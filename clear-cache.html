@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Clear Cache - Color Aquatic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        button:hover {
+            background: #5568d3;
+        }
+        .info {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clear Cache & LocalStorage</h1>
+    <p>Tool này giúp xóa cache và localStorage của blog.</p>
+    
+    <div class="info">
+        <h3>Thông tin hiện tại:</h3>
+        <p><strong>LocalStorage blogLanguage:</strong> <span id="currentLang">-</span></p>
+        <p><strong>Tất cả keys trong localStorage:</strong></p>
+        <pre id="allKeys">-</pre>
+    </div>
+    
+    <button onclick="clearLocalStorage()">Xóa LocalStorage</button>
+    <button onclick="clearAll()">Xóa Tất Cả (LocalStorage + Reload)</button>
+    <button onclick="goToHome()">Về Trang Chủ</button>
+    
+    <script>
+        // Hiển thị thông tin hiện tại
+        function showInfo() {
+            const lang = localStorage.getItem('blogLanguage') || 'Không có';
+            document.getElementById('currentLang').textContent = lang;
+            
+            const keys = Object.keys(localStorage);
+            document.getElementById('allKeys').textContent = keys.length > 0 ? keys.join(', ') : 'Không có';
+        }
+        
+        function clearLocalStorage() {
+            localStorage.clear();
+            alert('Đã xóa localStorage! Đang reload trang...');
+            showInfo();
+        }
+        
+        function clearAll() {
+            localStorage.clear();
+            alert('Đã xóa localStorage! Đang chuyển về trang chủ...');
+            window.location.href = 'index.html';
+        }
+        
+        function goToHome() {
+            window.location.href = 'index.html';
+        }
+        
+        // Load thông tin khi trang load
+        showInfo();
+    </script>
+</body>
+</html>

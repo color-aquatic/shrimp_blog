@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Color Aquatic - Hướng dẫn nuôi và chăm sóc tép cảnh</title>
+    <meta name="description" content="Blog chia sẻ kiến thức về nuôi tép cảnh, các loại tép phổ biến, cách chăm sóc, setup bể và kinh nghiệm thực tế từ người chơi tép lâu năm.">
+    <meta name="keywords" content="tép cảnh, tép thủy sinh, nuôi tép, chăm sóc tép, tép cherry, tép crystal, tép amano">
+    <meta name="author" content="Color Aquatic">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Color Aquatic - Hướng dẫn nuôi và chăm sóc tép cảnh">
+    <meta property="og:description" content="Blog chia sẻ kiến thức về nuôi tép cảnh, các loại tép phổ biến, cách chăm sóc, setup bể và kinh nghiệm thực tế.">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Color Aquatic - Hướng dẫn nuôi và chăm sóc tép cảnh">
+    <meta property="twitter:description" content="Blog chia sẻ kiến thức về nuôi tép cảnh, các loại tép phổ biến, cách chăm sóc, setup bể và kinh nghiệm thực tế.">
+    <meta property="twitter:image" content="https://yourdomain.com/images/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul>
+                <li><strong>🐠 Color Aquatic</strong></li>
+            </ul>
+            <ul>
+                <li><a href="index.html" data-translate="nav.home">Trang chủ</a></li>
+                <li><a href="#collection" data-translate="nav.collection">Bộ sưu tập</a></li>
+                <li><a href="#posts" data-translate="nav.posts">Bài viết</a></li>
+                <li><a href="#about" data-translate="nav.about">Giới thiệu</a></li>
+                <li>
+                    <details class="language-selector" id="language-selector">
+                        <summary id="language-summary" class="language-summary">
+                            <span class="lang-flag flag-vn"></span>
+                            <span class="lang-text">Tiếng Việt</span>
+                        </summary>
+                        <ul class="language-menu">
+                            <li><a href="#" class="lang-option" data-lang="vi">
+                                <span class="lang-flag flag-vn"></span>
+                                <span class="lang-name">Tiếng Việt</span>
+                            </a></li>
+                            <li><a href="#" class="lang-option" data-lang="en">
+                                <span class="lang-flag flag-gb"></span>
+                                <span class="lang-name">English</span>
+                            </a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="hero">
+            <h1 data-translate="hero.title">Chào mừng đến với Color Aquatic</h1>
+            <p data-translate="hero.subtitle">Nơi chia sẻ kiến thức và kinh nghiệm về nuôi tép cảnh</p>
+        </section>
+
+        <section id="collection">
+            <h2 data-translate="collection.title">🦐 Bộ sưu tập</h2>
+            <div id="collection-list" class="grid">
+                <!-- Collection products will be loaded dynamically -->
+            </div>
+        </section>
+
+        <section id="posts">
+            <h2 data-translate="posts.title">📝 Bài viết mới nhất</h2>
+            <div id="post-list" class="grid">
+                <!-- Posts will be loaded dynamically -->
+            </div>
+        </section>
+
+        <section id="post-content" style="display: none;">
+            <article id="article-content">
+                <!-- Markdown content will be rendered here -->
+            </article>
+            <nav>
+                <a href="index.html" role="button" class="secondary" data-translate="post.backButton">← Quay lại trang chủ</a>
+            </nav>
+        </section>
+
+        <section id="about">
+            <h2 data-translate="about.title">Giới thiệu</h2>
+            <p data-translate="about.content">Blog này được tạo ra để chia sẻ kiến thức, kinh nghiệm và niềm đam mê về tép cảnh. Từ những người mới bắt đầu đến những người chơi lâu năm, chúng tôi hy vọng sẽ mang đến những thông tin hữu ích cho cộng đồng yêu thích tép cảnh.</p>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p><small data-translate="footer.copyright">&copy; 2024 Color Aquatic</small></p>
+    </footer>
+
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Translations -->
+    <script src="js/translations.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
