@@ -52,253 +52,6 @@ const posts = [
     }
 ];
 
-// Collection products content (embedded markdown)
-const collectionContent = {
-    'vi': {
-        'tep-bluedream': `# Tép Blue Dream
-
-## Giới thiệu
-
-Tép Blue Dream là một trong những giống tép cảnh quý hiếm và được yêu thích nhất hiện nay. Với màu xanh dương đặc trưng, chúng tạo nên một điểm nhấn tuyệt đẹp trong bể thủy sinh.
-
-## Đặc điểm
-
-- **Tên khoa học**: Caridina cf. cantonensis "Blue Dream"
-- **Kích thước**: 2-3 cm khi trưởng thành
-- **Màu sắc**: Xanh dương đặc trưng với ánh kim loại
-- **Tính cách**: Hiền lành, thích sống theo nhóm
-- **Độ khó nuôi**: Khó (phù hợp cho người chơi có kinh nghiệm)
-
-## Thông số nước
-
-| Thông số | Giá trị khuyến nghị |
-|----------|---------------------|
-| Nhiệt độ | 22-26°C |
-| pH | 6.8-7.5 |
-| TDS | 150-250 ppm |
-| GH | 6-12 dGH |
-| KH | 3-8 dKH |
-
-## Đặc điểm sinh học
-
-Tép Blue Dream có nguồn gốc từ khu vực Đông Nam Á, được lai tạo để có màu sắc đặc biệt. Chúng cần điều kiện nước ổn định và chất lượng cao để duy trì màu sắc.
-
-## Cách nuôi
-
-### Thiết bị cần thiết
-
-1. **Bể nuôi**: Tối thiểu 40 lít, có thể nuôi chung với các loại tép khác màu
-2. **Lọc**: Hệ thống lọc tốt để duy trì chất lượng nước
-3. **Sưởi**: Duy trì nhiệt độ ổn định
-4. **Ánh sáng**: Ánh sáng dịu nhẹ
-
-### Thức ăn
-
-- Thức ăn chuyên dụng cho tép cảnh
-- Thức ăn tự nhiên: Tảo, màng sinh học
-- Bổ sung vitamin và khoáng chất
-
-## Lưu ý quan trọng
-
-⚠️ **Quan trọng**: Tép Blue Dream rất nhạy cảm với thay đổi chất lượng nước. Hãy theo dõi TDS và các thông số nước thường xuyên.
-
-## Tuổi thọ
-
-1-2 năm trong điều kiện nuôi tốt.
-
-## Giá cả
-
-Tép Blue Dream có giá khá cao do độ quý hiếm và khó nuôi. Giá dao động từ 50.000 - 200.000 VNĐ/con tùy kích thước và chất lượng.`,
-        'tep-pure-red-line': `# Tép Pure Red Line
-
-## Giới thiệu
-
-Tép Pure Red Line là giống tép cảnh có đường màu đỏ thuần khiết chạy dọc lưng. Chúng có ngoại hình đẹp mắt và màu sắc bền vững, phù hợp cho cả người mới bắt đầu và người chơi có kinh nghiệm.
-
-## Đặc điểm
-
-- **Tên khoa học**: Caridina cf. cantonensis "Pure Red Line"
-- **Kích thước**: 2-3 cm khi trưởng thành
-- **Màu sắc**: Đỏ thuần với đường đỏ nổi bật trên lưng
-- **Tính cách**: Hiền lành, dễ thích nghi
-- **Độ khó nuôi**: Trung bình (phù hợp cho người mới và có kinh nghiệm)
-
-## Thông số nước
-
-| Thông số | Giá trị khuyến nghị |
-|----------|---------------------|
-| Nhiệt độ | 20-28°C |
-| pH | 6.5-7.8 |
-| TDS | 120-200 ppm |
-| GH | 4-10 dGH |
-| KH | 2-6 dKH |
-
-## Đặc điểm sinh học
-
-Tép Pure Red Line được lai tạo để có đường màu đỏ đặc trưng. Chúng có khả năng thích nghi tốt với nhiều điều kiện nước khác nhau, dễ sinh sản trong môi trường nuôi.
-
-## Cách nuôi
-
-### Thiết bị cần thiết
-
-1. **Bể nuôi**: Tối thiểu 30 lít, có thể nuôi đơn hoặc chung với các loại tép khác
-2. **Lọc**: Hệ thống lọc cơ bản đến nâng cao
-3. **Sưởi**: Tùy theo nhiệt độ phòng
-4. **Ánh sáng**: Ánh sáng tự nhiên hoặc đèn LED dịu nhẹ
-
-### Thức ăn
-
-- Thức ăn viên chuyên dụng cho tép
-- Thức ăn tự nhiên: Tảo, màng sinh học
-- Rau xanh luộc: Rau bina, rau máng cầu
-- Thức ăn đông lạnh: Artemia nhỏ
-
-## Sinh sản
-
-Tép Pure Red Line sinh sản dễ dàng trong điều kiện tốt. Con cái mang thai khoảng 3-4 tuần và có thể đẻ 20-50 tép con mỗi lần.
-
-### Chăm sóc tép con
-
-- Cần nơi ẩn náu an toàn
-- Thức ăn nhỏ: Tảo tự nhiên, thức ăn nghiền
-- Tránh lọc mạnh hút tép con
-
-## Lưu ý quan trọng
-
-⚠️ **Quan trọng**: Giữ màu đỏ thuần bằng cách nuôi riêng giống hoặc chấp nhận lai tạp tạo màu mới.
-
-## Tuổi thọ
-
-1-2 năm trong điều kiện nuôi tốt.
-
-## Giá cả
-
-Tép Pure Red Line có giá phải chăng, dao động từ 20.000 - 50.000 VNĐ/con tùy kích thước.`
-    },
-    'en': {
-        'tep-bluedream': `# Blue Dream Shrimp
-
-## Introduction
-
-Blue Dream shrimp is one of the most precious and beloved aquarium shrimp varieties today. With their distinctive blue color, they create a beautiful highlight in aquariums.
-
-## Characteristics
-
-- **Scientific name**: Caridina cf. cantonensis "Blue Dream"
-- **Size**: 2-3 cm when fully grown
-- **Color**: Characteristic blue with metallic sheen
-- **Temperament**: Gentle, prefers living in groups
-- **Difficulty level**: Hard (suitable for experienced hobbyists)
-
-## Water Parameters
-
-| Parameter | Recommended Value |
-|-----------|-------------------|
-| Temperature | 22-26°C |
-| pH | 6.8-7.5 |
-| TDS | 150-250 ppm |
-| GH | 6-12 dGH |
-| KH | 3-8 dKH |
-
-## Biological Characteristics
-
-Blue Dream shrimp originates from Southeast Asia and has been selectively bred for their special coloration. They require stable and high-quality water conditions to maintain their color.
-
-## Care Guide
-
-### Required Equipment
-
-1. **Tank**: Minimum 40 liters, can be kept with other colored shrimp varieties
-2. **Filtration**: Good filtration system to maintain water quality
-3. **Heater**: Maintain stable temperature
-4. **Lighting**: Soft lighting
-
-### Food
-
-- Specialized shrimp food
-- Natural food: Algae, biofilm
-- Vitamin and mineral supplements
-
-## Important Notes
-
-⚠️ **Important**: Blue Dream shrimp are very sensitive to water quality changes. Monitor TDS and water parameters regularly.
-
-## Lifespan
-
-1-2 years under good care conditions.
-
-## Price
-
-Blue Dream shrimp are quite expensive due to their rarity and difficulty in breeding. Prices range from $2-8 USD per shrimp depending on size and quality.`,
-        'tep-pure-red-line': `# Pure Red Line Shrimp
-
-## Introduction
-
-Pure Red Line shrimp are aquarium shrimp with pure red stripes running along their backs. They have an attractive appearance and sustainable colors, suitable for both beginners and experienced hobbyists.
-
-## Characteristics
-
-- **Scientific name**: Caridina cf. cantonensis "Pure Red Line"
-- **Size**: 2-3 cm when fully grown
-- **Color**: Pure red with prominent red stripes on the back
-- **Temperament**: Gentle, easy to adapt
-- **Difficulty level**: Medium (suitable for beginners and experienced keepers)
-
-## Water Parameters
-
-| Parameter | Recommended Value |
-|-----------|-------------------|
-| Temperature | 20-28°C |
-| pH | 6.5-7.8 |
-| TDS | 120-200 ppm |
-| GH | 4-10 dGH |
-| KH | 2-6 dKH |
-
-## Biological Characteristics
-
-Pure Red Line shrimp are bred to have characteristic red stripes. They have good adaptability to various water conditions and breed easily in captivity.
-
-## Care Guide
-
-### Required Equipment
-
-1. **Tank**: Minimum 30 liters, can be kept alone or with other shrimp varieties
-2. **Filtration**: Basic to advanced filtration system
-3. **Heater**: Depending on room temperature
-4. **Lighting**: Natural light or soft LED lighting
-
-### Food
-
-- Specialized shrimp pellets
-- Natural food: Algae, biofilm
-- Boiled vegetables: Spinach, watercress
-- Frozen food: Small artemia
-
-## Breeding
-
-Pure Red Line shrimp breed easily under good conditions. Females carry eggs for about 3-4 weeks and can produce 20-50 shrimp per brood.
-
-### Baby Shrimp Care
-
-- Need safe hiding places
-- Small food: Natural algae, crushed food
-- Avoid strong filtration that sucks up babies
-
-## Important Notes
-
-⚠️ **Important**: Keep pure red color by breeding separately or accept hybridization to create new colors.
-
-## Lifespan
-
-1-2 years under good care conditions.
-
-## Price
-
-Pure Red Line shrimp are reasonably priced, ranging from $1-2 USD per shrimp depending on size.`
-    }
-};
-
-// Collection products data
 const collectionProducts = [
     {
         id: 'tep-bluedream',
@@ -543,6 +296,26 @@ function updateProductMetaTags(product, productName) {
         const baseUrl = window.location.origin + window.location.pathname;
         ogUrl.setAttribute('content', `${baseUrl}?product=${product.id}`);
     }
+}
+
+// Function to update footer translations
+function updateFooterTranslations() {
+    console.log('updateFooterTranslations called');
+    console.log('Current language:', currentLanguage);
+
+    const hotline = t('footer.hotline', currentLanguage);
+    const address = t('footer.address', currentLanguage);
+    const representative = t('footer.representative', currentLanguage);
+    const email = t('footer.email', currentLanguage);
+    const payment = t('footer.payment', currentLanguage);
+
+    console.log('Fetched translations:', { hotline, address, representative, email, payment });
+
+    document.querySelector('[data-translate="footer.hotline"]').textContent = hotline;
+    document.querySelector('[data-translate="footer.address"]').textContent = address;
+    document.querySelector('[data-translate="footer.representative"]').textContent = representative;
+    document.querySelector('[data-translate="footer.email"]').innerHTML = `<a href="mailto:hoangquoctu95@gmail.com">${email}</a>`;
+    document.querySelector('[data-translate="footer.payment"]').textContent = payment;
 }
 
 // Khởi tạo blog

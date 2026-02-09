@@ -51,10 +51,14 @@ const translations = {
         },
         
         // Footer
-        footer: {
-            copyright: '© 2024 Color Aquatic'
+        contact: {
+            copyright: '© 2024 Color Aquatic',
+            hotline: 'Hotline: 0836 569 811',
+            address: 'Địa chỉ: 958 Lạc Long Quân, Phường 5, Quận 11, TP.HCM',
+            representative: 'Đại diện: Hoàng Quốc Tú',
+            email: 'Email: hoangquoctu95@gmail.com',
+            payment: 'Phương thức thanh toán:'
         },
-        
         // Language Selector
         language: {
             label: 'Ngôn ngữ',
@@ -112,10 +116,14 @@ const translations = {
         },
         
         // Footer
-        footer: {
-            copyright: '© 2024 Color Aquatic'
+        contact: {
+            copyright: '© 2024 Color Aquatic',
+            hotline: 'Hotline: 0836 569 811',
+            address: 'Address: 958 Lac Long Quan, Ward 5, District 11, Ho Chi Minh City',
+            representative: 'Representative: Hoàng Quốc Tú',
+            email: 'Email: hoangquoctu95@gmail.com',
+            payment: 'Payment Methods:'
         },
-        
         // Language Selector
         language: {
             label: 'Language',
