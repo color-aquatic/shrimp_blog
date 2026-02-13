@@ -49,6 +49,94 @@
     border-color: var(--primary-color, #667eea);
 }
 
+/* Social Stick */
+.social-stick {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    gap: 0;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 8px 0 0 8px;
+    font-size: 20px;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-link:hover {
+    width: 60px;
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Social Platform Colors */
+.facebook {
+    background: linear-gradient(45deg, #1877f2, #42a5f5);
+}
+
+.facebook:hover {
+    background: linear-gradient(45deg, #166fe5, #1976d2);
+}
+
+.instagram {
+    background: linear-gradient(45deg, #e91e63, #f06292, #ff9800);
+}
+
+.instagram:hover {
+    background: linear-gradient(45deg, #c2185b, #e91e63, #ff5722);
+}
+
+.zalo {
+    background: linear-gradient(45deg, #0068ff, #1976d2);
+}
+
+.zalo:hover {
+    background: linear-gradient(45deg, #0056d3, #1565c0);
+}
+
+.tiktok {
+    background: linear-gradient(45deg, #000000, #333333);
+}
+
+.tiktok:hover {
+    background: linear-gradient(45deg, #111111, #444444);
+}
+
+.zalo-icon {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .social-stick {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .social-link:hover {
+        width: 50px;
+    }
+}
+
 .post-card h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
