@@ -810,3 +810,91 @@ function goHome() {
     // Reset meta tags
     resetMetaTags();
 }
+
+// Slideshow functionality
+let currentSlideIndex = 0;
+let slides = [];
+let indicators = [];
+let slideshowInterval;
+
+function initSlideshowElements() {
+    slides = document.querySelectorAll('.slide');
+    indicators = document.querySelectorAll('.indicator');
+}
+
+function updateSlideshow() {
+    // Hide all slides and deactivate all indicators
+    slides.forEach((slide, index) => {
+        slide.classList.remove('active');
+        if (indicators[index]) {
+            indicators[index].classList.remove('active');
+        }
+    });
+    
+    // Show current slide and activate indicator
+    if (slides[currentSlideIndex]) {
+        slides[currentSlideIndex].classList.add('active');
+    }
+    if (indicators[currentSlideIndex]) {
+        indicators[currentSlideIndex].classList.add('active');
+    }
+}
+
+function showNextSlide() {
+    if (slides.length === 0) return;
+    
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    updateSlideshow();
+}
+
+function showPrevSlide() {
+    if (slides.length === 0) return;
+    
+    currentSlideIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
+    updateSlideshow();
+}
+
+function goToSlide(index) {
+    if (index >= 0 && index < slides.length) {
+        currentSlideIndex = index;
+        updateSlideshow();
+        
+        // Restart auto slideshow
+        clearInterval(slideshowInterval);
+        startAutoSlideshow();
+    }
+}
+
+function changeSlide(direction) {
+    if (direction === 1) {
+        showNextSlide();
+    } else {
+        showPrevSlide();
+    }
+    
+    // Restart auto slideshow
+    clearInterval(slideshowInterval);
+    startAutoSlideshow();
+}
+
+function startAutoSlideshow() {
+    if (slides.length > 1) {
+        // Start automatic slideshow with 3 second interval
+        slideshowInterval = setInterval(showNextSlide, 3000);
+    }
+}
+
+function initSlideshow() {
+    initSlideshowElements();
+    if (slides.length > 0) {
+        updateSlideshow();
+        startAutoSlideshow();
+    }
+}
+
+// Initialize slideshow when DOM is ready
+document.addEventListener('DOMContentLoaded', initSlideshow);
+
+// Make functions globally available for onclick handlers
+window.changeSlide = changeSlide;
+window.goToSlide = goToSlide;

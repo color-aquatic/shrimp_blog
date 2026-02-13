@@ -76,8 +76,32 @@
             <p data-translate="hero.subtitle">Nơi chia sẻ kiến thức và kinh nghiệm về nuôi tép cảnh</p>
         </section>
 
+        <section id="benefits">
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <img src="images/good_benefits.png" alt="Good Benefits">
+                </div>
+                <div class="slide">
+                    <img src="images/no3.png" alt="No 3">
+                </div>
+                <div class="slide">
+                    <img src="images/fetilizer.png" alt="Fertilizer">
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <button class="slideshow-nav prev" onclick="changeSlide(-1)">❮</button>
+                <button class="slideshow-nav next" onclick="changeSlide(1)">❯</button>
+            </div>
+            
+            <!-- Slide Indicators -->
+            <div class="slideshow-indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+            </div>
+        </section>
+
         <section id="collection">
-            <img src="images/good_benefits.png" alt="Good Benefits" style="width:100%; height:auto;">
             <h2 data-translate="collection.title">🦐 Bộ sưu tập</h2>
             <div id="collection-list" class="grid">
                 <!-- Collection products will be loaded dynamically -->
