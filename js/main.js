@@ -79,6 +79,9 @@ const collectionProducts = [
     }
 ];
 
+// Collection product content is now loaded from files dynamically
+// No embedded content needed - files are in collection/{lang}/{productId}.md
+
 // Helper function to get post properties based on language
 function getPostByLang(post, property, lang) {
     const langKey = property + (lang === 'en' ? 'En' : 'Vi');
@@ -220,7 +223,11 @@ function createPaginationHTML(currentPage, totalPages) {
 }
 
 // Load product details
-function loadProduct(productId) {
+async function loadProduct(productId) {
+    console.log('=== loadProduct() called ===');
+    console.log('productId:', productId);
+    console.log('currentLanguage:', currentLanguage);
+    
     const product = collectionProducts.find(p => p.id === productId);
     if (!product) {
         console.error('Product not found:', productId);
@@ -232,6 +239,7 @@ function loadProduct(productId) {
     const collectionSection = document.getElementById('collection');
     const heroSection = document.getElementById('hero');
     const postContentElement = document.getElementById('post-content');
+    const articleContent = document.getElementById('article-content');
 
     if (postsSection) postsSection.style.display = 'none';
     if (collectionSection) collectionSection.style.display = 'none';
@@ -242,33 +250,63 @@ function loadProduct(productId) {
     const newUrl = `${window.location.pathname}?product=${productId}`;
     window.history.pushState({ productId }, '', newUrl);
 
-    // Load product content from embedded data
-    const markdown = collectionContent[currentLanguage]?.[productId];
+    // Hiển thị loading
+    const loadingText = t('post.loading', currentLanguage);
+    articleContent.innerHTML = `<div class="loading">${loadingText}</div>`;
 
-    if (!markdown) {
-        console.error('Product content not found for:', productId, 'in language:', currentLanguage);
-        document.getElementById('article-content').innerHTML = `
-            <div class="error-message">
-                <h2>${t('post.error', currentLanguage)}</h2>
-                <p>Nội dung sản phẩm không tìm thấy.</p>
-                <button onclick="goHome()" class="secondary">${t('post.backButton', currentLanguage)}</button>
+    try {
+        // Load file Markdown từ thư mục collection/{lang}/
+        const productFile = `collection/${currentLanguage}/${productId}.md`;
+        console.log('Loading product file:', productFile);
+        
+        const response = await fetch(productFile);
+        
+        if (!response.ok) {
+            throw new Error('Failed to load product');
+        }
+        
+        const markdown = await response.text();
+        
+        // Render Markdown sang HTML
+        if (typeof marked !== 'undefined') {
+            const html = marked.parse(markdown);
+            
+            // Cập nhật nội dung sản phẩm
+            const productName = getProductByLang(product, 'name', currentLanguage);
+            
+            articleContent.innerHTML = `
+                <header>
+                    <h1>${productName}</h1>
+                </header>
+                <hr>
+                ${html}
+            `;
+            
+            // Cập nhật meta tags cho SEO
+            updateProductMetaTags(product, productName);
+            
+            // Cập nhật translations cho button back
+            updateTranslations();
+            
+            // Scroll lên đầu trang
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            throw new Error('Marked.js is not loaded');
+        }
+    } catch (error) {
+        console.error('Error loading product:', error);
+        const errorText = t('post.error', currentLanguage);
+        const backButtonText = t('post.backButton', currentLanguage);
+        articleContent.innerHTML = `
+            <div class="loading">
+                <p>${errorText}</p>
+                <a href="index.html" role="button" data-translate="post.backButton">${backButtonText}</a>
             </div>
         `;
-        return;
-    }
-
-    // Parse markdown and display
-    const html = marked.parse(markdown);
-    const articleElement = document.getElementById('article-content');
-
-    if (articleElement) {
-        articleElement.innerHTML = html;
-
-        // Update page title and meta
-        const productName = getProductByLang(product, 'name', currentLanguage);
-        updateProductMetaTags(product, productName);
+        updateTranslations();
     }
 }
+
 
 // Update meta tags for product pages
 function updateProductMetaTags(product, productName) {
@@ -343,6 +381,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Setup language selector
     console.log('Setting up language selector...');
     setupLanguageSelector();
+    
+    // Initialize search functionality
+    console.log('Initializing search...');
+    initializeSearch();
     
     // Kiểm tra xem có đang xem bài viết hoặc sản phẩm cụ thể không
     const urlParams = new URLSearchParams(window.location.search);
@@ -894,6 +936,349 @@ function initSlideshow() {
 
 // Initialize slideshow when DOM is ready
 document.addEventListener('DOMContentLoaded', initSlideshow);
+
+// Search functionality
+let searchResults = [];
+let isSearchActive = false;
+
+// Initialize search functionality
+function initializeSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const clearButton = document.getElementById('clear-search');
+    
+    if (!searchInput || !searchButton || !clearButton) {
+        console.error('Search elements not found');
+        return;
+    }
+    
+    // Search on input
+    searchInput.addEventListener('input', debounce(performSearch, 300));
+    
+    // Search on button click
+    searchButton.addEventListener('click', performSearch);
+    
+    // Clear search
+    clearButton.addEventListener('click', clearSearch);
+    
+    // Search on Enter key
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+}
+
+// Debounce function to limit search frequency
+function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+
+// Perform search
+function performSearch() {
+    const searchInput = document.getElementById('search-input');
+    const query = searchInput.value.trim();
+    
+    if (query.length === 0) {
+        clearSearch();
+        return;
+    }
+    
+    // Show clear button
+    const clearButton = document.getElementById('clear-search');
+    clearButton.style.display = 'flex';
+    
+    // Search in posts and collections
+    const postResults = searchInPosts(query);
+    const collectionResults = searchInCollections(query);
+    
+    searchResults = {
+        posts: postResults,
+        collections: collectionResults,
+        query: query
+    };
+    
+    displaySearchResults();
+    isSearchActive = true;
+}
+
+// Search in posts
+function searchInPosts(query) {
+    const results = [];
+    const lowercaseQuery = query.toLowerCase();
+    
+    posts.forEach(post => {
+        const title = getPostByLang(post, 'title', currentLanguage).toLowerCase();
+        const description = getPostByLang(post, 'description', currentLanguage).toLowerCase();
+        const keywords = getPostByLang(post, 'keywords', currentLanguage).toLowerCase();
+        
+        let score = 0;
+        let matchedFields = [];
+        
+        if (title.includes(lowercaseQuery)) {
+            score += 3; // Title matches have highest score
+            matchedFields.push('title');
+        }
+        
+        if (description.includes(lowercaseQuery)) {
+            score += 2; // Description matches
+            matchedFields.push('description');
+        }
+        
+        if (keywords.includes(lowercaseQuery)) {
+            score += 1; // Keywords matches
+            matchedFields.push('keywords');
+        }
+        
+        if (score > 0) {
+            results.push({
+                ...post,
+                score,
+                matchedFields,
+                type: 'post'
+            });
+        }
+    });
+    
+    // Sort by score (highest first)
+    return results.sort((a, b) => b.score - a.score);
+}
+
+// Search in collections
+function searchInCollections(query) {
+    const results = [];
+    const lowercaseQuery = query.toLowerCase();
+    
+    collectionProducts.forEach((product, index) => {
+        const name = getProductByLang(product, 'name', currentLanguage);
+        const description = getProductByLang(product, 'shortDescription', currentLanguage);
+        
+        if (!name || !description) {
+            console.warn(`Product ${index} missing name or description for language ${currentLanguage}:`, product);
+            return;
+        }
+        
+        const nameLower = name.toLowerCase();
+        const descriptionLower = description.toLowerCase();
+        
+        let score = 0;
+        let matchedFields = [];
+        
+        if (nameLower.includes(lowercaseQuery)) {
+            score += 3; // Name matches have highest score
+            matchedFields.push('name');
+        }
+        
+        if (descriptionLower.includes(lowercaseQuery)) {
+            score += 2; // Description matches
+            matchedFields.push('description');
+        }
+        
+        // Search in specifications
+        const specs = `${product.temperature || ''} ${product.tds || ''} ${product.gh || ''}`.toLowerCase();
+        if (specs.includes(lowercaseQuery)) {
+            score += 1;
+            matchedFields.push('specs');
+        }
+        
+        if (score > 0) {
+            results.push({
+                ...product,
+                score,
+                matchedFields,
+                type: 'collection'
+            });
+        }
+    });
+    
+    // Sort by score (highest first)
+    return results.sort((a, b) => b.score - a.score);
+}
+
+// Display search results
+function displaySearchResults() {
+    const searchResultsSection = document.getElementById('search-results');
+    const searchResultsContent = document.getElementById('search-results-content');
+    const collectionSection = document.getElementById('collection');
+    const postsSection = document.getElementById('posts');
+    
+    if (!searchResultsSection || !searchResultsContent) return;
+    
+    const totalResults = searchResults.posts.length + searchResults.collections.length;
+    
+    if (totalResults === 0) {
+        // No results found
+        searchResultsContent.innerHTML = `
+            <div class="no-results">
+                <i class="fas fa-search" style="font-size: 3rem; color: var(--muted-color); margin-bottom: 1rem;"></i>
+                <p>${t('search.noResults', currentLanguage)} "<strong>${searchResults.query}</strong>"</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">${t('search.tryDifferentKeywords', currentLanguage)}</p>
+            </div>
+        `;
+    } else {
+        let html = `<div class="search-stats">${t('search.foundResults', currentLanguage).replace('{count}', totalResults).replace('{query}', searchResults.query)}</div>`;
+        
+        // Display collection results
+        if (searchResults.collections.length > 0) {
+            html += `
+                <div class="search-results-section">
+                    <h4><i class="fas fa-gem"></i> ${t('search.collectionResults', currentLanguage)} (${searchResults.collections.length})</h4>
+                    <div class="grid">
+            `;
+            
+            searchResults.collections.forEach(product => {
+                html += createSearchResultCard(product, 'collection');
+            });
+            
+            html += '</div></div>';
+        }
+        
+        // Display post results
+        if (searchResults.posts.length > 0) {
+            html += `
+                <div class="search-results-section">
+                    <h4><i class="fas fa-newspaper"></i> ${t('search.postResults', currentLanguage)} (${searchResults.posts.length})</h4>
+                    <div class="grid">
+            `;
+            
+            searchResults.posts.forEach(post => {
+                html += createSearchResultCard(post, 'post');
+            });
+            
+            html += '</div></div>';
+        }
+        
+        searchResultsContent.innerHTML = html;
+    }
+    
+    // Show search results and hide original sections
+    searchResultsSection.style.display = 'block';
+    collectionSection.style.display = 'none';
+    postsSection.style.display = 'none';
+}
+
+// Create search result card
+function createSearchResultCard(item, type) {
+    const query = searchResults.query;
+    
+    if (type === 'post') {
+        const title = getPostByLang(item, 'title', currentLanguage);
+        const description = getPostByLang(item, 'description', currentLanguage);
+        const highlightedTitle = highlightText(title, query);
+        const highlightedDescription = highlightText(description, query);
+        
+        const date = new Date(item.date);
+        const locale = currentLanguage === 'en' ? 'en-US' : 'vi-VN';
+        const formattedDate = date.toLocaleDateString(locale, {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        
+        const matchFields = item.matchedFields.map(field => {
+            return t('search.field.' + field, currentLanguage);
+        }).join(', ');
+        
+        return `
+            <div class="post-card" onclick="loadPost('${item.id}'); window.history.pushState({ postId: '${item.id}' }, '', '?post=${item.id}')">
+                <h3>${highlightedTitle}</h3>
+                <div class="post-date">📅 ${formattedDate}</div>
+                <p class="post-description">${highlightedDescription}</p>
+                <div class="search-match-info">
+                    <small><i class="fas fa-tag"></i> ${t('search.matchIn', currentLanguage)}: ${matchFields}</small>
+                </div>
+            </div>
+        `;
+    } else if (type === 'collection') {
+        const name = getProductByLang(item, 'name', currentLanguage);
+        const description = getProductByLang(item, 'shortDescription', currentLanguage);
+        const highlightedName = highlightText(name, query);
+        const highlightedDescription = highlightText(description, query);
+        
+        const matchFields = item.matchedFields.map(field => {
+            return t('search.field.' + field, currentLanguage);
+        }).join(', ');
+        
+        return `
+            <div class="product-card" onclick="loadProduct('${item.id}'); window.history.pushState({ productId: '${item.id}' }, '', '?product=${item.id}')">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="images/placeholder1.png" alt="${name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='>
+                    </div>
+                    <div class="thumbnail-images">
+                        ${item.images ? item.images.slice(0, 4).map((img, index) =>
+                            `<img src="images/${img}" alt="${name} ${index + 1}" onerror="this.style.display='none'">`
+                        ).join('') : ''}
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>${highlightedName}</h3>
+                    <p class="product-description">${highlightedDescription}</p>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">${t('collection.temperature', currentLanguage)}:</span>
+                            <span class="spec-value">${highlightText(item.temperature || '', query)}</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">${t('collection.tds', currentLanguage)}:</span>
+                            <span class="spec-value">${highlightText(item.tds || '', query)}</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">${t('collection.gh', currentLanguage)}:</span>
+                            <span class="spec-value">${highlightText(item.gh || '', query)}</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">${t('collection.lifespan', currentLanguage)}:</span>
+                            <span class="spec-value">${highlightText(item.lifespan || '', query)}</span>
+                        </div>
+                    </div>
+                    <button class="view-details-btn" onclick="loadProduct('${item.id}'); window.history.pushState({ productId: '${item.id}' }, '', '?product=${item.id}')">
+                        ${t('collection.viewDetails', currentLanguage)}
+                    </button>
+                    <div class="search-match-info">
+                        <small><i class="fas fa-tag"></i> ${t('search.matchIn', currentLanguage)}: ${matchFields}</small>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+}
+
+// Highlight search terms in text
+function highlightText(text, query) {
+    if (!text || !query) return text;
+    
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&')})`, 'gi');
+    return text.replace(regex, '<span class="search-highlight">$1</span>');
+}
+
+// Clear search
+function clearSearch() {
+    const searchInput = document.getElementById('search-input');
+    const clearButton = document.getElementById('clear-search');
+    const searchResultsSection = document.getElementById('search-results');
+    const collectionSection = document.getElementById('collection');
+    const postsSection = document.getElementById('posts');
+    const heroSection = document.getElementById('hero');
+    
+    if (searchInput) searchInput.value = '';
+    if (clearButton) clearButton.style.display = 'none';
+    if (searchResultsSection) searchResultsSection.style.display = 'none';
+    if (collectionSection) collectionSection.style.display = 'block';
+    if (postsSection) postsSection.style.display = 'block';
+    if (heroSection) heroSection.style.display = 'block';
+    
+    searchResults = [];
+    isSearchActive = false;
+    
+    // Re-display original content
+    displayPostList();
+    displayCollectionProducts();
+}
 
 // Make functions globally available for onclick handlers
 window.changeSlide = changeSlide;

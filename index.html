@@ -74,6 +74,28 @@
     </header>
 
     <main class="container">
+        <section id="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Tìm kiếm bài viết và bộ sưu tập..." data-translate="">
+                    <button id="search-button" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button id="clear-search" class="clear-btn" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Search Results Section -->
+            <div id="search-results" style="display: none;">
+                <h3 id="search-results-title" data-translate="search.resultsTitle">Kết quả tìm kiếm</h3>
+                <div id="search-results-content">
+                    <!-- Search results will be displayed here -->
+                </div>
+            </div>
+        </section>
+
         <section id="hero">
             <h1 data-translate="hero.title">Chào mừng đến với Color Aquatic</h1>
             <p data-translate="hero.subtitle">Nơi chia sẻ kiến thức và kinh nghiệm về nuôi tép cảnh</p>

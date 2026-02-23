@@ -64,6 +64,25 @@ const translations = {
             label: 'Ngôn ngữ',
             vi: 'Tiếng Việt',
             en: 'English'
+        },
+        
+        // Search
+        search: {
+            placeholder: '',
+            resultsTitle: 'Kết quả tìm kiếm',
+            noResults: 'Không tìm thấy kết quả cho',
+            tryDifferentKeywords: 'Thử sử dụng từ khóa khác hoặc kiểm tra chính tả',
+            foundResults: 'Tìm thấy {count} kết quả cho "{query}"',
+            collectionResults: 'Bộ sưu tập',
+            postResults: 'Bài viết',
+            matchIn: 'Tìm thấy trong',
+            field: {
+                title: 'tiêu đề',
+                name: 'tên',
+                description: 'mô tả',
+                keywords: 'từ khóa',
+                specs: 'thông số'
+            }
         }
     },
     
@@ -129,6 +148,25 @@ const translations = {
             label: 'Language',
             vi: 'Tiếng Việt',
             en: 'English'
+        },
+        
+        // Search
+        search: {
+            placeholder: 'Search articles and collection...',
+            resultsTitle: 'Search Results',
+            noResults: 'No results found for',
+            tryDifferentKeywords: 'Try using different keywords or check spelling',
+            foundResults: 'Found {count} results for "{query}"',
+            collectionResults: 'Collection',
+            postResults: 'Articles',
+            matchIn: 'Found in',
+            field: {
+                title: 'title',
+                name: 'name',
+                description: 'description',
+                keywords: 'keywords',
+                specs: 'specifications'
+            }
         }
     }
 };
