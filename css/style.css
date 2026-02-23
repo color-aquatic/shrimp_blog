@@ -1,5 +1,10 @@
 /* Custom Styles for Color Aquatic */
 
+/* Smooth scroll for page navigation */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header and Navigation */
 header {
     position: relative;
@@ -1175,4 +1180,45 @@ section h2 {
     .slideshow-nav.next {
         right: 10px;
     }
+}
+
+/* Footer Map Section */
+.footer-map {
+    width: 75vw;
+    max-width: 75vw;
+    margin: 2rem auto;
+    border-top: 1px solid var(--border-color, #e0e0e0);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footer-map iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.footer-map iframe:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Map Responsive */
+@media (max-width: 768px) {
+    .footer-map {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+    
+    .footer-map iframe {
+        height: 350px;
+        border-radius: 0.5rem;
+    }
+}
+
+/* Dark mode support for footer map */
+[data-theme="dark"] .footer-map {
+    border-color: var(--border-color, #333);
 }

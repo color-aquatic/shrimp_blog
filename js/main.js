@@ -148,6 +148,90 @@ const collectionProducts = [
         gh: '4-10 dGH',
         lifespan: '1-2',
         images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'tep-blue-diamond',
+        nameVi: 'Tép Blue Diamond',
+        nameEn: 'Blue Diamond Shrimp',
+        shortDescriptionVi: 'Tép cảnh với màu xanh kim cương lấp lánh, dễ nuôi cho người mới.',
+        shortDescriptionEn: 'Diamond-blue colored shrimp with sparkling beauty, easy for beginners.',
+        temperature: '20-26°C',
+        tds: '150-300 ppm',
+        gh: '4-8 dGH',
+        lifespan: '1-2',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'tep-cam',
+        nameVi: 'Tép Cam',
+        nameEn: 'Orange Shrimp',
+        shortDescriptionVi: 'Tép màu cam rực rỡ, dễ nuôi và giá cả phải chăng.',
+        shortDescriptionEn: 'Vibrant orange shrimp, easy to keep and affordable.',
+        temperature: '18-25°C',
+        tds: '150-350 ppm',
+        gh: '3-15 dGH',
+        lifespan: '1-1.5',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'tep-bloody-mary',
+        nameVi: 'Tép Bloody Mary',
+        nameEn: 'Bloody Mary Shrimp',
+        shortDescriptionVi: 'Tép cao cấp với màu đỏ thẫm và đầu trong suốt độc đáo.',
+        shortDescriptionEn: 'Premium shrimp with deep red color and unique transparent head.',
+        temperature: '20-24°C',
+        tds: '150-250 ppm',
+        gh: '4-8 dGH',
+        lifespan: '1.5-2',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'tep-snow-ball',
+        nameVi: 'Tép Snow Ball',
+        nameEn: 'Snow Ball Shrimp',
+        shortDescriptionVi: 'Tép trắng tinh như tuyết, tạo điểm nhấn đẹp trong bể cây xanh.',
+        shortDescriptionEn: 'Pure white snow-like shrimp, beautiful accent in planted tanks.',
+        temperature: '18-26°C',
+        tds: '150-350 ppm',
+        gh: '4-12 dGH',
+        lifespan: '1-2',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'tep-black-galaxy-fishbone-snowflake',
+        nameVi: 'Tép Black Galaxy Fishbone Snowflake',
+        nameEn: 'Black Galaxy Fishbone Snowflake Shrimp',
+        shortDescriptionVi: 'Tép lạnh cao cấp với họa tiết thiên hà đen và tuyết rơi.',
+        shortDescriptionEn: 'Premium cold-water shrimp with black galaxy and snowflake patterns.',
+        temperature: '20-24°C',
+        tds: '90-150 ppm',
+        gh: '3-6 dGH',
+        lifespan: '2-3',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'tep-black-galaxy-boa',
+        nameVi: 'Tép Black Galaxy BOA',
+        nameEn: 'Black Galaxy BOA Shrimp',
+        shortDescriptionVi: 'Vua của các loại tép lạnh với vẻ đẹp tuyệt đỉnh và giá trị cực cao.',
+        shortDescriptionEn: 'The king of cold-water shrimp with ultimate beauty and extreme value.',
+        temperature: '18-22°C',
+        tds: '80-120 ppm',
+        gh: '2-5 dGH',
+        lifespan: '3-4',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'tep-red-galaxy-tiger',
+        nameVi: 'Tép Red Galaxy Tiger',
+        nameEn: 'Red Galaxy Tiger Shrimp',
+        shortDescriptionVi: 'Tép lạnh với màu đỏ rực rỡ, họa tiết sọc hổ và chấm galaxy.',
+        shortDescriptionEn: 'Cold-water shrimp with vibrant red, tiger stripes and galaxy spots.',
+        temperature: '20-24°C',
+        tds: '100-160 ppm',
+        gh: '3-6 dGH',
+        lifespan: '2-2.5',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
     }
 ];
 

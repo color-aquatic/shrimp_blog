@@ -54,7 +54,7 @@ const translations = {
         contact: {
             copyright: '© 2024 Color Aquatic',
             hotline: 'Hotline: 0836 569 811',
-            address: 'Địa chỉ: 958 Lạc Long Quân, Phường 5, Quận 11, TP.HCM',
+            address: 'Địa chỉ: 8 Ni Sư Huỳnh Liên, Phường 10, Quận Tân Bình, TP.HCM',
             representative: 'Đại diện: Hoàng Quốc Tú',
             email: 'Email: hoangquoctu95@gmail.com',
             payment: 'Phương thức thanh toán:'
@@ -134,11 +134,12 @@ const translations = {
             content: 'This blog was created to share knowledge, experience, and passion for aquarium shrimp. From beginners to experienced hobbyists, we hope to provide useful information for the aquarium shrimp community.'
         },
         
+
         // Footer
         contact: {
             copyright: '© 2024 Color Aquatic',
             hotline: 'Hotline: 0836 569 811',
-            address: 'Address: 958 Lac Long Quan, Ward 5, District 11, Ho Chi Minh City',
+            address: 'Address: 8 Ni Su Huynh Lien, Ward 10, Tan Binh District, Ho Chi Minh City',
             representative: 'Representative: Hoàng Quốc Tú',
             email: 'Email: hoangquoctu95@gmail.com',
             payment: 'Payment Methods:'

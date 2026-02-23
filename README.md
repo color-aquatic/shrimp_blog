@@ -5,19 +5,33 @@ Blog tĩnh về tép cảnh được xây dựng bằng HTML5, CSS3 với Pico.c
 ## Cấu trúc thư mục
 
 ```
-blog-tep-canh/
+shrimp_blog/
 │
-├── index.html          # Trang chủ
+├── index.html          # Trang chủ với tìm kiếm và Google Maps
 ├── css/
-│   └── style.css       # CSS tùy chỉnh
+│   └── style.css       # CSS tùy chỉnh với responsive design
 ├── js/
-│   └── main.js         # JavaScript xử lý Markdown và navigation
+│   ├── main.js         # JavaScript xử lý Markdown, tìm kiếm, hamburger menu
+│   └── translations.js # Hỗ trợ đa ngôn ngữ
 ├── posts/
-│   ├── tep-mau.md
-│   ├── setup-be-tep.md
-│   ├── tep-mau.md
-│   ├── tep-sulawesi.md
-│   └── tep-lanh.md
+│   ├── vi/             # Bài viết tiếng Việt
+│   │   ├── tep-mau.md
+│   │   ├── setup-be-tep.md
+│   │   ├── tep-sulawesi.md
+│   │   └── tep-lanh.md
+│   └── en/             # Bài viết tiếng Anh
+│       ├── tep-mau.md
+│       ├── setup-be-tep.md
+│       ├── tep-sulawesi.md
+│       └── tep-lanh.md
+├── collection/
+│   ├── vi/             # Bộ sưu tập tiếng Việt
+│   │   ├── tep-bluedream.md
+│   │   └── tep-pure-red-line.md
+│   └── en/             # Bộ sưu tập tiếng Anh
+│       ├── tep-bluedream.md
+│       └── tep-pure-red-line.md
+├── images/             # Hình ảnh website
 └── README.md
 ```
 
@@ -29,6 +43,10 @@ blog-tep-canh/
 - ✅ Tự động render Markdown sang HTML với Marked.js
 - ✅ Navigation động giữa các bài viết
 - ✅ UI/UX hiện đại và dễ sử dụng
+- ✅ Hamburger menu responsive cho mobile
+- ✅ Tính năng tìm kiếm thông minh cho bài viết và bộ sưu tập
+- ✅ Hỗ trợ đa ngôn ngữ (Tiếng Việt/English)
+- ✅ Google Maps tích hợp hiển thị vị trí showroom
 
 ## Cách sử dụng
 
@@ -72,10 +90,12 @@ Mở file `index.html` trong trình duyệt. Nếu gặp lỗi CORS khi load fil
 - **Cấu hình**: Chỉnh sửa file `js/main.js`
 - **SEO**: Cập nhật meta tags trong `index.html`
 
-## Thư viện sử dụng
+## Thư viện và dịch vụ sử dụng
 
 - **Pico.css**: https://picocss.com/ - CSS framework nhẹ và hiện đại
 - **Marked.js**: https://marked.js.org/ - Thư viện render Markdown sang HTML
+- **Font Awesome**: https://fontawesome.com/ - Icon library cho UI
+- **Google Maps Embed API**: Hiển thị bản đồ tương tác cho vị trí showroom
 
 ## Lưu ý
 
