@@ -51,4 +51,4 @@ Blue Dream shrimp originates from Southeast Asia and has been selectively bred f
 
 ## Price
 
-Blue Dream shrimp are quite expensive due to their rarity and difficulty in breeding. Prices range from $2-8 USD per shrimp depending on size and quality.
+Blue Dream shrimp are quite expensive due to their rarity and difficulty in breeding. Prices range from $2-5 USD per shrimp depending on size and quality.

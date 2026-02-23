@@ -8,6 +8,78 @@ console.log('Initial language:', currentLanguage);
 // Clear old/corrupted localStorage data if needed (uncomment to reset)
 // localStorage.removeItem('blogLanguage');
 
+// Mobile Hamburger Menu
+function initializeHamburgerMenu() {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+    
+    if (!hamburgerMenu || !navMenu || !navOverlay) {
+        console.error('Hamburger menu elements not found');
+        return;
+    }
+    
+    // Toggle menu function
+    function toggleMenu() {
+        const isActive = hamburgerMenu.classList.contains('active');
+        
+        if (isActive) {
+            closeMenu();
+        } else {
+            // Show overlay first
+            navOverlay.classList.add('active');
+            
+            // Then show menu with slight delay
+            setTimeout(() => {
+                hamburgerMenu.classList.add('active');
+                navMenu.classList.add('active');
+            }, 10);
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
+    // Close menu function
+    function closeMenu() {
+        if (!navMenu.classList.contains('active')) return;
+        
+        hamburgerMenu.classList.remove('active');
+        navMenu.classList.remove('active');
+        
+        // Hide overlay after menu animation
+        setTimeout(() => {
+            navOverlay.classList.remove('active');
+        }, 300);
+        
+        document.body.style.overflow = '';
+    }
+    
+    // Event listeners
+    hamburgerMenu.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', closeMenu);
+    
+    // Close menu when clicking on nav links (except language selector)
+    const navLinks = navMenu.querySelectorAll('a:not(.lang-option)');
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
+    
+    // Handle escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+}
+
 // Danh sách bài viết (chung cho cả hai ngôn ngữ, file path sẽ được thay đổi dựa trên ngôn ngữ)
 const posts = [
     {
@@ -385,6 +457,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize search functionality
     console.log('Initializing search...');
     initializeSearch();
+    
+    // Initialize hamburger menu
+    console.log('Initializing hamburger menu...');
+    initializeHamburgerMenu();
     
     // Kiểm tra xem có đang xem bài viết hoặc sản phẩm cụ thể không
     const urlParams = new URLSearchParams(window.location.search);
