@@ -139,6 +139,18 @@
 
         <section id="collection">
             <h2 data-translate="collection.title">🦐 Bộ sưu tập</h2>
+            
+            <!-- Collection Filter -->
+            <div class="collection-filter">
+                <label for="category-filter" data-translate="collection.filterLabel">Lọc theo danh mục:</label>
+                <select id="category-filter" onchange="filterCollection(this.value)">
+                    <option value="all" data-translate="collection.filterAll">Tất cả</option>
+                    <option value="shrimps" data-translate="collection.filterShrimps">Tép cảnh</option>
+                    <option value="fishes" data-translate="collection.filterFishes">Cá cảnh</option>
+                    <option value="accessory" data-translate="collection.filterAccessory">Phụ kiện</option>
+                </select>
+            </div>
+            
             <div id="collection-list" class="grid">
                 <!-- Collection products will be loaded dynamically -->
             </div>

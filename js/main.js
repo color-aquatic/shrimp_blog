@@ -127,6 +127,7 @@ const posts = [
 const collectionProducts = [
     {
         id: 'tep-bluedream',
+        category: 'shrimps',
         nameVi: 'Tép Blue Dream',
         nameEn: 'Blue Dream Shrimp',
         shortDescriptionVi: 'Tép cảnh với màu xanh dương tuyệt đẹp, phù hợp cho người chơi lâu năm.',
@@ -139,6 +140,7 @@ const collectionProducts = [
     },
     {
         id: 'tep-pure-red-line',
+        category: 'shrimps',
         nameVi: 'Tép Pure Red Line',
         nameEn: 'Pure Red Line Shrimp',
         shortDescriptionVi: 'Tép với đường màu đỏ thuần khiết, màu sắc sống động và bền vững.',
@@ -151,6 +153,7 @@ const collectionProducts = [
     },
     {
         id: 'tep-blue-diamond',
+        category: 'shrimps',
         nameVi: 'Tép Blue Diamond',
         nameEn: 'Blue Diamond Shrimp',
         shortDescriptionVi: 'Tép cảnh với màu xanh kim cương lấp lánh, dễ nuôi cho người mới.',
@@ -163,6 +166,7 @@ const collectionProducts = [
     },
     {
         id: 'tep-cam',
+        category: 'shrimps',
         nameVi: 'Tép Cam',
         nameEn: 'Orange Shrimp',
         shortDescriptionVi: 'Tép màu cam rực rỡ, dễ nuôi và giá cả phải chăng.',
@@ -175,6 +179,7 @@ const collectionProducts = [
     },
     {
         id: 'tep-bloody-mary',
+        category: 'shrimps',
         nameVi: 'Tép Bloody Mary',
         nameEn: 'Bloody Mary Shrimp',
         shortDescriptionVi: 'Tép cao cấp với màu đỏ thẫm và đầu trong suốt độc đáo.',
@@ -187,6 +192,7 @@ const collectionProducts = [
     },
     {
         id: 'tep-snow-ball',
+        category: 'shrimps',
         nameVi: 'Tép Snow Ball',
         nameEn: 'Snow Ball Shrimp',
         shortDescriptionVi: 'Tép trắng tinh như tuyết, tạo điểm nhấn đẹp trong bể cây xanh.',
@@ -199,6 +205,7 @@ const collectionProducts = [
     },
     {
         id: 'tep-black-galaxy-fishbone-snowflake',
+        category: 'shrimps',
         nameVi: 'Tép Black Galaxy Fishbone Snowflake',
         nameEn: 'Black Galaxy Fishbone Snowflake Shrimp',
         shortDescriptionVi: 'Tép lạnh cao cấp với họa tiết thiên hà đen và tuyết rơi.',
@@ -211,6 +218,7 @@ const collectionProducts = [
     },
     {
         id: 'tep-black-galaxy-boa',
+        category: 'shrimps',
         nameVi: 'Tép Black Galaxy BOA',
         nameEn: 'Black Galaxy BOA Shrimp',
         shortDescriptionVi: 'Vua của các loại tép lạnh với vẻ đẹp tuyệt đỉnh và giá trị cực cao.',
@@ -223,6 +231,7 @@ const collectionProducts = [
     },
     {
         id: 'tep-red-galaxy-tiger',
+        category: 'shrimps',
         nameVi: 'Tép Red Galaxy Tiger',
         nameEn: 'Red Galaxy Tiger Shrimp',
         shortDescriptionVi: 'Tép lạnh với màu đỏ rực rỡ, họa tiết sọc hổ và chấm galaxy.',
@@ -231,6 +240,60 @@ const collectionProducts = [
         tds: '100-160 ppm',
         gh: '3-6 dGH',
         lifespan: '2-2.5',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    // Sample fishes products
+    {
+        id: 'ca-betta',
+        category: 'fishes',
+        nameVi: 'Cá Betta (Xiêm)',
+        nameEn: 'Betta Fish (Siamese Fighter)',
+        shortDescriptionVi: 'Cá Betta với màu sắc rực rỡ và dễ nuôi, phù hợp cho người mới bắt đầu.',
+        shortDescriptionEn: 'Vibrant and easy-to-care Betta fish, perfect for beginners.',
+        temperature: '24-28°C',
+        tds: '150-300 ppm',
+        gh: '5-19 dGH',
+        lifespan: '2-3',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'ca-guppy',
+        category: 'fishes',
+        nameVi: 'Cá Guppy',
+        nameEn: 'Guppy Fish',
+        shortDescriptionVi: 'Cá Guppy nhỏ xinh với màu sắc đa dạng, sinh sản nhanh và dễ chăm sóc.',
+        shortDescriptionEn: 'Small colorful Guppy fish, fast breeding and easy care.',
+        temperature: '22-28°C',
+        tds: '150-400 ppm',
+        gh: '7-12 dGH',
+        lifespan: '1-2',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    // Sample accessory products
+    {
+        id: 'may-loc-nuoc',
+        category: 'accessory',
+        nameVi: 'Máy Lọc Nước Mini',
+        nameEn: 'Mini Water Filter',
+        shortDescriptionVi: 'Máy lọc nước nhỏ gọn phù hợp cho bể nano, duy trì chất lượng nước tốt.',
+        shortDescriptionEn: 'Compact water filter suitable for nano tanks, maintains good water quality.',
+        temperature: 'N/A',
+        tds: 'N/A',
+        gh: 'N/A',
+        lifespan: '1-2',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'den-led-thuy-sinh',
+        category: 'accessory',
+        nameVi: 'Đèn LED Thủy Sinh',
+        nameEn: 'LED Aquarium Light',
+        shortDescriptionVi: 'Đèn LED chuyên dụng cho thủy sinh, hỗ trợ quang hợp và tăng màu sắc.',
+        shortDescriptionEn: 'Specialized LED light for aquariums, supports photosynthesis and enhances colors.',
+        temperature: 'N/A',
+        tds: 'N/A',
+        gh: 'N/A',
+        lifespan: '3-5',
         images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
     }
 ];
@@ -258,23 +321,31 @@ function getProductByLang(product, property, lang) {
 // Helper function to get collection product file path based on language
 // getProductFile function removed - now using embedded content
 
-// Collection pagination variables
+// Collection pagination and filter variables
 let currentCollectionPage = 1;
+let currentFilter = 'all';
 const productsPerPage = 20;
 
-// Display collection products with pagination
-function displayCollectionProducts(page = 1) {
+// Display collection products with pagination and filtering
+function displayCollectionProducts(page = 1, filter = currentFilter) {
     const collectionContainer = document.getElementById('collection-list');
     if (!collectionContainer) return;
 
     currentCollectionPage = page;
+    currentFilter = filter;
+
+    // Filter products by category
+    let filteredProducts = collectionProducts;
+    if (filter && filter !== 'all') {
+        filteredProducts = collectionProducts.filter(product => product.category === filter);
+    }
 
     // Calculate pagination
-    const totalProducts = collectionProducts.length;
+    const totalProducts = filteredProducts.length;
     const totalPages = Math.ceil(totalProducts / productsPerPage);
     const startIndex = (page - 1) * productsPerPage;
     const endIndex = Math.min(startIndex + productsPerPage, totalProducts);
-    const productsToShow = collectionProducts.slice(startIndex, endIndex);
+    const productsToShow = filteredProducts.slice(startIndex, endIndex);
 
     // Clear existing content
     collectionContainer.innerHTML = '';
@@ -294,7 +365,7 @@ function displayCollectionProducts(page = 1) {
     if (totalPages > 1) {
         const paginationContainer = document.createElement('div');
         paginationContainer.className = 'pagination';
-        paginationContainer.innerHTML = createPaginationHTML(page, totalPages);
+        paginationContainer.innerHTML = createPaginationHTML(page, totalPages, filter);
         collectionContainer.appendChild(paginationContainer);
     }
 }
@@ -349,12 +420,12 @@ function createProductCard(product) {
 }
 
 // Create pagination HTML
-function createPaginationHTML(currentPage, totalPages) {
+function createPaginationHTML(currentPage, totalPages, filter = 'all') {
     let paginationHTML = '<div class="pagination-controls">';
 
     // Previous button
     if (currentPage > 1) {
-        paginationHTML += `<button class="pagination-btn" onclick="displayCollectionProducts(${currentPage - 1})">${t('collection.previous', currentLanguage)}</button>`;
+        paginationHTML += `<button class="pagination-btn" onclick="displayCollectionProducts(${currentPage - 1}, '${filter}')">${t('collection.previous', currentLanguage)}</button>`;
     }
 
     // Page numbers
@@ -365,17 +436,24 @@ function createPaginationHTML(currentPage, totalPages) {
         if (i === currentPage) {
             paginationHTML += `<span class="pagination-current">${i}</span>`;
         } else {
-            paginationHTML += `<button class="pagination-btn" onclick="displayCollectionProducts(${i})">${i}</button>`;
+            paginationHTML += `<button class="pagination-btn" onclick="displayCollectionProducts(${i}, '${filter}')">${i}</button>`;
         }
     }
 
     // Next button
     if (currentPage < totalPages) {
-        paginationHTML += `<button class="pagination-btn" onclick="displayCollectionProducts(${currentPage + 1})">${t('collection.next', currentLanguage)}</button>`;
+        paginationHTML += `<button class="pagination-btn" onclick="displayCollectionProducts(${currentPage + 1}, '${filter}')">${t('collection.next', currentLanguage)}</button>`;
     }
 
     paginationHTML += '</div>';
     return paginationHTML;
+}
+
+// Filter collection products by category
+function filterCollection(category) {
+    currentFilter = category;
+    currentCollectionPage = 1; // Reset to first page when filtering
+    displayCollectionProducts(1, category);
 }
 
 // Load product details
@@ -411,8 +489,8 @@ async function loadProduct(productId) {
     articleContent.innerHTML = `<div class="loading">${loadingText}</div>`;
 
     try {
-        // Load file Markdown từ thư mục collection/{lang}/
-        const productFile = `collection/${currentLanguage}/${productId}.md`;
+        // Load file Markdown từ thư mục collection/shrimps/{lang}/
+        const productFile = `collection/shrimps/${currentLanguage}/${productId}.md`;
         console.log('Loading product file:', productFile);
         
         const response = await fetch(productFile);
@@ -742,7 +820,30 @@ function updateTranslations() {
         }
     });
     
+    // Update collection filter dropdown options
+    updateCollectionFilterOptions();
+    
     console.log('Translations updated successfully');
+}
+
+// Update collection filter dropdown options with current language
+function updateCollectionFilterOptions() {
+    const filterSelect = document.getElementById('category-filter');
+    if (!filterSelect) return;
+    
+    const currentValue = filterSelect.value;
+    
+    // Update option texts
+    const options = filterSelect.querySelectorAll('option');
+    options.forEach(option => {
+        const key = option.getAttribute('data-translate');
+        if (key) {
+            option.textContent = t(key, currentLanguage);
+        }
+    });
+    
+    // Preserve current selection
+    filterSelect.value = currentValue;
 }
 
 // Hiển thị danh sách bài viết

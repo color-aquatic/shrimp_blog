@@ -28,7 +28,12 @@ const translations = {
             loading: 'Đang tải bộ sưu tập...',
             noProducts: 'Không có sản phẩm nào.',
             previous: 'Trước',
-            next: 'Tiếp'
+            next: 'Tiếp',
+            filterLabel: 'Lọc theo danh mục:',
+            filterAll: 'Tất cả',
+            filterShrimps: 'Tép cảnh',
+            filterFishes: 'Cá cảnh',
+            filterAccessory: 'Phụ kiện'
         },
 
         // Posts Section
@@ -112,7 +117,12 @@ const translations = {
             loading: 'Loading collection...',
             noProducts: 'No products available.',
             previous: 'Previous',
-            next: 'Next'
+            next: 'Next',
+            filterLabel: 'Filter by category:',
+            filterAll: 'All',
+            filterShrimps: 'Shrimps',
+            filterFishes: 'Fishes',
+            filterAccessory: 'Accessory'
         },
 
         // Posts Section
