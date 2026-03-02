@@ -219,8 +219,14 @@
     <!-- Marked.js for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     
-    <!-- Translations -->
+    <!-- Modular JavaScript - Load in order -->
     <script src="js/translations.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/ui-helpers.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
     
     <!-- Social Stick -->
     <div class="social-stick">
@@ -237,8 +243,5 @@
             <i class="fab fa-tiktok"></i>
         </a>
     </div>
-
-    <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
 </body>
 </html>
