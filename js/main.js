@@ -295,6 +295,98 @@ const collectionProducts = [
         gh: 'N/A',
         lifespan: '3-5',
         images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    // New accessory products
+    {
+        id: 'loc-qs200',
+        category: 'accessory',
+        nameVi: 'Lọc QS200',
+        nameEn: 'QS200 Filter',
+        shortDescriptionVi: 'Combo lọc vi sinh cao cấp từ Qanvee, tích hợp công nghệ denitrate khử nitrat hiệu quả.',
+        shortDescriptionEn: 'Premium biological filtration combo from Qanvee with advanced denitrate technology for effective nitrate removal.',
+        temperature: 'N/A',
+        tds: 'N/A',
+        gh: 'N/A',
+        lifespan: '2-3',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'loc-thac-kaokui',
+        category: 'accessory',
+        nameVi: 'Lọc thác Kaokui',
+        nameEn: 'Kaokui Waterfall Filter',
+        shortDescriptionVi: 'Hệ thống lọc treo ngoài với thiết kế thác nước độc đáo, model KK-528 và KK-538.',
+        shortDescriptionEn: 'Hang-on-back filtration system with unique waterfall design, models KK-528 and KK-538.',
+        temperature: 'N/A',
+        tds: 'N/A',
+        gh: 'N/A',
+        lifespan: '2-3',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'keo-dan-reu-thuy-sinh',
+        category: 'accessory',
+        nameVi: 'Keo dán rêu thủy sinh',
+        nameEn: 'Aquatic Moss Glue',
+        shortDescriptionVi: 'Keo GUO Elephant Super Glue chuyên dụng cho việc dán rêu và cây thủy sinh, an toàn sinh học.',
+        shortDescriptionEn: 'GUO Elephant Super Glue specially designed for attaching moss and aquatic plants, biologically safe.',
+        temperature: 'N/A',
+        tds: 'N/A',
+        gh: 'N/A',
+        lifespan: '1-2',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'binh-co2-thuy-sinh',
+        category: 'accessory',
+        nameVi: 'Bình CO2 thủy sinh',
+        nameEn: 'Aquatic CO2 Tank',
+        shortDescriptionVi: 'Thiết bị cung cấp carbon dioxide cho cây thủy sinh, thúc đẩy quá trình quang hợp.',
+        shortDescriptionEn: 'Carbon dioxide supply device for aquatic plants, promoting photosynthesis process.',
+        temperature: 'N/A',
+        tds: 'N/A',
+        gh: 'N/A',
+        lifespan: '3-5',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'loc-vang-kaokui',
+        category: 'accessory',
+        nameVi: 'Lọc váng Kaokui',
+        nameEn: 'Kaokui Surface Skimmer',
+        shortDescriptionVi: 'Thiết bị KK-88 Surface Skimmer Mini chuyên loại bỏ váng dầu và tạp chất nổi.',
+        shortDescriptionEn: 'KK-88 Surface Skimmer Mini device specialized in removing oil film and floating debris.',
+        temperature: 'N/A',
+        tds: 'N/A',
+        gh: 'N/A',
+        lifespan: '2-3',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'den-neo-helios',
+        category: 'accessory',
+        nameVi: 'Đèn Neo-Helios',
+        nameEn: 'Neo-Helios Light',
+        shortDescriptionVi: 'Đèn LED RGB 3 in 1 cao cấp với công nghệ Solar Light, thiết kế phẳng hiện đại.',
+        shortDescriptionEn: 'Premium RGB LED 3-in-1 light with Solar Light technology and modern flat design.',
+        temperature: 'N/A',
+        tds: 'N/A',
+        gh: 'N/A',
+        lifespan: '5-7',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'men-vi-sinh-koika-bac',
+        category: 'accessory',
+        nameVi: 'Men vi sinh Koika-Bac',
+        nameEn: 'Koika-Bac Microorganisms',
+        shortDescriptionVi: 'Sản phẩm bổ sung men vi sinh chuyên dụng, giúp phân hủy chất thải và cân bằng sinh học.',
+        shortDescriptionEn: 'Specialized probiotic supplement that helps decompose waste and maintain biological balance.',
+        temperature: 'N/A',
+        tds: 'N/A',
+        gh: 'N/A',
+        lifespan: '1-2',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
     }
 ];
 
@@ -489,8 +581,8 @@ async function loadProduct(productId) {
     articleContent.innerHTML = `<div class="loading">${loadingText}</div>`;
 
     try {
-        // Load file Markdown từ thư mục collection/shrimps/{lang}/
-        const productFile = `collection/shrimps/${currentLanguage}/${productId}.md`;
+        // Load file Markdown từ thư mục collection/{category}/{lang}/
+        const productFile = `collection/${product.category}/${currentLanguage}/${productId}.md`;
         console.log('Loading product file:', productFile);
         
         const response = await fetch(productFile);
