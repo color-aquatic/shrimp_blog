@@ -12,15 +12,6 @@ The Kaokui Waterfall Filter is a premium hang-on-back filtration system with uni
 - **Style**: Natural waterfall flow
 - **Installation**: Hang-on-back
 
-## Technical Specifications
-
-| Parameter | KK-528 | KK-538 |
-|-----------|---------|---------|
-| Size | Compact | Medium |
-| Flow rate | Suitable for small tanks | Suitable for medium tanks |
-| Noise level | Ultra quiet | Ultra quiet |
-| Power consumption | Energy efficient | Energy efficient |
-| Waterfall type | Natural | Natural |
 
 ## Application and Usage
 
@@ -38,4 +29,4 @@ The Kaokui Waterfall Filter is a premium hang-on-back filtration system with uni
 
 ## Product Link
 
-[Buy at tepmauquan3.com](https://tepmauquan3.com/loc-thac-kaokui-kk-528-kk-538-slim-hanging-filter)
+_Product link will be updated later_

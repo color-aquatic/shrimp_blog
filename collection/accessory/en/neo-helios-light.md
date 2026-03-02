@@ -12,17 +12,6 @@ The Neo-Helios Flat XP Series Solar Light RGB 3 in 1 is a premium lighting devic
 - **Design**: Flat, modern
 - **Technology**: Premium RGB LED
 
-## Technical Specifications
-
-| Parameter | Value |
-|-----------|--------|
-| LED type | RGB Full Spectrum |
-| Power | Varies by size |
-| Color temperature | 6500K-10000K |
-| Lifespan | 50,000+ hours |
-| Timer function | Yes |
-| Remote control | Yes |
-
 ## Application and Usage
 
 ### Outstanding Features:
@@ -52,4 +41,4 @@ The Neo-Helios Flat XP Series Solar Light RGB 3 in 1 is a premium lighting devic
 
 ## Product Link
 
-[Buy at tepmauquan3.com](https://tepmauquan3.com/den-thuy-sinh-neo-helios-flat-xp-series-solar-light-rgb-3-in-1)
+_Product link will be updated later_

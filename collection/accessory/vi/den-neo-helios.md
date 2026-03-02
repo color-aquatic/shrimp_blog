@@ -12,16 +12,6 @@
 - **Thiết kế**: Phẳng, hiện đại
 - **Công nghệ**: LED RGB cao cấp
 
-## Thông số kỹ thuật
-
-| Thông số | Giá trị |
-|----------|---------|
-| Loại LED | RGB Full Spectrum |
-| Công suất | Tùy theo kích thước |
-| Nhiệt độ màu | 6500K-10000K |
-| Thời gian sống | 50,000+ giờ |
-| Chức năng timer | Có |
-| Điều khiển remote | Có |
 
 ## Ứng dụng và cách sử dụng
 
@@ -52,4 +42,4 @@
 
 ## Link sản phẩm
 
-[Mua tại tepmauquan3.com](https://tepmauquan3.com/den-thuy-sinh-neo-helios-flat-xp-series-solar-light-rgb-3-in-1)
+_Link sản phẩm sẽ được cập nhật sau_

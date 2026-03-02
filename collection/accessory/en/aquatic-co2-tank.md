@@ -12,16 +12,6 @@ The Aquatic CO2 Tank is a device that supplies carbon dioxide for aquatic plants
 - **Safety**: Pressure regulator, gauge included
 - **Easy to use**: Simple installation
 
-## Technical Specifications
-
-| Parameter | Value |
-|-----------|--------|
-| Capacity | Various sizes |
-| Pressure | Adjustable regulator |
-| Gauge | Pressure display |
-| Tubing | Premium silicone |
-| Needle valve | Precise adjustment |
-
 ## Application and Usage
 
 ### Benefits:
@@ -45,4 +35,4 @@ The Aquatic CO2 Tank is a device that supplies carbon dioxide for aquatic plants
 
 ## Product Link
 
-[Buy at tepmauquan3.com](https://tepmauquan3.com/binh-co2-thuy-sinh)
+_Product link will be updated later_

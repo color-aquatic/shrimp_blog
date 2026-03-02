@@ -12,15 +12,6 @@ Men vi sinh Koika-Bac là sản phẩm bổ sung men vi sinh chuyên dụng cho 
 - **Tính năng**: Phân hủy chất thải, cân bằng sinh học
 - **An toàn**: Hoàn toàn tự nhiên
 
-## Thông số kỹ thuật
-
-| Thông số | Giá trị |
-|----------|---------|
-| Nồng độ men | Cao, đậm đặc |
-| Số lượng chủng vi khuẩn | Đa dạng |
-| Thời gian hiệu quả | Lâu dài |
-| Bảo quản | Nơi khô ráo, thoáng mát |
-| Hạn sử dụng | Theo ghi trên bao bì |
 
 ## Ứng dụng và cách sử dụng
 
@@ -51,4 +42,4 @@ Men vi sinh Koika-Bac là sản phẩm bổ sung men vi sinh chuyên dụng cho 
 
 ## Link sản phẩm
 
-[Mua tại tepmauquan3.com](https://tepmauquan3.com/men-vi-sinh-koika-bac)
+_Link sản phẩm sẽ được cập nhật sau_

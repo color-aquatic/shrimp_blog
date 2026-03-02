@@ -12,16 +12,6 @@ The Kaokui KK-88 Surface Skimmer Mini is a specialized device designed to remove
 - **Size**: Mini, compact and lightweight
 - **Design**: Modern, aesthetic
 
-## Technical Specifications
-
-| Parameter | Value |
-|-----------|--------|
-| Size | Mini (suitable for small tanks) |
-| Suction flow | Adjustable |
-| Power consumption | Energy efficient |
-| Noise level | Ultra quiet |
-| Installation | Simple, convenient |
-
 ## Application and Usage
 
 ### Functions:
@@ -50,4 +40,4 @@ The Kaokui KK-88 Surface Skimmer Mini is a specialized device designed to remove
 
 ## Product Link
 
-[Buy at tepmauquan3.com](https://tepmauquan3.com/loc-vang-kaokui-kk-88-surface-skimmer-mini)
+_Product link will be updated later_

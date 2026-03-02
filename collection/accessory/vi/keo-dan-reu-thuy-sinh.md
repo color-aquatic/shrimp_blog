@@ -12,15 +12,6 @@ Keo dán rêu thủy sinh GUO Elephant Super Glue là sản phẩm chuyên dụn
 - **Ứng dụng**: Dán rêu, cây thủy sinh
 - **Tính năng**: Khô nhanh, kết dính mạnh
 
-## Thông số kỹ thuật
-
-| Thông số | Giá trị |
-|----------|---------|
-| Thời gian khô | 30 giây - 2 phút |
-| Khả năng chống nước | 100% |
-| An toàn sinh học | Có |
-| Thể tích | Theo từng size |
-| Bảo quản | Nơi khô ráo, thoáng mát |
 
 ## Ứng dụng và cách sử dụng
 
@@ -45,4 +36,4 @@ Keo dán rêu thủy sinh GUO Elephant Super Glue là sản phẩm chuyên dụn
 
 ## Link sản phẩm
 
-[Mua tại tepmauquan3.com](https://tepmauquan3.com/keo-dan-reu-thuy-sinh-guo-elephant-super-glue)
+_Link sản phẩm sẽ được cập nhật sau_

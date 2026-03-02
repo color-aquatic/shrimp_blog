@@ -12,16 +12,6 @@ GUO Elephant Super Glue for aquatic moss is a specialized product for decorating
 - **Application**: Moss bonding, aquatic plants
 - **Features**: Quick dry, strong bonding
 
-## Technical Specifications
-
-| Parameter | Value |
-|-----------|--------|
-| Drying time | 30 seconds - 2 minutes |
-| Waterproof ability | 100% |
-| Biological safety | Yes |
-| Volume | Various sizes |
-| Storage | Dry, cool place |
-
 ## Application and Usage
 
 ### Functions:
@@ -45,4 +35,4 @@ GUO Elephant Super Glue for aquatic moss is a specialized product for decorating
 
 ## Product Link
 
-[Buy at tepmauquan3.com](https://tepmauquan3.com/keo-dan-reu-thuy-sinh-guo-elephant-super-glue)
+_Product link will be updated later_

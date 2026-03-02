@@ -484,6 +484,7 @@ function createProductCard(product) {
         <div class="product-info">
             <h3>${productName}</h3>
             <p class="product-description">${productDescription}</p>
+            ${product.category !== 'accessory' ? `
             <div class="product-specs">
                 <div class="spec-item">
                     <span class="spec-label">${t('collection.temperature', currentLanguage)}:</span>
@@ -502,6 +503,7 @@ function createProductCard(product) {
                     <span class="spec-value">${product.lifespan}</span>
                 </div>
             </div>
+            ` : ''}
             <button class="view-details-btn" onclick="loadProduct('${product.id}')">
                 ${t('collection.viewDetails', currentLanguage)}
             </button>
@@ -1571,6 +1573,7 @@ function createSearchResultCard(item, type) {
                 <div class="product-info">
                     <h3>${highlightedName}</h3>
                     <p class="product-description">${highlightedDescription}</p>
+                    ${item.category !== 'accessory' ? `
                     <div class="product-specs">
                         <div class="spec-item">
                             <span class="spec-label">${t('collection.temperature', currentLanguage)}:</span>
@@ -1589,6 +1592,7 @@ function createSearchResultCard(item, type) {
                             <span class="spec-value">${highlightText(item.lifespan || '', query)}</span>
                         </div>
                     </div>
+                    ` : ''}
                     <button class="view-details-btn" onclick="loadProduct('${item.id}'); window.history.pushState({ productId: '${item.id}' }, '', '?product=${item.id}')">
                         ${t('collection.viewDetails', currentLanguage)}
                     </button>

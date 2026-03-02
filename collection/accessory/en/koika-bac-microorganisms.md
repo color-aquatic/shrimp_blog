@@ -12,16 +12,6 @@ Koika-Bac Microorganisms is a specialized probiotic supplement for fish and shri
 - **Features**: Waste decomposition, biological balance
 - **Safety**: Completely natural
 
-## Technical Specifications
-
-| Parameter | Value |
-|-----------|--------|
-| Bacteria concentration | High, concentrated |
-| Number of bacterial strains | Diverse |
-| Effectiveness duration | Long-lasting |
-| Storage | Dry, cool place |
-| Expiration date | As marked on package |
-
 ## Application and Usage
 
 ### Functions:
@@ -51,4 +41,4 @@ Koika-Bac Microorganisms is a specialized probiotic supplement for fish and shri
 
 ## Product Link
 
-[Buy at tepmauquan3.com](https://tepmauquan3.com/men-vi-sinh-koika-bac)
+_Product link will be updated later_

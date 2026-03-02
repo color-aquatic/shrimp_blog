@@ -12,15 +12,6 @@ Lọc váng Kaokui KK-88 Surface Skimmer Mini là thiết bị chuyên dụng đ
 - **Kích thước**: Mini, gọn nhẹ
 - **Thiết kế**: Hiện đại, thẩm mỹ
 
-## Thông số kỹ thuật
-
-| Thông số | Giá trị |
-|----------|---------|
-| Kích thước | Mini (phù hợp bể nhỏ) |
-| Lưu lượng hút | Điều chỉnh được |
-| Công suất | Tiết kiệm điện |
-| Tiếng ồn | Cực yên tĩnh |
-| Lắp đặt | Đơn giản, tiện lợi |
 
 ## Ứng dụng và cách sử dụng
 
@@ -50,4 +41,4 @@ Lọc váng Kaokui KK-88 Surface Skimmer Mini là thiết bị chuyên dụng đ
 
 ## Link sản phẩm
 
-[Mua tại tepmauquan3.com](https://tepmauquan3.com/loc-vang-kaokui-kk-88-surface-skimmer-mini)
+_Link sản phẩm sẽ được cập nhật sau_

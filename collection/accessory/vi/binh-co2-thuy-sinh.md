@@ -12,15 +12,6 @@ Bình CO2 thủy sinh là thiết bị cung cấp carbon dioxide cho cây thủy
 - **An toàn**: Có van điều áp, đồng hồ đo
 - **Dễ sử dụng**: Lắp đặt đơn giản
 
-## Thông số kỹ thuật
-
-| Thông số | Giá trị |
-|----------|---------|
-| Dung tích | Đa dạng size |
-| Áp suất | Có van điều chỉnh |
-| Đồng hồ đo | Hiển thị áp suất |
-| Ống dẫn | Silicone cao cấp |
-| Van kim | Điều chỉnh chính xác |
 
 ## Ứng dụng và cách sử dụng
 
@@ -45,4 +36,4 @@ Bình CO2 thủy sinh là thiết bị cung cấp carbon dioxide cho cây thủy
 
 ## Link sản phẩm
 
-[Mua tại tepmauquan3.com](https://tepmauquan3.com/binh-co2-thuy-sinh)
+_Link sản phẩm sẽ được cập nhật sau_
