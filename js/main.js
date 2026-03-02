@@ -387,6 +387,72 @@ const collectionProducts = [
         gh: 'N/A',
         lifespan: '1-2',
         images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    // Plants products
+    {
+        id: 'reu-pelia',
+        category: 'plants',
+        nameVi: 'Rêu Pelia',
+        nameEn: 'Pelia Moss',
+        shortDescriptionVi: 'Rêu thủy sinh độc đáo với hình dạng giống lá gan, tốc độ phát triển chậm nhưng tạo hiệu ứng thị giác đẹp mắt.',
+        shortDescriptionEn: 'Unique aquatic liverwort with leaf-like appearance, slow growth but creates stunning visual effects.',
+        temperature: '18-26°C',
+        tds: 'N/A',
+        gh: 'Soft to medium',
+        lifespan: 'N/A',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'reu-mini-taiwan',
+        category: 'plants',
+        nameVi: 'Rêu Mini Taiwan',
+        nameEn: 'Mini Taiwan Moss',
+        shortDescriptionVi: 'Rêu thủy sinh có kích thước rất nhỏ, tạo thảm xanh dày đặc và đẹp mắt cho foreground.',
+        shortDescriptionEn: 'Very small aquatic moss that creates dense, beautiful green carpets for foreground planting.',
+        temperature: '22-28°C',
+        tds: 'N/A',
+        gh: 'Soft to hard',
+        lifespan: 'N/A',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'duong-xi-chau-phi',
+        category: 'plants',
+        nameVi: 'Dương Xỉ Châu Phi',
+        nameEn: 'African Fern',
+        shortDescriptionVi: 'Dương xỉ nước với lá kép chia thùy sâu, độc đáo và dễ chăm sóc trong aquascape.',
+        shortDescriptionEn: 'Aquatic fern with compound, deeply divided leaves, unique and easy to care for in aquascaping.',
+        temperature: '20-28°C',
+        tds: 'N/A',
+        gh: 'Soft to medium',
+        lifespan: 'N/A',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'duong-xi-la-kim-mini',
+        category: 'plants',
+        nameVi: 'Dương Xỉ Lá Kim Mini',
+        nameEn: 'Mini Needle Leaf Fern',
+        shortDescriptionVi: 'Biến thể đặc biệt của dương xỉ Java với lá hẹp dài như kim, tạo hiệu ứng động trong nước.',
+        shortDescriptionEn: 'Special Java Fern variant with narrow needle-like leaves, creating dynamic effects in water.',
+        temperature: '18-30°C',
+        tds: 'N/A',
+        gh: 'Soft to hard',
+        lifespan: 'N/A',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+    },
+    {
+        id: 'ray-nana',
+        category: 'plants',
+        nameVi: 'Ráy Nana',
+        nameEn: 'Anubias Nana',
+        shortDescriptionVi: 'Cây thủy sinh phổ biến và dễ trồng nhất với lá xanh đậm bóng, hoàn hảo cho người mới.',
+        shortDescriptionEn: 'Most popular and easy-to-grow aquatic plant with dark green glossy leaves, perfect for beginners.',
+        temperature: '22-28°C',
+        tds: 'N/A',
+        gh: 'Soft to hard',
+        lifespan: 'N/A',
+        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
     }
 ];
 
