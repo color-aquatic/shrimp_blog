@@ -1,22 +1,11 @@
 // UI Helper Functions for Color Aquatic
 console.log('ui-helpers.js loaded');
 
-// Helper function to get post properties based on language
-function getPostByLang(post, property, lang) {
-    const langKey = property + (lang === 'en' ? 'En' : 'Vi');
-    return post[langKey] || post[property] || '';
-}
-
 // Helper function to get post file path based on language
 function getPostFile(postId, lang) {
     return `posts/${lang}/${postId}.md`;
 }
 
-// Helper function to get collection product properties based on language
-function getProductByLang(product, property, lang) {
-    const langKey = property + (lang === 'en' ? 'En' : 'Vi');
-    return product[langKey] || product[property] || '';
-}
 
 // Create product card HTML
 function createProductCard(product) {
@@ -30,11 +19,11 @@ function createProductCard(product) {
     card.innerHTML = `
         <div class="product-images">
             <div class="main-image">
-                <img src="images/placeholder1.png" alt="${productName}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='">
+                <img src="images/placeholder1.png" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='">
             </div>
             <div class="thumbnail-images">
                 ${product.images.slice(0, 4).map((img, index) =>
-                    `<img src="images/${img}" alt="${productName} ${index + 1}" onerror="this.style.display='none'">`
+                    `<img src="images/${img}" alt="${productName} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
                 ).join('')}
             </div>
         </div>
@@ -61,7 +50,7 @@ function createProductCard(product) {
                 </div>
             </div>
             ` : ''}
-            <button class="view-details-btn" onclick="loadProduct('${product.id}')">
+            <button type="button" class="view-details-btn" data-product-id="${product.id}">
                 ${t('collection.viewDetails', lang)}
             </button>
         </div>
@@ -77,7 +66,7 @@ function createPaginationHTML(currentPage, totalPages, filter = 'all') {
 
     // Previous button
     if (currentPage > 1) {
-        paginationHTML += `<button class="pagination-btn" onclick="displayCollectionProducts(${currentPage - 1}, '${filter}')">${t('collection.previous', lang)}</button>`;
+        paginationHTML += `<button type="button" class="pagination-btn" data-page="${currentPage - 1}" data-filter="${filter}">${t('collection.previous', lang)}</button>`;
     }
 
     // Page numbers
@@ -88,13 +77,13 @@ function createPaginationHTML(currentPage, totalPages, filter = 'all') {
         if (i === currentPage) {
             paginationHTML += `<span class="pagination-current">${i}</span>`;
         } else {
-            paginationHTML += `<button class="pagination-btn" onclick="displayCollectionProducts(${i}, '${filter}')">${i}</button>`;
+            paginationHTML += `<button type="button" class="pagination-btn" data-page="${i}" data-filter="${filter}">${i}</button>`;
         }
     }
 
     // Next button
     if (currentPage < totalPages) {
-        paginationHTML += `<button class="pagination-btn" onclick="displayCollectionProducts(${currentPage + 1}, '${filter}')">${t('collection.next', lang)}</button>`;
+        paginationHTML += `<button type="button" class="pagination-btn" data-page="${currentPage + 1}" data-filter="${filter}">${t('collection.next', lang)}</button>`;
     }
 
     paginationHTML += '</div>';

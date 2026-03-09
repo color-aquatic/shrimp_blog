@@ -92,14 +92,14 @@
                     <button id="search-button" class="search-btn">
                         <i class="fas fa-search"></i>
                     </button>
-                    <button id="clear-search" class="clear-btn" style="display: none;">
+                    <button id="clear-search" class="clear-btn is-hidden">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
             </div>
             
             <!-- Search Results Section -->
-            <div id="search-results" style="display: none;">
+            <div id="search-results" class="is-hidden">
                 <h3 id="search-results-title" data-translate="search.resultsTitle">Kết quả tìm kiếm</h3>
                 <div id="search-results-content">
                     <!-- Search results will be displayed here -->
@@ -115,25 +115,37 @@
         <section id="benefits">
             <div class="slideshow-container">
                 <div class="slide active">
-                    <img src="images/good_benefits.png" alt="Good Benefits">
+                    <picture>
+                        <source srcset="images/optimized/good_benefits.avif" type="image/avif">
+                        <source srcset="images/optimized/good_benefits.webp" type="image/webp">
+                        <img src="images/good_benefits.png" alt="Good Benefits" fetchpriority="high" decoding="async">
+                    </picture>
                 </div>
                 <div class="slide">
-                    <img src="images/no3.png" alt="No 3">
+                    <picture>
+                        <source srcset="images/optimized/no3.avif" type="image/avif">
+                        <source srcset="images/optimized/no3.webp" type="image/webp">
+                        <img src="images/no3.png" alt="No 3" loading="lazy" decoding="async">
+                    </picture>
                 </div>
                 <div class="slide">
-                    <img src="images/fetilizer.png" alt="Fertilizer">
+                    <picture>
+                        <source srcset="images/optimized/fetilizer.avif" type="image/avif">
+                        <source srcset="images/optimized/fetilizer.webp" type="image/webp">
+                        <img src="images/fetilizer.png" alt="Fertilizer" loading="lazy" decoding="async">
+                    </picture>
                 </div>
                 
                 <!-- Navigation Buttons -->
-                <button class="slideshow-nav prev" onclick="changeSlide(-1)">❮</button>
-                <button class="slideshow-nav next" onclick="changeSlide(1)">❯</button>
+                <button id="slide-prev" class="slideshow-nav prev">❮</button>
+                <button id="slide-next" class="slideshow-nav next">❯</button>
             </div>
             
             <!-- Slide Indicators -->
             <div class="slideshow-indicators">
-                <span class="indicator active" onclick="goToSlide(0)"></span>
-                <span class="indicator" onclick="goToSlide(1)"></span>
-                <span class="indicator" onclick="goToSlide(2)"></span>
+                <span class="indicator active" data-slide-to="0"></span>
+                <span class="indicator" data-slide-to="1"></span>
+                <span class="indicator" data-slide-to="2"></span>
             </div>
         </section>
 
@@ -143,7 +155,7 @@
             <!-- Collection Filter -->
             <div class="collection-filter">
                 <label for="category-filter" data-translate="collection.filterLabel">Lọc theo danh mục:</label>
-                <select id="category-filter" onchange="filterCollection(this.value)">
+                <select id="category-filter">
                     <option value="all" data-translate="collection.filterAll">Tất cả</option>
                     <option value="shrimps" data-translate="collection.filterShrimps">Tép cảnh</option>
                     <option value="fishes" data-translate="collection.filterFishes">Cá cảnh</option>
@@ -163,7 +175,7 @@
             </div>
         </section>
 
-        <section id="post-content" style="display: none;">
+        <section id="post-content" class="is-hidden">
             <article id="article-content">
                 <!-- Markdown content will be rendered here -->
             </article>
@@ -172,7 +184,7 @@
             </nav>
         </section>
 
-        <section id="product-detail" style="display: none;">
+        <section id="product-detail" class="is-hidden">
             <!-- Product detail content will be rendered here -->
         </section>
 
@@ -184,24 +196,24 @@
 
     </main>
 
-    <footer class="container" style="display: flex; flex-direction: column; align-items: center;">
-        <div style="display: flex; justify-content: space-between; width: 100%;">
-            <div style="flex: 1; text-align: left;">
+    <footer class="container footer-layout">
+        <div class="footer-row">
+            <div class="footer-col-left">
                 <p data-translate="contact.hotline">Hotline: 0836 569 811</p>
                 <p data-translate="contact.address">Địa chỉ: 8 Ni Sư Huỳnh Liên, Phường 10, Quận Tân Bình, TP.HCM</p>
                 <p data-translate="contact.representative">Đại diện: Hoàng Quốc Tú</p>
                 <p data-translate="contact.email">Email: <a href="mailto:hoangquoctu95@gmail.com">hoangquoctu95@gmail.com</a></p>
             </div>
-            <div style="flex: 1; text-align: right;">
+            <div class="footer-col-right">
                 <p data-translate="contact.payment">Phương thức thanh toán:</p>
                 <div class="payment-methods">
-                    <img src="images/visa.png" alt="Visa" style="width:50px; height:auto; margin-right:10px;">
-                    <img src="images/mastercard.png" alt="MasterCard" style="width:50px; height:auto; margin-right:10px;">
-                    <img src="images/paypal.png" alt="PayPal" style="width:50px; height:auto;">
+                    <img src="images/visa.png" alt="Visa" class="payment-icon">
+                    <img src="images/mastercard.png" alt="MasterCard" class="payment-icon">
+                    <img src="images/paypal.png" alt="PayPal" class="payment-icon payment-icon-last">
                 </div>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 20px;">
+        <div class="footer-copyright">
             <p><small data-translate="contact.copyright">&copy; 2024 Color Aquatic</small></p>
         </div>
     </footer>
@@ -212,7 +224,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1272982726037!2d106.64894197590956!3d10.8059765890078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e6c5d6b9c7d%3A0x1e1b1b1b1b1b1b1b!2s8%20Ni%20S%C6%B0%20Hu%E1%BB%B3nh%20Li%C3%AAn%2C%20Ph%C6%B0%E1%BB%9Dng%2010%2C%20T%C3%A2n%20B%C3%ACnh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vietnam!5e0!3m2!1sen!2s!4v1645123456789!5m2!1sen!2s"
             width="100%" 
             height="450" 
-            style="border:0; border-radius: 8px;" 
+            class="footer-map-frame" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"
@@ -222,6 +234,7 @@
 
     <!-- Marked.js for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
     
     <!-- Modular JavaScript - Load in order -->
     <script src="js/translations.js"></script>
@@ -234,16 +247,16 @@
     
     <!-- Social Stick -->
     <div class="social-stick">
-        <a href="https://www.facebook.com/profile.php?id=61555715236452" class="social-link facebook" target="_blank" title="Facebook">
+        <a href="https://www.facebook.com/profile.php?id=61555715236452" class="social-link facebook" target="_blank" rel="noopener noreferrer" title="Facebook">
             <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.instagram.com/color.aquatic/" class="social-link instagram" target="_blank" title="Instagram">
+        <a href="https://www.instagram.com/color.aquatic/" class="social-link instagram" target="_blank" rel="noopener noreferrer" title="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://zalo.me/" class="social-link zalo" target="_blank" title="Zalo">
+        <a href="https://zalo.me/" class="social-link zalo" target="_blank" rel="noopener noreferrer" title="Zalo">
             <span class="zalo-icon">Z</span>
         </a>
-        <a href="https://www.tiktok.com/@color.aquatic" class="social-link tiktok" target="_blank" title="TikTok">
+        <a href="https://www.tiktok.com/@color.aquatic" class="social-link tiktok" target="_blank" rel="noopener noreferrer" title="TikTok">
             <i class="fab fa-tiktok"></i>
         </a>
     </div>

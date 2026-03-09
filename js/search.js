@@ -10,6 +10,7 @@ function initializeSearch() {
     const searchInput = document.getElementById('search-input');
     const searchButton = document.getElementById('search-button');
     const clearButton = document.getElementById('clear-search');
+    const searchResultsContent = document.getElementById('search-results-content');
     
     if (!searchInput || !searchButton || !clearButton) {
         console.error('Search elements not found');
@@ -31,6 +32,24 @@ function initializeSearch() {
             performSearch();
         }
     });
+
+    if (searchResultsContent) {
+        searchResultsContent.addEventListener('click', function(e) {
+            const target = e.target.closest('[data-result-id][data-result-type]');
+            if (!target) return;
+
+            e.preventDefault();
+            const id = target.getAttribute('data-result-id');
+            const type = target.getAttribute('data-result-type');
+
+            if (!id || !type) return;
+            if (type === 'post') {
+                loadPost(id);
+            } else if (type === 'collection') {
+                loadProduct(id);
+            }
+        });
+    }
 }
 
 // Debounce function to limit search frequency
@@ -181,9 +200,9 @@ function displaySearchResults() {
         // No results found
         searchResultsContent.innerHTML = `
             <div class="no-results">
-                <i class="fas fa-search" style="font-size: 3rem; color: var(--muted-color); margin-bottom: 1rem;"></i>
+                <i class="fas fa-search no-results-icon"></i>
                 <p>${t('search.noResults', lang)} "<strong>${searchResults.query}</strong>"</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">${t('search.tryDifferentKeywords', lang)}</p>
+                <p class="no-results-hint">${t('search.tryDifferentKeywords', lang)}</p>
             </div>
         `;
     } else {
@@ -252,7 +271,7 @@ function createSearchResultCard(item, type) {
         }).join(', ');
         
         return `
-            <div class="post-card" onclick="loadPost('${item.id}'); window.history.pushState({ postId: '${item.id}' }, '', '?post=${item.id}')">
+            <div class="post-card" data-result-type="post" data-result-id="${item.id}">
                 <h3>${highlightedTitle}</h3>
                 <div class="post-date">📅 ${formattedDate}</div>
                 <p class="post-description">${highlightedDescription}</p>
@@ -272,14 +291,14 @@ function createSearchResultCard(item, type) {
         }).join(', ');
         
         return `
-            <div class="product-card" onclick="loadProduct('${item.id}'); window.history.pushState({ productId: '${item.id}' }, '', '?product=${item.id}')">
+            <div class="product-card" data-result-type="collection" data-result-id="${item.id}">
                 <div class="product-images">
                     <div class="main-image">
-                        <img src="images/placeholder1.png" alt="${name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='>
+                        <img src="images/placeholder1.png" alt="${name}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='>
                     </div>
                     <div class="thumbnail-images">
                         ${item.images ? item.images.slice(0, 4).map((img, index) =>
-                            `<img src="images/${img}" alt="${name} ${index + 1}" onerror="this.style.display='none'">`
+                            `<img src="images/${img}" alt="${name} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
                         ).join('') : ''}
                     </div>
                 </div>
@@ -306,7 +325,7 @@ function createSearchResultCard(item, type) {
                         </div>
                     </div>
                     ` : ''}
-                    <button class="view-details-btn" onclick="loadProduct('${item.id}'); window.history.pushState({ productId: '${item.id}' }, '', '?product=${item.id}')">
+                    <button type="button" class="view-details-btn" data-result-type="collection" data-result-id="${item.id}">
                         ${t('collection.viewDetails', lang)}
                     </button>
                     <div class="search-match-info">

@@ -219,6 +219,9 @@ async function loadMarkdownContent(id, lang, type) {
         }
 
         const html = marked.parse(markdown);
+        const safeHtml = (window.DOMPurify && typeof window.DOMPurify.sanitize === 'function')
+            ? window.DOMPurify.sanitize(html)
+            : html;
 
         if (type === 'post') {
             const post = posts.find(p => p.id === id);
@@ -240,7 +243,7 @@ async function loadMarkdownContent(id, lang, type) {
                     <p><small>📅 ${publishedOnText} ${formattedDate}</small></p>
                 </header>
                 <hr>
-                ${html}
+                ${safeHtml}
             `;
         } else {
             const product = collectionProducts.find(p => p.id === id);
@@ -252,7 +255,7 @@ async function loadMarkdownContent(id, lang, type) {
                     <h1>${productName}</h1>
                 </header>
                 <hr>
-                ${html}
+                ${safeHtml}
             `;
         }
         
@@ -299,6 +302,8 @@ function changeMainImage(src) {
 function initSlideshow() {
     const slides = document.querySelectorAll('.slide');
     const indicators = document.querySelectorAll('.indicator');
+    const prevButton = document.getElementById('slide-prev');
+    const nextButton = document.getElementById('slide-next');
     if (!slides.length) return;
 
     function renderSlide(index) {
@@ -325,19 +330,34 @@ function initSlideshow() {
         }
     }
 
-    window.goToSlide = function(index) {
+    function goToSlide(index) {
         currentSlideIndex = (index + slides.length) % slides.length;
         renderSlide(currentSlideIndex);
         // Restart auto slideshow after manual interaction
         startAutoSlideshow();
-    };
+    }
 
-    window.changeSlide = function(direction) {
+    function changeSlide(direction) {
         currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
         renderSlide(currentSlideIndex);
         // Restart auto slideshow after manual interaction
         startAutoSlideshow();
-    };
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => changeSlide(-1));
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => changeSlide(1));
+    }
+
+    indicators.forEach((indicator) => {
+        indicator.addEventListener('click', () => {
+            const target = Number(indicator.getAttribute('data-slide-to') || 0);
+            goToSlide(target);
+        });
+    });
 
     renderSlide(currentSlideIndex);
     // Start auto slideshow
@@ -352,6 +372,29 @@ function setupCategoryFilter() {
     filterSelect.addEventListener('change', function() {
         const selectedCategory = this.value;
         filterCollection(selectedCategory);
+    });
+}
+
+function setupCollectionInteractions() {
+    const collectionContainer = document.getElementById('collection-list');
+    if (!collectionContainer) return;
+
+    collectionContainer.addEventListener('click', function(event) {
+        const productButton = event.target.closest('[data-product-id]');
+        if (productButton) {
+            const productId = productButton.getAttribute('data-product-id');
+            if (productId) {
+                loadProduct(productId);
+            }
+            return;
+        }
+
+        const pageButton = event.target.closest('[data-page]');
+        if (pageButton) {
+            const page = Number(pageButton.getAttribute('data-page') || '1');
+            const filter = pageButton.getAttribute('data-filter') || currentFilter;
+            displayCollectionProducts(page, filter);
+        }
     });
 }
 
@@ -379,6 +422,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('Setting up category filter...');
     setupCategoryFilter();
+    setupCollectionInteractions();
     
     // Update page content
     updateLanguageToggleButton();
@@ -407,8 +451,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Color Aquatic blog initialized successfully!');
 });
 
-// Initialize slideshow when DOM is loaded
-document.addEventListener('DOMContentLoaded', initSlideshow);
 window.filterCollection = filterCollection;
 window.changeMainImage = changeMainImage;
 

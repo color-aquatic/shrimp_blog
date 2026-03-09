@@ -90,6 +90,60 @@ Mở file `index.html` trong trình duyệt. Nếu gặp lỗi CORS khi load fil
 - **Cấu hình**: Chỉnh sửa file `js/main.js`
 - **SEO**: Cập nhật meta tags trong `index.html`
 
+## Build production
+
+### Cài dependencies
+
+```bash
+npm install
+```
+
+### Tạo bản build tối ưu
+
+```bash
+npm run build
+```
+
+Kết quả nằm trong thư mục `dist/` với các cải tiến:
+- Minify HTML/CSS/JS
+- Loại trừ `js/main-old.js` khỏi artifact deploy
+- Giữ nguyên cấu trúc markdown (`posts/`, `collection/`) để route hiện tại không đổi
+
+### Tối ưu ảnh
+
+```bash
+npm run optimize:images
+```
+
+Lệnh này tạo ảnh `.webp` và `.avif` trong `images/optimized/` để dùng khi deploy production.
+
+## Deploy lên AWS (S3 + CloudFront)
+
+### 1. Build
+
+```bash
+npm run build
+```
+
+### 2. Deploy
+
+```powershell
+npm run deploy:aws -- -BucketName your-bucket-name -DistributionId E1234567890ABC -Region ap-southeast-1
+```
+
+Script deploy sẽ áp dụng cache headers:
+- `index.html`: `no-cache, no-store, must-revalidate`
+- `js/`, `css/`: `public, max-age=31536000, immutable`
+- `images/`: `public, max-age=2592000`
+- `posts/`, `collection/`: `public, max-age=300`
+
+Có sẵn mẫu security headers policy tại `aws/cloudfront-response-headers-policy.json`.
+Bạn có thể tạo policy bằng AWS CLI:
+
+```bash
+aws cloudfront create-response-headers-policy --response-headers-policy-config file://aws/cloudfront-response-headers-policy.json
+```
+
 ## Thư viện và dịch vụ sử dụng
 
 - **Pico.css**: https://picocss.com/ - CSS framework nhẹ và hiện đại
@@ -103,6 +157,7 @@ Mở file `index.html` trong trình duyệt. Nếu gặp lỗi CORS khi load fil
 - Tất cả bài viết được lưu dưới dạng file `.md`
 - Cần local server để tránh lỗi CORS khi load file Markdown
 - Có thể deploy lên GitHub Pages, Netlify, Vercel, etc.
+- Khi deploy AWS, khuyến nghị dùng S3 private bucket + CloudFront OAC + ACM + Route53
 
 ## License
 

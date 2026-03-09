@@ -1,5 +1,9 @@
 /* Custom Styles for Color Aquatic */
 
+.is-hidden {
+    display: none;
+}
+
 /* Smooth scroll for page navigation */
 html {
     scroll-behavior: smooth;
@@ -307,6 +311,59 @@ nav {
 
 #search-input::placeholder {
     color: var(--muted-color, #999);
+}
+
+.no-results-icon {
+    font-size: 3rem;
+    color: var(--muted-color, #999);
+    margin-bottom: 1rem;
+}
+
+.no-results-hint {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-col-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-col-right {
+    flex: 1;
+    text-align: right;
+}
+
+.payment-icon {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.payment-icon-last {
+    margin-right: 0;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-map-frame {
+    border: 0;
+    border-radius: 8px;
 }
 
 .search-btn, .clear-btn {
@@ -1115,8 +1172,9 @@ section h2 {
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
-    width: 100%;
-    height: 400px; /* Fixed height based on good_benefits dimensions */
+    width: min(100%, 1100px);
+    aspect-ratio: 43 / 24; /* Match good_benefits.png (2752x1536) */
+    height: auto;
     margin: 2rem auto;
     border-radius: 0.5rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -1214,7 +1272,9 @@ section h2 {
 /* Responsive slideshow */
 @media (max-width: 768px) {
     .slideshow-container {
-        height: 250px; /* Smaller fixed height for mobile */
+        width: 100%;
+        aspect-ratio: 43 / 24;
+        min-height: 220px;
     }
     
     .slideshow-nav {

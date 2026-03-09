@@ -1,0 +1,17 @@
+{
+  "name": "shrimp-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static shrimp blog with multilingual markdown content",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "deploy:aws": "powershell -ExecutionPolicy Bypass -File scripts/deploy-aws.ps1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.12",
+    "glob": "^10.4.5",
+    "html-minifier-terser": "^7.2.0",
+    "sharp": "^0.32.6"
+  }
+}
