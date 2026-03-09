@@ -7,6 +7,18 @@ function initializeLanguage() {
     if (langToggle) {
         langToggle.addEventListener('click', toggleLanguage);
     }
+
+    // Header language dropdown options
+    const langOptions = document.querySelectorAll('.lang-option');
+    langOptions.forEach((option) => {
+        option.addEventListener('click', (event) => {
+            event.preventDefault();
+            const selectedLang = option.getAttribute('data-lang');
+            if (selectedLang) {
+                switchToLanguage(selectedLang);
+            }
+        });
+    });
 }
 
 // Language switching functionality
@@ -27,26 +39,56 @@ function switchToLanguage(lang) {
     
     // Store in localStorage
     localStorage.setItem('colorAquaticLanguage', lang);
+    localStorage.setItem('blogLanguage', lang);
     
-    // Update language toggle button
-    updateLanguageToggleButton();
-    
-    // Update all page texts
-    updatePageTexts();
-    
-    // Re-render content
-    displayPostList();
-    displayCollectionProducts();
-    
-    // Update page URL without reload
+    // Update page URL FIRST before reloading content
     const url = new URL(window.location);
     url.searchParams.set('lang', lang);
     window.history.replaceState(null, '', url.toString());
     
-    // Update meta tags
-    updateMetaTags();
+    // Update language toggle button
+    updateLanguageToggleButton();
+    updateLanguageSummary();
+    
+    // Update all page texts
+    updatePageTexts();
+    
+    // Check if we're on a detail page and reload it with new language
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get('post');
+    const productId = urlParams.get('product');
+    
+    if (postId && window.loadPost) {
+        console.log('Reloading post with new language:', lang);
+        window.loadPost(postId);
+    } else if (productId && window.loadProduct) {
+        console.log('Reloading product with new language:', lang);
+        window.loadProduct(productId);
+    } else {
+        // Re-render list content only if on home page
+        displayPostList();
+        displayCollectionProducts();
+    }
     
     console.log(`Đã chuyển đổi sang ngôn ngữ: ${lang}`);
+}
+
+// Update visible language label in header summary
+function updateLanguageSummary() {
+    const lang = window.currentLanguage || 'vi';
+    const summary = document.getElementById('language-summary');
+    if (!summary) return;
+
+    const flag = summary.querySelector('.lang-flag');
+    const text = summary.querySelector('.lang-text');
+
+    if (lang === 'en') {
+        if (flag) flag.className = 'lang-flag flag-gb';
+        if (text) text.textContent = 'English';
+    } else {
+        if (flag) flag.className = 'lang-flag flag-vn';
+        if (text) text.textContent = 'Tiếng Việt';
+    }
 }
 
 // Update language toggle button
@@ -68,40 +110,39 @@ function updateLanguageToggleButton() {
 // Update all page texts
 function updatePageTexts() {
     const lang = window.currentLanguage || 'vi';
-    
-    // Update hero section
-    const heroTitle = document.getElementById('hero-title');
-    const heroSubtitle = document.getElementById('hero-subtitle');
-    const heroButton = document.getElementById('hero-button');
-    
-    if (heroTitle) heroTitle.textContent = t('hero.title', lang);
-    if (heroSubtitle) heroSubtitle.textContent = t('hero.subtitle', lang);
-    if (heroButton) heroButton.textContent = t('hero.button', lang);
-    
-    // Update navigation
-    updateNavigation();
-    
-    // Update section headers
-    const collectionTitle = document.querySelector('#collection h2');
-    const postsTitle = document.querySelector('#posts h2');
-    
-    if (collectionTitle) collectionTitle.textContent = t('collection.title', lang);
-    if (postsTitle) postsTitle.textContent = t('posts.title', lang);
-    
-    // Update footer
-    updateFooter();
-    
-    // Update search placeholders
-    const searchInput = document.getElementById('search-input');
-    if (searchInput) {
-        searchInput.placeholder = t('search.placeholder', lang);
+
+    // Update any element tagged with data-translate
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach((element) => {
+        const key = element.getAttribute('data-translate');
+        if (!key) return;
+        const translated = t(key, lang);
+        if (translated === key) return;
+
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = translated;
+        } else {
+            element.textContent = translated;
+        }
+    });
+
+    // Keep email link markup while translating label text
+    const emailElement = document.querySelector('[data-translate="contact.email"]');
+    if (emailElement && emailElement.querySelector('a')) {
+        const anchor = emailElement.querySelector('a');
+        emailElement.firstChild.textContent = `${t('contact.email', lang)} `;
+        if (anchor) {
+            anchor.textContent = 'hoangquoctu95@gmail.com';
+        }
     }
+
+    updateLanguageSummary();
 }
 
 // Update navigation
 function updateNavigation() {
     const lang = window.currentLanguage || 'vi';
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('nav a[data-translate^="nav."]');
     
     navLinks.forEach(link => {
         switch(link.getAttribute('href') || link.getAttribute('onclick')) {
@@ -122,19 +163,19 @@ function updateNavigation() {
             const value = option.value;
             switch(value) {
                 case 'all':
-                    option.textContent = t('collection.filters.all', lang);
+                    option.textContent = t('collection.filterAll', lang);
                     break;
                 case 'shrimps':
-                    option.textContent = t('collection.filters.shrimps', lang);
+                    option.textContent = t('collection.filterShrimps', lang);
                     break;
                 case 'fishes':
-                    option.textContent = t('collection.filters.fishes', lang);
+                    option.textContent = t('collection.filterFishes', lang);
                     break;
                 case 'accessory':
-                    option.textContent = t('collection.filters.accessory', lang);
+                    option.textContent = t('collection.filterAccessory', lang);
                     break;
                 case 'plants':
-                    option.textContent = t('collection.filters.plants', lang);
+                    option.textContent = t('collection.filterPlants', lang);
                     break;
             }
         });
@@ -143,60 +184,34 @@ function updateNavigation() {
 
 // Update footer
 function updateFooter() {
-    const lang = window.currentLanguage || 'vi';
-    const footer = document.querySelector('footer');
-    
-    if (footer) {
-        footer.innerHTML = `
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>${t('footer.aboutUs', lang)}</h4>
-                    <p>${t('footer.description', lang)}</p>
-                </div>
-                <div class="footer-section">
-                    <h4>${t('footer.contact', lang)}</h4>
-                    <p>Email: coloraquatic@gmail.com</p>
-                    <p>Phone: +84 123 456 789</p>
-                </div>
-                <div class="footer-section">
-                    <h4>${t('footer.followUs', lang)}</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Color Aquatic. ${t('footer.allRightsReserved', lang)}.</p>
-            </div>
-        `;
-    }
+    // Footer is now translated by data-translate bindings in updatePageTexts().
 }
 
 // Get text by language with fallback
 function getPostByLang(post, field, lang) {
-    if (!post || !post[field]) return '';
-    
-    // If it's an object with language keys
-    if (typeof post[field] === 'object') {
-        return post[field][lang] || post[field]['vi'] || post[field]['en'] || '';
+    if (!post) return '';
+
+    const langKey = `${field}${lang === 'en' ? 'En' : 'Vi'}`;
+    if (post[langKey]) return post[langKey];
+
+    if (post[field] && typeof post[field] === 'object') {
+        return post[field][lang] || post[field].vi || post[field].en || '';
     }
-    
-    // If it's a string (fallback)
+
     return post[field] || '';
 }
 
 // Get product text by language with fallback
 function getProductByLang(product, field, lang) {
-    if (!product || !product[field]) return '';
-    
-    // If it's an object with language keys
-    if (typeof product[field] === 'object') {
-        return product[field][lang] || product[field]['vi'] || product[field]['en'] || '';
+    if (!product) return '';
+
+    const langKey = `${field}${lang === 'en' ? 'En' : 'Vi'}`;
+    if (product[langKey]) return product[langKey];
+
+    if (product[field] && typeof product[field] === 'object') {
+        return product[field][lang] || product[field].vi || product[field].en || '';
     }
-    
-    // If it's a string (fallback)
+
     return product[field] || '';
 }
 
@@ -204,7 +219,7 @@ function getProductByLang(product, field, lang) {
 function initializeLanguageFromStorage() {
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
-    const storedLang = localStorage.getItem('colorAquaticLanguage');
+    const storedLang = localStorage.getItem('colorAquaticLanguage') || localStorage.getItem('blogLanguage');
     
     let initialLang = urlLang || storedLang || 'vi';
     
@@ -214,6 +229,7 @@ function initializeLanguageFromStorage() {
     }
     
     window.currentLanguage = initialLang;
+    updateLanguageSummary();
     
     // Update the URL if needed
     if (!urlLang) {
@@ -240,10 +256,11 @@ function formatDateForLanguage(dateString, lang) {
 
 // Get translated text helper
 function t(key, lang) {
-    if (!window.translations) return key;
+    const source = window.translations || (typeof translations !== 'undefined' ? translations : null);
+    if (!source) return key;
     
     const keys = key.split('.');
-    let value = window.translations[lang] || window.translations['vi'];
+    let value = source[lang] || source['vi'];
     
     for (const k of keys) {
         if (value && typeof value === 'object') {

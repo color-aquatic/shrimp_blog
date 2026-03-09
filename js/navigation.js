@@ -105,7 +105,7 @@ function showHomePage() {
     if (searchResultsSection) searchResultsSection.style.display = 'none';
     
     // Hide detail sections
-    const postDetailSection = document.getElementById('post-detail');
+    const postDetailSection = document.getElementById('post-content');
     const productDetailSection = document.getElementById('product-detail');
     
     if (postDetailSection) postDetailSection.style.display = 'none';
@@ -128,7 +128,7 @@ function showHomePage() {
 
 // Hide all sections
 function hideAllSections() {
-    const sections = ['hero', 'collection', 'posts', 'search-results', 'post-detail', 'product-detail'];
+    const sections = ['hero', 'collection', 'posts', 'search-results', 'post-content', 'product-detail'];
     sections.forEach(sectionId => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -169,7 +169,7 @@ function loadPost(postId) {
     hideAllSections();
     
     // Show post detail section
-    const postDetailSection = document.getElementById('post-detail');
+    const postDetailSection = document.getElementById('post-content');
     if (postDetailSection) {
         postDetailSection.style.display = 'block';
     }
@@ -207,10 +207,10 @@ function loadProduct(productId) {
     // Hide main sections
     hideAllSections();
     
-    // Show product detail section
-    const productDetailSection = document.getElementById('product-detail');
-    if (productDetailSection) {
-        productDetailSection.style.display = 'block';
+    // Show shared detail section (old source behavior)
+    const postDetailSection = document.getElementById('post-content');
+    if (postDetailSection) {
+        postDetailSection.style.display = 'block';
     }
     
     // Load product content
@@ -270,3 +270,9 @@ function getCurrentPageId() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('post') || urlParams.get('product') || urlParams.get('section') || null;
 }
+
+// Expose functions for inline handlers and other modules
+window.loadPost = loadPost;
+window.loadProduct = loadProduct;
+window.goBack = goBack;
+window.showHomePage = showHomePage;

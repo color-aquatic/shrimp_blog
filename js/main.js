@@ -6,6 +6,8 @@ window.currentLanguage = 'vi';
 let currentCollectionPage = 1;
 let currentFilter = 'all';
 const productsPerPage = 20;
+let currentSlideIndex = 0;
+let slideshowInterval;
 
 // Mobile Hamburger Menu
 function initializeHamburgerMenu() {
@@ -96,20 +98,33 @@ function displayCollectionProducts(page = 1, filter = currentFilter) {
     const totalProducts = filteredProducts.length;
     const totalPages = Math.ceil(totalProducts / productsPerPage);
     const startIndex = (page - 1) * productsPerPage;
-    const endIndex = startIndex + productsPerPage;
-    const pageProducts = filteredProducts.slice(startIndex, endIndex);
+    const endIndex = Math.min(startIndex + productsPerPage, totalProducts);
+    const productsToShow = filteredProducts.slice(startIndex, endIndex);
 
-    let html = '';
-    pageProducts.forEach(product => {
-        html += createProductCard(product);
+    // Clear existing content
+    collectionContainer.innerHTML = '';
+
+    if (productsToShow.length === 0) {
+        const lang = window.currentLanguage || 'vi';
+        collectionContainer.innerHTML = `<div class="loading">${t('collection.noProducts', lang)}</div>`;
+        return;
+    }
+
+    // Display products
+    productsToShow.forEach(product => {
+        const productCard = createProductCard(product);
+        collectionContainer.appendChild(productCard);
     });
 
-    collectionContainer.innerHTML = html;
+    // Add pagination
+    if (totalPages > 1) {
+        const paginationContainer = document.createElement('div');
+        paginationContainer.className = 'pagination';
+        paginationContainer.innerHTML = createPaginationHTML(page, totalPages, filter);
+        collectionContainer.appendChild(paginationContainer);
+    }
 
-    // Update pagination
-    updatePagination(totalPages, page, 'collection');
-
-    console.log(`Displayed ${pageProducts.length} products (page ${page}/${totalPages}, filter: ${filter})`);
+    console.log(`Displayed ${productsToShow.length} products (page ${page}/${totalPages}, filter: ${filter})`);
 }
 
 // Filter collection
@@ -124,161 +139,55 @@ function filterCollection(category) {
     }
 }
 
-// Update pagination
-function updatePagination(totalPages, currentPage, type) {
-    const paginationContainer = document.getElementById(`${type}-pagination`);
-    if (!paginationContainer || totalPages <= 1) {
-        if (paginationContainer) paginationContainer.innerHTML = '';
-        return;
-    }
-
-    paginationContainer.innerHTML = createPaginationHTML(totalPages, currentPage, type);
-}
-
-// Change page
-function changePage(page, type) {
-    if (type === 'posts') {
-        displayPostList(page);
-    } else if (type === 'collection') {
-        displayCollectionProducts(page, currentFilter);
-    }
-    
-    // Scroll to top of section
-    const section = document.getElementById(type === 'posts' ? 'posts' : 'collection');
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
 // Display posts
 function displayPostList(page = 1) {
-    const postsContainer = document.getElementById('posts-list');
+    const postsContainer = document.getElementById('post-list');
     if (!postsContainer) return;
 
     const lang = window.currentLanguage || 'vi';
-    const totalPosts = posts.length;
-    const postsPerPage = 6; // Số posts mỗi trang
-    const totalPages = Math.ceil(totalPosts / postsPerPage);
-    const startIndex = (page - 1) * postsPerPage;
-    const endIndex = startIndex + postsPerPage;
-    const pagePosts = posts.slice(startIndex, endIndex);
+    // Clear existing content
+    postsContainer.innerHTML = '';
     
-    let html = '';
-    pagePosts.forEach(post => {
-        html += createPostCard(post);
+    // Sort posts by date (newest first)
+    const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    // Create card for each post
+    sortedPosts.forEach(post => {
+        const postCard = createPostCard(post);
+        postsContainer.appendChild(postCard);
     });
-    
-    postsContainer.innerHTML = html;
-    
-    // Update pagination
-    updatePagination(totalPages, page, 'posts');
 }
 
 // Display post detail
 function displayPostDetail(post) {
     if (!post) return;
     
-    const postDetailSection = document.getElementById('post-detail');
-    if (!postDetailSection) return;
-    
+    const postDetailSection = document.getElementById('post-content');
+    const articleContent = document.getElementById('article-content');
+    if (!postDetailSection || !articleContent) return;
+
     const lang = window.currentLanguage || 'vi';
-    const title = getPostByLang(post, 'title', lang);
-    const description = getPostByLang(post, 'description', lang);
+    articleContent.innerHTML = `<div class="loading">${t('post.loading', lang)}</div>`;
+
+    postDetailSection.style.display = 'block';
     
-    const date = new Date(post.date);
-    const locale = lang === 'en' ? 'en-US' : 'vi-VN';
-    const formattedDate = date.toLocaleDateString(locale, {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
-    
-    postDetailSection.innerHTML = `
-        <div class="post-detail-header">
-            <button class="back-btn" onclick="goBack()">
-                <i class="fas fa-arrow-left"></i> ${t('common.back', lang)}
-            </button>
-        </div>
-        <article class="post-detail-content">
-            <h1>${title}</h1>
-            <div class="post-meta">
-                <span class="post-date">📅 ${formattedDate}</span>
-            </div>
-            <div class="post-description">
-                <p>${description}</p>
-            </div>
-            <div class="post-content" id="post-markdown-content">
-                ${t('common.loading', lang)}...
-            </div>
-        </article>
-    `;
-    
-    // Load markdown content
+    // Load markdown content using old source structure
     loadMarkdownContent(post.id, lang, 'post');
 }
 
 // Display product detail
 function displayProductDetail(product) {
     if (!product) return;
-    
-    const productDetailSection = document.getElementById('product-detail');
-    if (!productDetailSection) return;
-    
+
+    const postDetailSection = document.getElementById('post-content');
+    const articleContent = document.getElementById('article-content');
+    if (!postDetailSection || !articleContent) return;
+
     const lang = window.currentLanguage || 'vi';
-    const name = getProductByLang(product, 'name', lang);
-    const description = getProductByLang(product, 'shortDescription', lang);
+    articleContent.innerHTML = `<div class="loading">${t('post.loading', lang)}</div>`;
+    postDetailSection.style.display = 'block';
     
-    productDetailSection.innerHTML = `
-        <div class="product-detail-header">
-            <button class="back-btn" onclick="goBack()">
-                <i class="fas fa-arrow-left"></i> ${t('common.back', lang)}
-            </button>
-        </div>
-        <article class="product-detail-content">
-            <h1>${name}</h1>
-            <div class="product-gallery">
-                <div class="main-image">
-                    <img id="main-product-image" src="images/placeholder1.png" alt="${name}">
-                </div>
-                <div class="thumbnail-gallery">
-                    ${product.images ? product.images.map((img, index) =>
-                        `<img src="images/${img}" alt="${name} ${index + 1}" onclick="changeMainImage(this.src)">`
-                    ).join('') : ''}
-                </div>
-            </div>
-            <div class="product-info">
-                <p class="product-description">${description}</p>
-                ${(product.category !== 'accessory' && product.category !== 'plants') ? `
-                <div class="product-specifications">
-                    <h3>${t('collection.specifications', lang)}</h3>
-                    <table>
-                        <tr>
-                            <td>${t('collection.temperature', lang)}:</td>
-                            <td>${product.temperature || 'N/A'}</td>
-                        </tr>
-                        <tr>
-                            <td>${t('collection.tds', lang)}:</td>
-                            <td>${product.tds || 'N/A'}</td>
-                        </tr>
-                        <tr>
-                            <td>${t('collection.gh', lang)}:</td>
-                            <td>${product.gh || 'N/A'}</td>
-                        </tr>
-                        <tr>
-                            <td>${t('collection.lifespan', lang)}:</td>
-                            <td>${product.lifespan ? product.lifespan + ' ' + t('collection.years', lang) : 'N/A'}</td>
-                        </tr>
-                    </table>
-                </div>
-                ` : ''}
-            </div>
-            <div class="product-content" id="product-markdown-content">
-                ${t('common.loading', lang)}...
-            </div>
-        </article>
-    `;
-    
-    // Load markdown content
+    // Load markdown content using old source structure
     loadMarkdownContent(product.id, lang, 'product');
 }
 
@@ -286,10 +195,12 @@ function displayProductDetail(product) {
 async function loadMarkdownContent(id, lang, type) {
     try {
         const basePath = type === 'post' ? 'posts' : 'collection';
-        const category = type === 'product' ? 
-            collectionProducts.find(p => p.id === id)?.category || '' : '';
+        const category = type === 'product'
+            ? (collectionProducts.find(p => p.id === id)?.category || '')
+            : '';
         
-        const filePath = type === 'post' ? 
+        const filePath = type === 'post'
+            ?
             `${basePath}/${lang}/${id}.md` :
             `${basePath}/${category}/${lang}/${id}.md`;
         
@@ -299,21 +210,62 @@ async function loadMarkdownContent(id, lang, type) {
             throw new Error(`Failed to load content: ${response.status}`);
         }
         
-        const content = await response.text();
-        const contentContainer = document.getElementById(`${type}-markdown-content`);
-        
-        if (contentContainer) {
-            // Simple markdown parsing (you can use a library like marked.js for better parsing)
-            const htmlContent = parseSimpleMarkdown(content);
-            contentContainer.innerHTML = htmlContent;
+        const markdown = await response.text();
+        const articleContent = document.getElementById('article-content');
+        if (!articleContent) return;
+
+        if (typeof marked === 'undefined') {
+            throw new Error('Marked.js is not loaded');
+        }
+
+        const html = marked.parse(markdown);
+
+        if (type === 'post') {
+            const post = posts.find(p => p.id === id);
+            if (!post) throw new Error(`Post not found: ${id}`);
+
+            const title = getPostByLang(post, 'title', lang);
+            const date = new Date(post.date);
+            const locale = lang === 'en' ? 'en-US' : 'vi-VN';
+            const formattedDate = date.toLocaleDateString(locale, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            const publishedOnText = t('post.publishedOn', lang);
+
+            articleContent.innerHTML = `
+                <header>
+                    <h1>${title}</h1>
+                    <p><small>📅 ${publishedOnText} ${formattedDate}</small></p>
+                </header>
+                <hr>
+                ${html}
+            `;
+        } else {
+            const product = collectionProducts.find(p => p.id === id);
+            if (!product) throw new Error(`Product not found: ${id}`);
+
+            const productName = getProductByLang(product, 'name', lang);
+            articleContent.innerHTML = `
+                <header>
+                    <h1>${productName}</h1>
+                </header>
+                <hr>
+                ${html}
+            `;
         }
         
     } catch (error) {
         console.error(`Error loading ${type} content:`, error);
-        const contentContainer = document.getElementById(`${type}-markdown-content`);
-        if (contentContainer) {
-            const lang = window.currentLanguage || 'vi';
-            contentContainer.innerHTML = `<p class="error-message">${t('common.contentLoadError', lang)}</p>`;
+        const articleContent = document.getElementById('article-content');
+        if (articleContent) {
+            const currentLang = window.currentLanguage || 'vi';
+            articleContent.innerHTML = `
+                <div class="loading">
+                    <p>${t('post.error', currentLang)}</p>
+                </div>
+            `;
         }
     }
 }
@@ -345,8 +297,51 @@ function changeMainImage(src) {
 
 // Initialize slideshow functionality
 function initSlideshow() {
-    console.log('Initializing slideshow...');
-    // Slideshow implementation can be added here if needed
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    if (!slides.length) return;
+
+    function renderSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }
+
+    function showNextSlide() {
+        if (slides.length === 0) return;
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        renderSlide(currentSlideIndex);
+    }
+
+    function startAutoSlideshow() {
+        if (slides.length > 1) {
+            // Clear any existing interval first
+            clearInterval(slideshowInterval);
+            // Start automatic slideshow with 3 second interval
+            slideshowInterval = setInterval(showNextSlide, 3000);
+        }
+    }
+
+    window.goToSlide = function(index) {
+        currentSlideIndex = (index + slides.length) % slides.length;
+        renderSlide(currentSlideIndex);
+        // Restart auto slideshow after manual interaction
+        startAutoSlideshow();
+    };
+
+    window.changeSlide = function(direction) {
+        currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
+        renderSlide(currentSlideIndex);
+        // Restart auto slideshow after manual interaction
+        startAutoSlideshow();
+    };
+
+    renderSlide(currentSlideIndex);
+    // Start auto slideshow
+    startAutoSlideshow();
 }
 
 // Setup category filter dropdown
@@ -414,13 +409,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize slideshow when DOM is loaded
 document.addEventListener('DOMContentLoaded', initSlideshow);
-
-// Make functions globally available for onclick handlers
-window.loadPost = loadPost;
-window.loadProduct = loadProduct;
-window.changePage = changePage;
 window.filterCollection = filterCollection;
 window.changeMainImage = changeMainImage;
-window.goBack = goBack;
 
 console.log('main.js completed loading - all modules integrated');

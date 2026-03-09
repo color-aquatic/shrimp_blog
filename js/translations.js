@@ -48,6 +48,11 @@ const translations = {
             error: '❌ Không thể tải bài viết. Vui lòng thử lại sau.',
             publishedOn: 'Ngày đăng:'
         },
+
+        common: {
+            loading: 'Đang tải',
+            contentLoadError: 'Không thể tải nội dung. Vui lòng thử lại sau.'
+        },
         
         // About Section
         about: {
@@ -137,6 +142,11 @@ const translations = {
             error: '❌ Unable to load post. Please try again later.',
             publishedOn: 'Published on:'
         },
+
+        common: {
+            loading: 'Loading',
+            contentLoadError: 'Unable to load content. Please try again later.'
+        },
         
         // About Section
         about: {
@@ -211,3 +221,6 @@ function setLanguage(lang) {
     console.log('setLanguage() called with:', lang);
     localStorage.setItem('blogLanguage', lang);
 }
+
+// Expose translations for modules that resolve via window namespace
+window.translations = translations;

@@ -20,11 +20,12 @@ function getProductByLang(product, property, lang) {
 
 // Create product card HTML
 function createProductCard(product) {
+    const lang = window.currentLanguage || 'vi';
     const card = document.createElement('div');
     card.className = 'product-card';
 
-    const productName = getProductByLang(product, 'name', window.currentLanguage || 'vi');
-    const productDescription = getProductByLang(product, 'shortDescription', window.currentLanguage || 'vi');
+    const productName = getProductByLang(product, 'name', lang);
+    const productDescription = getProductByLang(product, 'shortDescription', lang);
 
     card.innerHTML = `
         <div class="product-images">
@@ -43,25 +44,25 @@ function createProductCard(product) {
             ${product.category !== 'accessory' && product.category !== 'plants' ? `
             <div class="product-specs">
                 <div class="spec-item">
-                    <span class="spec-label">${t('collection.temperature', window.currentLanguage || 'vi')}:</span>
+                    <span class="spec-label">${t('collection.temperature', lang)}:</span>
                     <span class="spec-value">${product.temperature}</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">${t('collection.tds', window.currentLanguage || 'vi')}:</span>
+                    <span class="spec-label">${t('collection.tds', lang)}:</span>
                     <span class="spec-value">${product.tds}</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">${t('collection.gh', window.currentLanguage || 'vi')}:</span>
+                    <span class="spec-label">${t('collection.gh', lang)}:</span>
                     <span class="spec-value">${product.gh}</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">${t('collection.lifespan', window.currentLanguage || 'vi')}:</span>
+                    <span class="spec-label">${t('collection.lifespan', lang)}:</span>
                     <span class="spec-value">${product.lifespan}</span>
                 </div>
             </div>
             ` : ''}
             <button class="view-details-btn" onclick="loadProduct('${product.id}')">
-                ${t('collection.viewDetails', window.currentLanguage || 'vi')}
+                ${t('collection.viewDetails', lang)}
             </button>
         </div>
     `;
@@ -109,8 +110,6 @@ function createPostCard(post) {
     card.onclick = function(e) {
         e.preventDefault();
         loadPost(post.id);
-        // Cập nhật URL mà không reload trang
-        window.history.pushState({ postId: post.id }, '', `?post=${post.id}`);
     };
     
     const date = new Date(post.date);
@@ -123,13 +122,13 @@ function createPostCard(post) {
     
     const title = getPostByLang(post, 'title', lang);
     const description = getPostByLang(post, 'description', lang);
-    
+
     card.innerHTML = `
         <h3>${title}</h3>
         <div class="post-date">📅 ${formattedDate}</div>
         <p class="post-description">${description}</p>
     `;
-    
+
     return card;
 }
 
