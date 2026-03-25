@@ -117,6 +117,44 @@ npm run optimize:images
 
 Lệnh này tạo ảnh `.webp` và `.avif` trong `images/optimized/` để dùng khi deploy production.
 
+## Deploy lên GitHub Pages
+
+Project này là static site nên deploy GitHub Pages rất phù hợp và không cần Docker.
+
+### 1. Tạo workflow deploy tự động
+
+Đã có sẵn file workflow tại `.github/workflows/deploy-pages.yml`.
+Mỗi lần push lên branch `main`, GitHub Actions sẽ:
+
+- Cài dependencies (`npm ci`)
+- Build project (`npm run build`)
+- Deploy thư mục `dist/` lên GitHub Pages
+
+### 2. Bật GitHub Pages trong repository
+
+1. Vào repository trên GitHub
+2. Vào **Settings** -> **Pages**
+3. Ở mục **Build and deployment**, chọn **Source = GitHub Actions**
+
+### 3. Push code để deploy
+
+```bash
+git add .
+git commit -m "Add GitHub Pages deployment workflow"
+git push origin main
+```
+
+Sau khi workflow chạy xong, site sẽ có URL dạng:
+
+```text
+https://<github-username>.github.io/<repo-name>/
+```
+
+### 4. Lưu ý quan trọng
+
+- Đã chuyển favicon sang đường dẫn tương đối (`favicon.ico`) để tương thích khi deploy dưới repo path
+- Nếu bạn dùng custom domain, cấu hình thêm file `CNAME` trong thư mục `dist/` hoặc workflow tùy nhu cầu
+
 ## Deploy lên AWS (S3 + CloudFront)
 
 ### 1. Build
