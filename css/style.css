@@ -1144,6 +1144,12 @@ section h2 {
 }
 
 .pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 2.25rem;
+    margin: 0;
     padding: 0.5rem 0.75rem;
     border: 1px solid var(--border-color, #e0e0e0);
     background: white;
@@ -1152,6 +1158,7 @@ section h2 {
     cursor: pointer;
     transition: all 0.2s ease;
     font-size: 0.9rem;
+    line-height: 1;
 }
 
 .pagination-btn:hover {
@@ -1160,13 +1167,39 @@ section h2 {
     border-color: var(--primary-color, #667eea);
 }
 
+.pagination-btn-disabled,
+.pagination-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    color: var(--muted-color, #666);
+    border-color: var(--border-color, #e0e0e0);
+    background: white;
+}
+
+.pagination-btn-disabled:hover,
+.pagination-btn:disabled:hover {
+    background: white;
+    color: var(--muted-color, #666);
+    border-color: var(--border-color, #e0e0e0);
+}
+
 .pagination-current {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 2.25rem;
+    margin: 0;
     padding: 0.5rem 0.75rem;
+    border: 1px solid var(--primary-color, #667eea);
     background-color: var(--primary-color, #667eea);
     color: white;
     border-radius: 0.25rem;
     font-weight: 500;
     font-size: 0.9rem;
+    line-height: 1;
+    opacity: 1;
+    cursor: default;
 }
 
 /* Slideshow Styles */

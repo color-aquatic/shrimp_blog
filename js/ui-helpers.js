@@ -64,10 +64,9 @@ function createPaginationHTML(currentPage, totalPages, filter = 'all') {
     const lang = window.currentLanguage || 'vi';
     let paginationHTML = '<div class="pagination-controls">';
 
-    // Previous button
-    if (currentPage > 1) {
-        paginationHTML += `<button type="button" class="pagination-btn" data-page="${currentPage - 1}" data-filter="${filter}">${t('collection.previous', lang)}</button>`;
-    }
+    // Always render previous button to keep pagination layout stable across pages
+    const hasPrevious = currentPage > 1;
+    paginationHTML += `<button type="button" class="pagination-btn${hasPrevious ? '' : ' pagination-btn-disabled'}" data-page="${currentPage - 1}" data-filter="${filter}" ${hasPrevious ? '' : 'disabled aria-disabled="true" tabindex="-1"'}>${t('collection.previous', lang)}</button>`;
 
     // Page numbers
     const startPage = Math.max(1, currentPage - 2);
@@ -75,16 +74,15 @@ function createPaginationHTML(currentPage, totalPages, filter = 'all') {
 
     for (let i = startPage; i <= endPage; i++) {
         if (i === currentPage) {
-            paginationHTML += `<span class="pagination-current">${i}</span>`;
+            paginationHTML += `<button type="button" class="pagination-btn pagination-current" aria-current="page" tabindex="-1">${i}</button>`;
         } else {
             paginationHTML += `<button type="button" class="pagination-btn" data-page="${i}" data-filter="${filter}">${i}</button>`;
         }
     }
 
-    // Next button
-    if (currentPage < totalPages) {
-        paginationHTML += `<button type="button" class="pagination-btn" data-page="${currentPage + 1}" data-filter="${filter}">${t('collection.next', lang)}</button>`;
-    }
+    // Always render next button to keep pagination layout stable across pages
+    const hasNext = currentPage < totalPages;
+    paginationHTML += `<button type="button" class="pagination-btn${hasNext ? '' : ' pagination-btn-disabled'}" data-page="${currentPage + 1}" data-filter="${filter}" ${hasNext ? '' : 'disabled aria-disabled="true" tabindex="-1"'}>${t('collection.next', lang)}</button>`;
 
     paginationHTML += '</div>';
     return paginationHTML;
