@@ -14,8 +14,7 @@ js/
 ├── language.js       # Quản lý đa ngôn ngữ (vi/en switching)
 ├── search.js         # Chức năng tìm kiếm
 ├── navigation.js     # Điều hướng và routing
-├── translations.js   # Bảng dịch cho nhiều ngôn ngữ
-└── main-old.js       # Backup của file main.js cũ (có thể xóa sau khi test)
+└── translations.js   # Bảng dịch cho nhiều ngôn ngữ
 ```
 
 ## Mô tả chi tiết các module
@@ -163,7 +162,6 @@ Modules phải được load theo thứ tự trong index.html:
 
 ## Backup và versioning  
 
-- `main-old.js` là backup của version cũ
 - Khuyến nghị dùng Git để version control
 - Regular backup của thư mục `collection/` và `posts/`
 

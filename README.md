@@ -106,7 +106,6 @@ npm run build
 
 Kết quả nằm trong thư mục `dist/` với các cải tiến:
 - Minify HTML/CSS/JS
-- Loại trừ `js/main-old.js` khỏi artifact deploy
 - Giữ nguyên cấu trúc markdown (`posts/`, `collection/`) để route hiện tại không đổi
 
 ### Tối ưu ảnh

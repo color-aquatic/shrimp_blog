@@ -437,9 +437,6 @@ async function buildJsAndCss() {
   const cssFiles = await glob('css/**/*.css', { cwd: rootDir, nodir: true });
 
   for (const relPath of jsFiles) {
-    if (relPath.endsWith('main-old.js')) {
-      continue;
-    }
     await writeMinifiedJs(path.join(rootDir, relPath), path.join(distDir, relPath));
   }
 
