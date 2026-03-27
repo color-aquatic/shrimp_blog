@@ -6,6 +6,54 @@ function getPostFile(postId, lang) {
     return `posts/${lang}/${postId}.md`;
 }
 
+function getLanguageFromPath(pathname = window.location.pathname) {
+    const segments = pathname.split('/').filter(Boolean);
+    const lang = segments[0];
+    return ['vi', 'en'].includes(lang) ? lang : null;
+}
+
+function getCurrentStaticPageType() {
+    return document.body?.dataset?.staticPageType || '';
+}
+
+function getHomePath(lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
+    return `/${lang}/`;
+}
+
+function getPostPath(postId, lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
+    return `/${lang}/posts/${postId}/`;
+}
+
+function getProductPath(productOrId, lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
+    const product = typeof productOrId === 'string'
+        ? collectionProducts.find((item) => item.id === productOrId)
+        : productOrId;
+    const productId = typeof productOrId === 'string' ? productOrId : productOrId?.id;
+    const category = product?.category || 'shrimps';
+    return `/${lang}/collection/${category}/${productId}/`;
+}
+
+function getLanguageSwitchPath(lang) {
+    const body = document.body;
+    const staticSwitch = lang === 'vi' ? body?.dataset?.switchVi : body?.dataset?.switchEn;
+    if (staticSwitch) {
+        return staticSwitch;
+    }
+
+    const pageType = getCurrentStaticPageType();
+    if (pageType === 'detail') {
+        const segments = window.location.pathname.split('/').filter(Boolean);
+        if (segments[1] === 'posts' && segments[2]) {
+            return getPostPath(segments[2], lang);
+        }
+        if (segments[1] === 'collection' && segments[2] && segments[3]) {
+            return `/${lang}/collection/${segments[2]}/${segments[3]}/`;
+        }
+    }
+
+    return getHomePath(lang);
+}
+
 
 // Create product card HTML
 function createProductCard(product) {
@@ -19,11 +67,11 @@ function createProductCard(product) {
     card.innerHTML = `
         <div class="product-images">
             <div class="main-image">
-                <img src="images/placeholder1.png" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='">
+                <img src="/images/placeholder1.png" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='">
             </div>
             <div class="thumbnail-images">
                 ${product.images.slice(0, 4).map((img, index) =>
-                    `<img src="images/${img}" alt="${productName} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
+                    `<img src="/images/${img}" alt="${productName} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
                 ).join('')}
             </div>
         </div>
@@ -50,9 +98,9 @@ function createProductCard(product) {
                 </div>
             </div>
             ` : ''}
-            <button type="button" class="view-details-btn" data-product-id="${product.id}">
+            <a href="${getProductPath(product, lang)}" class="view-details-btn" role="button">
                 ${t('collection.viewDetails', lang)}
-            </button>
+            </a>
         </div>
     `;
 
@@ -92,12 +140,8 @@ function createPaginationHTML(currentPage, totalPages, filter = 'all') {
 function createPostCard(post) {
     const lang = window.currentLanguage || 'vi';
     const card = document.createElement('a');
-    card.href = `?post=${post.id}`;
+    card.href = getPostPath(post.id, lang);
     card.className = 'post-card';
-    card.onclick = function(e) {
-        e.preventDefault();
-        loadPost(post.id);
-    };
     
     const date = new Date(post.date);
     const locale = lang === 'en' ? 'en-US' : 'vi-VN';

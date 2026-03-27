@@ -40,11 +40,15 @@ function switchToLanguage(lang) {
     // Store in localStorage
     localStorage.setItem('colorAquaticLanguage', lang);
     localStorage.setItem('blogLanguage', lang);
-    
-    // Update page URL FIRST before reloading content
-    const url = new URL(window.location);
-    url.searchParams.set('lang', lang);
-    window.history.replaceState(null, '', url.toString());
+
+    const targetPath = typeof getLanguageSwitchPath === 'function'
+        ? getLanguageSwitchPath(lang)
+        : `/${lang}/`;
+
+    if (targetPath && targetPath !== `${window.location.pathname}${window.location.hash}`) {
+        window.location.href = targetPath;
+        return;
+    }
     
     // Update language toggle button
     updateLanguageToggleButton();
@@ -217,11 +221,12 @@ function getProductByLang(product, field, lang) {
 
 // Initialize language from URL or localStorage
 function initializeLanguageFromStorage() {
+    const pathLang = typeof getLanguageFromPath === 'function' ? getLanguageFromPath() : null;
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
     const storedLang = localStorage.getItem('colorAquaticLanguage') || localStorage.getItem('blogLanguage');
     
-    let initialLang = urlLang || storedLang || 'vi';
+    let initialLang = pathLang || urlLang || storedLang || 'vi';
     
     // Validate language
     if (!['vi', 'en'].includes(initialLang)) {
@@ -230,13 +235,6 @@ function initializeLanguageFromStorage() {
     
     window.currentLanguage = initialLang;
     updateLanguageSummary();
-    
-    // Update the URL if needed
-    if (!urlLang) {
-        const url = new URL(window.location);
-        url.searchParams.set('lang', initialLang);
-        window.history.replaceState(null, '', url.toString());
-    }
     
     console.log(`Language initialized: ${initialLang}`);
     return initialLang;

@@ -380,15 +380,6 @@ function setupCollectionInteractions() {
     if (!collectionContainer) return;
 
     collectionContainer.addEventListener('click', function(event) {
-        const productButton = event.target.closest('[data-product-id]');
-        if (productButton) {
-            const productId = productButton.getAttribute('data-product-id');
-            if (productId) {
-                loadProduct(productId);
-            }
-            return;
-        }
-
         const pageButton = event.target.closest('[data-page]');
         if (pageButton) {
             const page = Number(pageButton.getAttribute('data-page') || '1');
@@ -402,6 +393,7 @@ function setupCollectionInteractions() {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded event fired');
     console.log('Current script version: Refactored modular version');
+    const staticPageType = typeof getCurrentStaticPageType === 'function' ? getCurrentStaticPageType() : '';
     
     // Initialize language from storage
     const initialLang = initializeLanguageFromStorage();
@@ -410,6 +402,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all modules
     console.log('Initializing language...');
     initializeLanguage();
+
+    console.log('Initializing hamburger menu...');
+    initializeHamburgerMenu();
+
+    // Update page content
+    updateLanguageToggleButton();
+    updatePageTexts();
+
+    if (staticPageType === 'detail') {
+        console.log('Static detail page initialized');
+        return;
+    }
     
     console.log('Initializing navigation...');
     initializeNavigation();
@@ -417,16 +421,9 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Initializing search...');
     initializeSearch();
     
-    console.log('Initializing hamburger menu...');
-    initializeHamburgerMenu();
-    
     console.log('Setting up category filter...');
     setupCategoryFilter();
     setupCollectionInteractions();
-    
-    // Update page content
-    updateLanguageToggleButton();
-    updatePageTexts();
     
     // Check URL parameters for specific content
     const urlParams = new URLSearchParams(window.location.search);

@@ -33,23 +33,6 @@ function initializeSearch() {
         }
     });
 
-    if (searchResultsContent) {
-        searchResultsContent.addEventListener('click', function(e) {
-            const target = e.target.closest('[data-result-id][data-result-type]');
-            if (!target) return;
-
-            e.preventDefault();
-            const id = target.getAttribute('data-result-id');
-            const type = target.getAttribute('data-result-type');
-
-            if (!id || !type) return;
-            if (type === 'post') {
-                loadPost(id);
-            } else if (type === 'collection') {
-                loadProduct(id);
-            }
-        });
-    }
 }
 
 // Debounce function to limit search frequency
@@ -271,14 +254,14 @@ function createSearchResultCard(item, type) {
         }).join(', ');
         
         return `
-            <div class="post-card" data-result-type="post" data-result-id="${item.id}">
+            <a class="post-card" href="${getPostPath(item.id, lang)}">
                 <h3>${highlightedTitle}</h3>
                 <div class="post-date">📅 ${formattedDate}</div>
                 <p class="post-description">${highlightedDescription}</p>
                 <div class="search-match-info">
                     <small><i class="fas fa-tag"></i> ${t('search.matchIn', lang)}: ${matchFields}</small>
                 </div>
-            </div>
+            </a>
         `;
     } else if (type === 'collection') {
         const name = getProductByLang(item, 'name', lang);
@@ -291,14 +274,14 @@ function createSearchResultCard(item, type) {
         }).join(', ');
         
         return `
-            <div class="product-card" data-result-type="collection" data-result-id="${item.id}">
+            <a class="product-card" href="${getProductPath(item, lang)}">
                 <div class="product-images">
                     <div class="main-image">
-                        <img src="images/placeholder1.png" alt="${name}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='>
+                        <img src="/images/placeholder1.png" alt="${name}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='>
                     </div>
                     <div class="thumbnail-images">
                         ${item.images ? item.images.slice(0, 4).map((img, index) =>
-                            `<img src="images/${img}" alt="${name} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
+                            `<img src="/images/${img}" alt="${name} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
                         ).join('') : ''}
                     </div>
                 </div>
@@ -332,7 +315,7 @@ function createSearchResultCard(item, type) {
                         <small><i class="fas fa-tag"></i> ${t('search.matchIn', lang)}: ${matchFields}</small>
                     </div>
                 </div>
-            </div>
+            </a>
         `;
     }
 }
