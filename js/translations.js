@@ -65,9 +65,7 @@ const translations = {
             copyright: '© 2024 Color Aquatic',
             hotline: 'Hotline: 0836 569 811',
             address: 'Địa chỉ: 8 Ni Sư Huỳnh Liên, Phường 10, Quận Tân Bình, TP.HCM',
-            representative: 'Đại diện: Hoàng Quốc Tú',
-            email: 'Email: hoangquoctu95@gmail.com',
-            payment: 'Phương thức thanh toán:'
+            email: 'Email: hoangquoctu95@gmail.com'
         },
         // Language Selector
         language: {
@@ -160,9 +158,7 @@ const translations = {
             copyright: '© 2024 Color Aquatic',
             hotline: 'Hotline: 0836 569 811',
             address: 'Address: 8 Ni Su Huynh Lien, Ward 10, Tan Binh District, Ho Chi Minh City',
-            representative: 'Representative: Hoàng Quốc Tú',
-            email: 'Email: hoangquoctu95@gmail.com',
-            payment: 'Payment Methods:'
+            email: 'Email: hoangquoctu95@gmail.com'
         },
         // Language Selector
         language: {

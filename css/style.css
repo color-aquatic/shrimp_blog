@@ -341,21 +341,6 @@ nav {
     text-align: left;
 }
 
-.footer-col-right {
-    flex: 1;
-    text-align: right;
-}
-
-.payment-icon {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.payment-icon-last {
-    margin-right: 0;
-}
-
 .footer-copyright {
     text-align: center;
     margin-top: 20px;
