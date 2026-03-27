@@ -6,8 +6,14 @@ function getPostFile(postId, lang) {
     return `posts/${lang}/${postId}.md`;
 }
 
+function getBasePath() {
+    return (typeof window.__BASE_PATH__ === 'string' ? window.__BASE_PATH__ : '');
+}
+
 function getLanguageFromPath(pathname = window.location.pathname) {
-    const segments = pathname.split('/').filter(Boolean);
+    const bp = getBasePath();
+    const stripped = bp ? pathname.replace(bp, '') : pathname;
+    const segments = stripped.split('/').filter(Boolean);
     const lang = segments[0];
     return ['vi', 'en'].includes(lang) ? lang : null;
 }
@@ -17,11 +23,11 @@ function getCurrentStaticPageType() {
 }
 
 function getHomePath(lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
-    return `/${lang}/`;
+    return `${getBasePath()}/${lang}/`;
 }
 
 function getPostPath(postId, lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
-    return `/${lang}/posts/${postId}/`;
+    return `${getBasePath()}/${lang}/posts/${postId}/`;
 }
 
 function getProductPath(productOrId, lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
@@ -30,7 +36,7 @@ function getProductPath(productOrId, lang = window.currentLanguage || getLanguag
         : productOrId;
     const productId = typeof productOrId === 'string' ? productOrId : productOrId?.id;
     const category = product?.category || 'shrimps';
-    return `/${lang}/collection/${category}/${productId}/`;
+    return `${getBasePath()}/${lang}/collection/${category}/${productId}/`;
 }
 
 function getLanguageSwitchPath(lang) {
@@ -42,12 +48,14 @@ function getLanguageSwitchPath(lang) {
 
     const pageType = getCurrentStaticPageType();
     if (pageType === 'detail') {
-        const segments = window.location.pathname.split('/').filter(Boolean);
+        const bp = getBasePath();
+        const stripped = bp ? window.location.pathname.replace(bp, '') : window.location.pathname;
+        const segments = stripped.split('/').filter(Boolean);
         if (segments[1] === 'posts' && segments[2]) {
             return getPostPath(segments[2], lang);
         }
         if (segments[1] === 'collection' && segments[2] && segments[3]) {
-            return `/${lang}/collection/${segments[2]}/${segments[3]}/`;
+            return `${bp}/${lang}/collection/${segments[1]}/${segments[2]}/`;
         }
     }
 
@@ -67,11 +75,11 @@ function createProductCard(product) {
     card.innerHTML = `
         <div class="product-images">
             <div class="main-image">
-                <img src="/images/placeholder1.png" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='">
+                <img src="${getBasePath()}/images/placeholder1.png" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='">
             </div>
             <div class="thumbnail-images">
                 ${product.images.slice(0, 4).map((img, index) =>
-                    `<img src="/images/${img}" alt="${productName} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
+                    `<img src="${getBasePath()}/images/${img}" alt="${productName} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
                 ).join('')}
             </div>
         </div>

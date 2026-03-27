@@ -9,6 +9,7 @@ const rootDir = process.cwd();
 const distDir = path.join(rootDir, 'dist');
 const supportedLanguages = ['vi', 'en'];
 const siteUrl = (process.env.SITE_URL || 'https://yourdomain.com').replace(/\/$/, '');
+const basePath = (process.env.BASE_PATH || '').replace(/\/$/, ''); // e.g. '/shrimp_blog' for GitHub Pages subdir, '' for root
 const homeSeo = {
   vi: {
     title: 'Color Aquatic - Hướng dẫn nuôi và chăm sóc tép cảnh',
@@ -77,11 +78,15 @@ function extractDescriptionFromMarkdown(markdown) {
 
 function normalizeTemplateAssets(template) {
   return template
-    .replace(/href="favicon\.ico"/g, 'href="/favicon.ico"')
-    .replace(/href="css\//g, 'href="/css/')
-    .replace(/src="js\//g, 'src="/js/')
-    .replace(/src="images\//g, 'src="/images/')
-    .replace(/srcset="images\//g, 'srcset="/images/');
+    .replace(/href="favicon\.ico"/g, `href="${basePath}/favicon.ico"`)
+    .replace(/href="css\//g, `href="${basePath}/css/`)
+    .replace(/src="js\//g, `src="${basePath}/js/`)
+    .replace(/src="images\//g, `src="${basePath}/images/`)
+    .replace(/srcset="images\//g, `srcset="${basePath}/images/`);
+}
+
+function injectBasePath(html) {
+  return html.replace('</head>', `<script>window.__BASE_PATH__=${JSON.stringify(basePath)};</script>\n</head>`);
 }
 
 function setHeadMetadata(template, { lang, title, description, keywords, canonicalPath, alternateVi, alternateEn, ogType = 'website' }) {
@@ -124,7 +129,7 @@ function setBodyData(template, attributes) {
 }
 
 function setNavigationLinks(template, lang) {
-  const homePath = `/${lang}/`;
+  const homePath = `${basePath}/${lang}/`;
   let html = template;
   html = replaceRequired(html, /href="index\.html" data-translate="nav\.home"/, `href="${homePath}" data-translate="nav.home"`, 'home nav link');
   html = replaceRequired(html, /href="#collection" data-translate="nav\.collection"/, `href="${homePath}#collection" data-translate="nav.collection"`, 'collection nav link');
@@ -167,9 +172,10 @@ function buildDetailContent({ title, htmlContent, metaLine }) {
 }
 
 function buildDetailPageFromTemplate(template, { lang, title, description, keywords, canonicalPath, htmlContent, alternatePath, metaLine }) {
-  const switchVi = lang === 'vi' ? canonicalPath : '/vi/';
-  const switchEn = lang === 'en' ? canonicalPath : (alternatePath || '/en/');
+  const switchVi = lang === 'vi' ? `${basePath}${canonicalPath}` : `${basePath}/vi/`;
+  const switchEn = lang === 'en' ? `${basePath}${canonicalPath}` : (alternatePath ? `${basePath}${alternatePath}` : `${basePath}/en/`);
   let html = normalizeTemplateAssets(template);
+  html = injectBasePath(html);
   html = setHeadMetadata(html, {
     lang,
     title: `${title} - Color Aquatic`,
@@ -200,18 +206,19 @@ function buildDetailPageFromTemplate(template, { lang, title, description, keywo
 
 function buildHomePageFromTemplate(template, lang) {
   const seo = homeSeo[lang];
-  const homePath = `/${lang}/`;
-  const switchVi = '/vi/';
-  const switchEn = '/en/';
+  const pagePath = `/${lang}/`;      // pure path for canonical/hreflang (combined with siteUrl)
+  const switchVi = `${basePath}/vi/`; // full browser path for navigation
+  const switchEn = `${basePath}/en/`;
   let html = normalizeTemplateAssets(template);
+  html = injectBasePath(html);
   html = setHeadMetadata(html, {
     lang,
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
-    canonicalPath: homePath,
-    alternateVi: switchVi,
-    alternateEn: switchEn,
+    canonicalPath: pagePath,
+    alternateVi: '/vi/',
+    alternateEn: '/en/',
     ogType: 'website'
   });
   html = setBodyData(html, {
@@ -269,12 +276,12 @@ async function buildRootRedirect() {
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=/vi/">
+  <meta http-equiv="refresh" content="0; url=${basePath}/vi/">
   <title>Redirecting...</title>
   <link rel="canonical" href="${siteUrl}/vi/">
 </head>
 <body>
-  <p>Redirecting to <a href="/vi/">/vi/</a></p>
+  <p>Redirecting to <a href="${basePath}/vi/">${basePath}/vi/</a></p>
 </body>
 </html>`;
   await writeFile(path.join(distDir, 'index.html'), await minifyHtml(html), 'utf8');
