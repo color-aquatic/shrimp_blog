@@ -250,10 +250,25 @@ async function loadMarkdownContent(id, lang, type) {
             if (!product) throw new Error(`Product not found: ${id}`);
 
             const productName = getProductByLang(product, 'name', lang);
+            const basePath = getBasePath();
+            const mainImg = product.images && product.images[0] ? product.images[0] : 'placeholder1.png';
+            const thumbnailsHtml = product.images
+                ? product.images.slice(0, 6).map((img, i) =>
+                    `<img src="${basePath}/images/${img}" alt="${productName} ${i + 1}" loading="lazy" decoding="async" class="thumb-img${i === 0 ? ' active' : ''}" onclick="changeMainImage('${basePath}/images/${img}', this)" onerror="this.style.display='none'">`
+                ).join('')
+                : '';
             articleContent.innerHTML = `
                 <header>
                     <h1>${productName}</h1>
                 </header>
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="${basePath}/images/${mainImg}" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='" >
+                    </div>
+                    <div class="thumbnail-images">
+                        ${thumbnailsHtml}
+                    </div>
+                </div>
                 <hr>
                 ${safeHtml}
             `;
@@ -291,10 +306,17 @@ function parseSimpleMarkdown(content) {
 }
 
 // Change main product image
-function changeMainImage(src) {
+function changeMainImage(src, thumbEl) {
     const mainImage = document.getElementById('main-product-image');
     if (mainImage) {
         mainImage.src = src;
+    }
+    if (thumbEl) {
+        const siblings = thumbEl.closest('.thumbnail-images');
+        if (siblings) {
+            siblings.querySelectorAll('.thumb-img').forEach(el => el.classList.remove('active'));
+        }
+        thumbEl.classList.add('active');
     }
 }
 

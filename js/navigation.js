@@ -85,6 +85,9 @@ function navigateToSection(section) {
     url.searchParams.delete('post');
     url.searchParams.delete('product');
     url.searchParams.set('section', section);
+    if (typeof isStaticBuildMode === 'function' && !isStaticBuildMode()) {
+        url.searchParams.set('lang', window.currentLanguage || 'vi');
+    }
     window.history.pushState({ section: section }, '', url.toString());
     
     // Update navigation highlighting
@@ -116,6 +119,9 @@ function showHomePage() {
     url.searchParams.delete('post');
     url.searchParams.delete('product');
     url.searchParams.delete('section');
+    if (typeof isStaticBuildMode === 'function' && !isStaticBuildMode()) {
+        url.searchParams.set('lang', window.currentLanguage || 'vi');
+    }
     window.history.pushState(null, '', url.toString());
     
     // Update navigation
@@ -182,6 +188,9 @@ function loadPost(postId) {
     url.searchParams.delete('product');
     url.searchParams.delete('section');
     url.searchParams.set('post', postId);
+    if (typeof isStaticBuildMode === 'function' && !isStaticBuildMode()) {
+        url.searchParams.set('lang', window.currentLanguage || 'vi');
+    }
     window.history.pushState({ postId: postId }, '', url.toString());
     
     // Update meta tags for SEO
@@ -221,6 +230,9 @@ function loadProduct(productId) {
     url.searchParams.delete('post');
     url.searchParams.delete('section');
     url.searchParams.set('product', productId);
+    if (typeof isStaticBuildMode === 'function' && !isStaticBuildMode()) {
+        url.searchParams.set('lang', window.currentLanguage || 'vi');
+    }
     window.history.pushState({ productId: productId }, '', url.toString());
     
     // Update meta tags for SEO

@@ -22,11 +22,43 @@ function getCurrentStaticPageType() {
     return document.body?.dataset?.staticPageType || '';
 }
 
+function isStaticBuildMode() {
+    return Boolean(getCurrentStaticPageType());
+}
+
+function buildSourceUrl({ lang, postId, productId, section } = {}) {
+    const params = new URLSearchParams();
+
+    if (lang) {
+        params.set('lang', lang);
+    }
+    if (postId) {
+        params.set('post', postId);
+    }
+    if (productId) {
+        params.set('product', productId);
+    }
+    if (section) {
+        params.set('section', section);
+    }
+
+    const query = params.toString();
+    return `${getBasePath()}/index.html${query ? `?${query}` : ''}`;
+}
+
 function getHomePath(lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
+    if (!isStaticBuildMode()) {
+        return buildSourceUrl({ lang });
+    }
+
     return `${getBasePath()}/${lang}/`;
 }
 
 function getPostPath(postId, lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
+    if (!isStaticBuildMode()) {
+        return buildSourceUrl({ lang, postId });
+    }
+
     return `${getBasePath()}/${lang}/posts/${postId}/`;
 }
 
@@ -36,6 +68,11 @@ function getProductPath(productOrId, lang = window.currentLanguage || getLanguag
         : productOrId;
     const productId = typeof productOrId === 'string' ? productOrId : productOrId?.id;
     const category = product?.category || 'shrimps';
+
+    if (!isStaticBuildMode()) {
+        return buildSourceUrl({ lang, productId });
+    }
+
     return `${getBasePath()}/${lang}/collection/${category}/${productId}/`;
 }
 
@@ -44,6 +81,16 @@ function getLanguageSwitchPath(lang) {
     const staticSwitch = lang === 'vi' ? body?.dataset?.switchVi : body?.dataset?.switchEn;
     if (staticSwitch) {
         return staticSwitch;
+    }
+
+    if (!isStaticBuildMode()) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return buildSourceUrl({
+            lang,
+            postId: urlParams.get('post'),
+            productId: urlParams.get('product'),
+            section: urlParams.get('section')
+        });
     }
 
     const pageType = getCurrentStaticPageType();
@@ -75,7 +122,7 @@ function createProductCard(product) {
     card.innerHTML = `
         <div class="product-images">
             <div class="main-image">
-                <img src="${getBasePath()}/images/placeholder1.png" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='">
+                <img src="${getBasePath()}/images/${product.images && product.images[0] ? product.images[0] : 'placeholder1.png'}" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='">
             </div>
             <div class="thumbnail-images">
                 ${product.images.slice(0, 4).map((img, index) =>

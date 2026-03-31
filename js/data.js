@@ -57,7 +57,7 @@ const collectionProducts = [
         tds: '150-250 ppm',
         gh: '6-12 dGH',
         lifespan: '1-2',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['bluedream1.png', 'bluedream2.png', 'bluedream3.png', 'bluedream4.png']
     },
     {
         id: 'tep-pure-red-line',

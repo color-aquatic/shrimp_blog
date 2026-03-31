@@ -108,6 +108,27 @@ Kết quả nằm trong thư mục `dist/` với các cải tiến:
 - Minify HTML/CSS/JS
 - Giữ nguyên cấu trúc markdown (`posts/`, `collection/`) để route hiện tại không đổi
 
+## Local development không cần build
+
+Nếu bạn chỉ cần chỉnh giao diện, JS, CSS hoặc nội dung Markdown tại local, dùng:
+
+```bash
+npm run dev
+```
+
+Server này phục vụ trực tiếp từ source root, không dùng `dist/`, nên bạn không phải chạy lại `npm run build` sau mỗi lần sửa.
+Nó cũng tự động reload trình duyệt khi bạn thay đổi file HTML, CSS, JS, Markdown hoặc ảnh trong project.
+
+Mở tại:
+
+```text
+http://localhost:3000/
+```
+
+Lưu ý:
+- Chế độ này dùng URL dạng query string như `?lang=vi&post=tep-mau` cho local dev.
+- Nếu bạn cần test đúng output production và URL đẹp `/vi/...`, vẫn dùng `npm run build` rồi `npm run serve`.
+
 ### Tối ưu ảnh
 
 ```bash
