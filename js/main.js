@@ -110,10 +110,47 @@ function displayCollectionProducts(page = 1, filter = currentFilter) {
         return;
     }
 
-    // Display products
-    productsToShow.forEach(product => {
-        const productCard = createProductCard(product);
-        collectionContainer.appendChild(productCard);
+    const lang = window.currentLanguage || 'vi';
+    const categoryOrder = ['shrimps', 'plants', 'accessory'];
+    const categoryTitles = {
+        shrimps: t('collection.filterShrimps', lang),
+        plants: t('collection.filterPlants', lang),
+        accessory: t('collection.filterAccessory', lang)
+    };
+
+    // Group items by category so users can scan and manage each type more easily.
+    const groupedProducts = productsToShow.reduce((groups, product) => {
+        const key = product.category || 'other';
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(product);
+        return groups;
+    }, {});
+
+    const sortedCategories = [
+        ...categoryOrder.filter(category => groupedProducts[category]?.length),
+        ...Object.keys(groupedProducts).filter(category => !categoryOrder.includes(category))
+    ];
+
+    sortedCategories.forEach((category) => {
+        const section = document.createElement('section');
+        section.className = 'collection-category-section';
+        section.setAttribute('data-category', category);
+
+        const title = document.createElement('h3');
+        title.className = 'collection-category-title';
+        title.textContent = categoryTitles[category] || category;
+        section.appendChild(title);
+
+        const grid = document.createElement('div');
+        grid.className = 'collection-category-grid';
+
+        groupedProducts[category].forEach((product) => {
+            const productCard = createProductCard(product);
+            grid.appendChild(productCard);
+        });
+
+        section.appendChild(grid);
+        collectionContainer.appendChild(section);
     });
 
     // Add pagination
