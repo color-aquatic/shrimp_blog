@@ -253,7 +253,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['mini-taiwan.png', 'mini-taiwan.png', 'mini-taiwan.png', 'mini-taiwan.png']
     },
     {
         id: 'reu-pelia',
@@ -266,7 +266,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['pelia.png', 'pelia.png', 'pelia.png', 'pelia.png']
     },
     // Sample accessory products
     {
@@ -280,7 +280,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '1-2',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['hbl-803.png', 'hbl-803.png', 'hbl-803.png', 'hbl-803.png']
     },
     {
         id: 'den-led-thuy-sinh',
@@ -293,7 +293,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '3-5',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['flat-nano.png', 'plant2.png', 'plant3.png', 'plant4.png']
     },
     // New accessory products
     {
@@ -307,7 +307,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '2-3',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['qs200a.png', 'qs200a.png', 'qs200a.png', 'qs200a.png']
     },
     {
         id: 'loc-thac-kaokui',
@@ -372,7 +372,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '5-7',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['flat-nano.png', 'flat-nano.png', 'flat-nano.png', 'flat-nano.png']
     },
     {
         id: 'men-vi-sinh-koika-bac',
@@ -399,7 +399,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['nanapettie.png', 'nanapettie.png', 'nanapettie.png', 'nanapettie.png']
     },
     {
         id: 'ray-pinto',
@@ -425,7 +425,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['bucep.png', 'bucep.png', 'bucep.png', 'bucep.png']
     },
     {
         id: 'duong-xi-java',
@@ -438,7 +438,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['java.png', 'java.png', 'java.png', 'java.png']
     },
     {
         id: 'duong-xi-chau-phi',
@@ -451,7 +451,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['dxcp.png', 'dxcp.png', 'dxcp.png', 'dxcp.png']
     },
     {
         id: 'duong-xi-la-kim',
@@ -464,6 +464,6 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['dxlk.png', 'dxlk.png', 'dxlk.png', 'dxlk.png']
     }
 ];
