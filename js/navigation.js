@@ -132,9 +132,9 @@ function showHomePage() {
     displayCollectionProducts();
 }
 
-// Hide all sections
+// Hide all sections (except about)
 function hideAllSections() {
-    const sections = ['hero', 'collection', 'posts', 'search-results', 'post-content', 'product-detail'];
+    const sections = ['hero', 'benefits', 'collection', 'posts', 'search-section', 'search-results', 'post-content', 'product-detail'];
     sections.forEach(sectionId => {
         const section = document.getElementById(sectionId);
         if (section) {
