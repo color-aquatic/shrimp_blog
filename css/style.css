@@ -5,8 +5,14 @@
 }
 
 /* Smooth scroll for page navigation */
-html {
+html, body {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
     scroll-behavior: smooth;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    color-scheme: light;
 }
 
 /* Header and Navigation */
@@ -536,7 +542,29 @@ nav {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .social-stick {
-        display: none;
+        display: flex;
+        position: fixed;
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
+        top: auto;
+        flex-direction: row;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 999px;
+        padding: 0.25rem;
+        gap: 0.25rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        border-radius: 50%;
+    }
+
+    .social-link:hover {
+        width: 40px;
     }
 }
 
@@ -573,7 +601,24 @@ nav {
 #article-content {
     max-width: 100%;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+}
+
+#article-content h1,
+#article-content h2,
+#article-content h3,
+#article-content p,
+#article-content ul,
+#article-content ol,
+#article-content blockquote,
+#article-content pre {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+#article-content blockquote {
+    padding-left: 1rem;
+    border-left: 4px solid var(--primary-color, #667eea);
 }
 
 #article-content h1 {
