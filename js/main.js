@@ -228,6 +228,56 @@ function displayProductDetail(product) {
     loadMarkdownContent(product.id, lang, 'product');
 }
 
+function getProductIdFromUrlPath() {
+    const path = (typeof getBasePath === 'function' ? window.location.pathname.replace(getBasePath(), '') : window.location.pathname).replace(/^\//, '');
+    const segments = path.split('/').filter(Boolean);
+    if (segments.length >= 4 && segments[1] === 'collection') {
+        return segments[3];
+    }
+    return null;
+}
+
+function ensureStaticProductImages() {
+    const articleContent = document.getElementById('article-content');
+    if (!articleContent) return;
+    if (articleContent.querySelector('.product-images')) return;
+
+    const productId = getProductIdFromUrlPath();
+    if (!productId) return;
+
+    const product = collectionProducts.find((item) => item.id === productId);
+    if (!product) return;
+
+    const lang = window.currentLanguage || 'vi';
+    const productName = getProductByLang(product, 'name', lang);
+    const basePath = typeof getBasePath === 'function' ? getBasePath() : '';
+    const mainImg = (product.images && product.images.length) ? product.images[0] : 'placeholder1.png';
+    const thumbnailsHtml = (product.images || []).slice(0, 6).map((img, index) =>
+        `<img src="${basePath}/images/${img}" alt="${productName} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
+    ).join('');
+
+    const productImagesHtml = `
+        <div class="product-images">
+            <div class="main-image">
+                <img id="main-product-image" src="${basePath}/images/${mainImg}" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkhsb2dnYW5nIGltYWdlPC90ZXh0Pjwvc3ZnPg=='" >
+            </div>
+            <div class="thumbnail-images">
+                ${thumbnailsHtml}
+            </div>
+        </div>
+    `;
+
+    articleContent.insertAdjacentHTML('afterbegin', productImagesHtml);
+
+    // Keep thumbnail click behavior as in current JS
+    const thumbnails = articleContent.querySelectorAll('.thumbnail-images img');
+    thumbnails.forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+            changeMainImage(thumb.src, thumb);
+        });
+    });
+}
+
 // Load markdown content dynamically
 async function loadMarkdownContent(id, lang, type) {
     try {
@@ -471,6 +521,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (staticPageType === 'detail') {
         console.log('Static detail page initialized');
+        ensureStaticProductImages();
         return;
     }
     
