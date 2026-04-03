@@ -267,7 +267,12 @@ function ensureStaticProductImages() {
         </div>
     `;
 
-    articleContent.insertAdjacentHTML('afterbegin', productImagesHtml);
+    const headerNode = articleContent.querySelector('header');
+    if (headerNode) {
+        headerNode.insertAdjacentHTML('afterend', productImagesHtml);
+    } else {
+        articleContent.insertAdjacentHTML('afterbegin', productImagesHtml);
+    }
 
     // Keep thumbnail click behavior as in current JS
     const thumbnails = articleContent.querySelectorAll('.thumbnail-images img');
