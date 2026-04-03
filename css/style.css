@@ -1216,10 +1216,10 @@ section h2 {
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
-    width: min(100%, 1100px);
+    width: 100%;
     aspect-ratio: 43 / 24; /* Match good_benefits.png (2752x1536) */
     height: auto;
-    margin: 2rem auto;
+    margin: 2rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     background: #f8f9fa;
