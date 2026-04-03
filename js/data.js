@@ -323,32 +323,6 @@ const collectionProducts = [
         images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
     },
     {
-        id: 'keo-dan-reu-thuy-sinh',
-        category: 'accessory',
-        nameVi: 'Keo dán rêu thủy sinh',
-        nameEn: 'Aquatic Moss Glue',
-        shortDescriptionVi: 'Keo GUO Elephant Super Glue chuyên dụng cho việc dán rêu và cây thủy sinh, an toàn sinh học.',
-        shortDescriptionEn: 'GUO Elephant Super Glue specially designed for attaching moss and aquatic plants, biologically safe.',
-        temperature: 'N/A',
-        tds: 'N/A',
-        gh: 'N/A',
-        lifespan: '1-2',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
-    },
-    {
-        id: 'binh-co2-thuy-sinh',
-        category: 'accessory',
-        nameVi: 'Bình CO2 thủy sinh',
-        nameEn: 'Aquatic CO2 Tank',
-        shortDescriptionVi: 'Thiết bị cung cấp carbon dioxide cho cây thủy sinh, thúc đẩy quá trình quang hợp.',
-        shortDescriptionEn: 'Carbon dioxide supply device for aquatic plants, promoting photosynthesis process.',
-        temperature: 'N/A',
-        tds: 'N/A',
-        gh: 'N/A',
-        lifespan: '3-5',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
-    },
-    {
         id: 'loc-vang-kaokui',
         category: 'accessory',
         nameVi: 'Lọc váng Kaokui',
@@ -373,19 +347,6 @@ const collectionProducts = [
         gh: 'N/A',
         lifespan: '5-7',
         images: ['flat-nano.png', 'flat-nano.png', 'flat-nano.png', 'flat-nano.png']
-    },
-    {
-        id: 'men-vi-sinh-koika-bac',
-        category: 'accessory',
-        nameVi: 'Men vi sinh Koika-Bac',
-        nameEn: 'Koika-Bac Microorganisms',
-        shortDescriptionVi: 'Sản phẩm bổ sung men vi sinh chuyên dụng, giúp phân hủy chất thải và cân bằng sinh học.',
-        shortDescriptionEn: 'Specialized probiotic supplement that helps decompose waste and maintain biological balance.',
-        temperature: 'N/A',
-        tds: 'N/A',
-        gh: 'N/A',
-        lifespan: '1-2',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
     },
     // Plants products
     {
