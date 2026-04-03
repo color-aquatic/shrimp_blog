@@ -310,32 +310,6 @@ const collectionProducts = [
         images: ['qs200a.png', 'qs200a.png', 'qs200a.png', 'qs200a.png']
     },
     {
-        id: 'loc-thac-kaokui',
-        category: 'accessory',
-        nameVi: 'Lọc thác Kaokui',
-        nameEn: 'Kaokui Waterfall Filter',
-        shortDescriptionVi: 'Hệ thống lọc treo ngoài với thiết kế thác nước độc đáo, model KK-528 và KK-538.',
-        shortDescriptionEn: 'Hang-on-back filtration system with unique waterfall design, models KK-528 and KK-538.',
-        temperature: 'N/A',
-        tds: 'N/A',
-        gh: 'N/A',
-        lifespan: '2-3',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
-    },
-    {
-        id: 'loc-vang-kaokui',
-        category: 'accessory',
-        nameVi: 'Lọc váng Kaokui',
-        nameEn: 'Kaokui Surface Skimmer',
-        shortDescriptionVi: 'Thiết bị KK-88 Surface Skimmer Mini chuyên loại bỏ váng dầu và tạp chất nổi.',
-        shortDescriptionEn: 'KK-88 Surface Skimmer Mini device specialized in removing oil film and floating debris.',
-        temperature: 'N/A',
-        tds: 'N/A',
-        gh: 'N/A',
-        lifespan: '2-3',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
-    },
-    {
         id: 'den-neo-helios',
         category: 'accessory',
         nameVi: 'Đèn Neo-Helios',
@@ -361,19 +335,6 @@ const collectionProducts = [
         gh: 'Soft to hard',
         lifespan: 'N/A',
         images: ['nanapettie.png', 'nanapettie.png', 'nanapettie.png', 'nanapettie.png']
-    },
-    {
-        id: 'ray-pinto',
-        category: 'plants',
-        nameVi: 'Ráy Pinto',
-        nameEn: 'Anubias Pinto',
-        shortDescriptionVi: 'Ráy đột biến variegated với mảng trắng xanh nổi bật, phù hợp làm điểm nhấn.',
-        shortDescriptionEn: 'A variegated Anubias with striking white-green marbling, ideal as a centerpiece.',
-        temperature: '20-28°C',
-        tds: 'N/A',
-        gh: 'Soft to hard',
-        lifespan: 'N/A',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
     },
     {
         id: 'bucephalandra',
