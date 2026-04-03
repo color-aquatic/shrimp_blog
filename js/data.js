@@ -122,7 +122,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['oe1.png', 'oe1.png', 'oe1.png', 'oe1.png']
     },
     {
         id: 'tep-pure-black-line',
@@ -135,7 +135,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['pbl1.png', 'pbl2.png', 'pbl1.png', 'pbl2.png']
     },
     {
         id: 'tep-ocean-blue',
@@ -148,7 +148,7 @@ const collectionProducts = [
         tds: '110-170 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['ocean1.png', 'ocean1.png', 'ocean1.png', 'ocean1.png']
     },
     {
         id: 'tep-loan-lanh',
@@ -161,7 +161,7 @@ const collectionProducts = [
         tds: '150-250 ppm',
         gh: '4-8 dGH',
         lifespan: '1-2',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['loanlanh1.png', 'loanlanh1.png', 'loanlanh1.png', 'loanlanh1.png']
     },
     {
         id: 'tep-deep-blue',
@@ -200,7 +200,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['dark-winered1.png', 'red-mosura1.png', 'red-mosura1.png', 'red-mosura1.png']
     },
     {
         id: 'tep-black-galaxy-fishbone-snowflake',
@@ -213,7 +213,7 @@ const collectionProducts = [
         tds: '90-150 ppm',
         gh: '3-6 dGH',
         lifespan: '2-3',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['black-glx1.png', 'black-glx2.png', 'black-glx3.png', 'black-glx4.png']
     },
     {
         id: 'tep-black-galaxy-boa',
@@ -226,7 +226,7 @@ const collectionProducts = [
         tds: '80-120 ppm',
         gh: '2-5 dGH',
         lifespan: '3-4',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['black-glx5.png', 'black-glx6.png', 'black-glx7.png', 'black-glx8.png']
     },
     {
         id: 'tep-red-galaxy-tiger',
@@ -239,7 +239,7 @@ const collectionProducts = [
         tds: '100-160 ppm',
         gh: '3-6 dGH',
         lifespan: '2-2.5',
-        images: ['placeholder1.png', 'placeholder2.png', 'placeholder3.png', 'placeholder4.png']
+        images: ['red-glx1.png', 'red-glx2.png', 'red-glx3.png', 'red-glx4.png']
     },
     // Sample fishes products
     {
