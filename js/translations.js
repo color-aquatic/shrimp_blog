@@ -32,7 +32,7 @@ const translations = {
             filterLabel: 'Lọc theo danh mục:',
             filterAll: 'Tất cả',
             filterShrimps: 'Tép cảnh',
-            filterFishes: 'Cá cảnh',
+            filterPlants: 'Cây thủy sinh',
             filterAccessory: 'Phụ kiện'
         },
 
@@ -124,7 +124,7 @@ const translations = {
             filterLabel: 'Filter by category:',
             filterAll: 'All',
             filterShrimps: 'Shrimps',
-            filterFishes: 'Fishes',
+            filterPlants: 'Aquatic Plants',
             filterAccessory: 'Accessory'
         },
 

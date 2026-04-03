@@ -172,9 +172,6 @@ function updateNavigation() {
                 case 'shrimps':
                     option.textContent = t('collection.filterShrimps', lang);
                     break;
-                case 'fishes':
-                    option.textContent = t('collection.filterFishes', lang);
-                    break;
                 case 'accessory':
                     option.textContent = t('collection.filterAccessory', lang);
                     break;
