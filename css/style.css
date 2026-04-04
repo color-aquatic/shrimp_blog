@@ -27,6 +27,23 @@ nav {
     position: relative;
 }
 
+nav .nav-menu a {
+    color: var(--color, #333);
+    font-weight: 600;
+    text-shadow: none;
+    forced-color-adjust: none;
+    color-scheme: light;
+}
+
+[data-theme="dark"] nav .nav-menu a {
+    color: #f2f2f2 !important;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    forced-color-adjust: none;
+    color-scheme: light;
+    -webkit-text-fill-color: currentColor;
+}
+
 header nav ul li strong {
     color: #1a1a1a;
     font-weight: 700;
@@ -220,6 +237,12 @@ header nav ul li strong {
     border-left: 1px solid var(--border-color, #333);
 }
 
+[data-theme="dark"] .nav-menu a {
+    color: #f2f2f2;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 [data-theme="dark"] .nav-menu a:hover {
     background: var(--primary-color, #667eea);
     color: white;
@@ -228,7 +251,31 @@ header nav ul li strong {
 [data-theme="dark"] .language-summary {
     background: var(--muted-background-color, #333);
     border: 1px solid var(--border-color, #444);
-    color: var(--color, #fff);
+    color: #f2f2f2;
+    forced-color-adjust: none;
+    color-adjust: exact;
+    -webkit-text-fill-color: currentColor;
+}
+
+[data-theme="dark"] .language-summary .lang-text,
+[data-theme="dark"] .language-summary .lang-text span,
+[data-theme="dark"] .language-summary .lang-flag {
+    color: #f2f2f2 !important;
+    forced-color-adjust: none;
+    color-adjust: exact;
+    -webkit-text-fill-color: currentColor;
+}
+
+[data-theme="dark"] .language-summary .lang-text {
+    font-weight: 600;
+}
+
+[data-theme="dark"] .language-selector .lang-option,
+[data-theme="dark"] .language-selector .lang-name {
+    color: #f2f2f2 !important;
+    forced-color-adjust: none;
+    color-adjust: exact;
+    -webkit-text-fill-color: currentColor;
 }
 
 [data-theme="dark"] .language-menu {
