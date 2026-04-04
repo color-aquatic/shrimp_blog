@@ -14,7 +14,7 @@ Tép Wine Red là một loài tép cảnh tuyệt đẹp được biết đến 
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 22-26°C |
 | pH | 5.0-6.5 |

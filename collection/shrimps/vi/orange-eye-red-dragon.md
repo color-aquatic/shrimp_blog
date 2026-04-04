@@ -14,7 +14,7 @@ Tép Orange Eye Red Dragon là dòng tép tiger cao cấp nổi bật nhờ đô
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 22-26°C |
 | pH | 5.2-6.6 |

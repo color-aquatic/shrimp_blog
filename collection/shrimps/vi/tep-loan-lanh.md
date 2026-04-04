@@ -14,7 +14,7 @@ Tép Loạn Lạnh đại diện cho một tập hợp đa dạng các giống t
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 20-26°C |
 | pH | 6.0-7.5 |

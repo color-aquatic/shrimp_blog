@@ -14,7 +14,7 @@ Tép Green Jade là dòng tép màu xanh ngọc đang rất được ưa chuộn
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 22-30°C |
 | pH | 6.2-7.8 |

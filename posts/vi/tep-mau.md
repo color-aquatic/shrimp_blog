@@ -30,7 +30,7 @@ Tép màu có tên khoa học là *Neocaridina davidi* (trước đây là *Neoc
 
 ### Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 18-28°C (tối ưu: 22-26°C) |
 | pH | 6.5-8.0 (tối ưu: 7.0-7.5) |

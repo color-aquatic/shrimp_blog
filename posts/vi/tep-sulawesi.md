@@ -53,7 +53,7 @@ Tép Sulawesi sống trong các hồ nước ngọt trên đảo Sulawesi, nơi 
 
 Tép Sulawesi yêu cầu điều kiện nước rất đặc biệt, khác biệt hoàn toàn so với các loại tép khác:
 
-| Thông số | Giá trị khuyến nghị | Lưu ý |
+| Thông số | Gía trị | Lưu ý |
 |----------|---------------------|-------|
 | Nhiệt độ | 28-29°C (tối ưu) | Phải có máy sưởi |
 | pH | 7.5-8.5 (tối ưu: 8.0-8.2) | **Rất quan trọng** |

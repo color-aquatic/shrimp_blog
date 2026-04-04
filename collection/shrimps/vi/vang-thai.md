@@ -14,7 +14,7 @@ Tép Vàng Thái là dòng tép cảnh nổi bật với màu vàng cam đặc t
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 22-31°C |
 | pH | 6.0-7.8 |

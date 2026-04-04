@@ -14,7 +14,7 @@ Tép Pure Black Line (PBL) là một dòng đặc biệt và khá khan hiếm tr
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 22-26°C |
 | pH | 5.0-6.5 |

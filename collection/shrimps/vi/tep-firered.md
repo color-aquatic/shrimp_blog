@@ -14,7 +14,7 @@ Tép Fire Red là một dòng tép cảnh rất được ưa chuộng với màu
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 18-25°C |
 | pH | 6.0-8.0 |

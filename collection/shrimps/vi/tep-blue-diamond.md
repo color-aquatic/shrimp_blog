@@ -14,7 +14,7 @@ Tép Blue Diamond là một trong những giống tép cảnh nổi bật với 
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 20-26°C |
 | pH | 6.5-7.8 |

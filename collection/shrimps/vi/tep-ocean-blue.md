@@ -14,7 +14,7 @@ Tép Ocean Blue là dòng tép cảnh nổi bật với tông xanh biển lạnh
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 20-24°C |
 | pH | 5.8-6.8 |

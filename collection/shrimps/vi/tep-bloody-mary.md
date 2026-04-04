@@ -14,7 +14,7 @@ Tép Bloody Mary là một giống tép cảnh cao cấp với màu đỏ thẫm
 
 ## Thông số nước
 
-| Thông số | Giá trị khuyến nghị |
+| Thông số | Gía trị |
 |----------|---------------------|
 | Nhiệt độ | 20-24°C |
 | pH | 6.2-7.2 |
