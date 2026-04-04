@@ -27,6 +27,15 @@ nav {
     position: relative;
 }
 
+header nav ul li strong {
+    color: #1a1a1a;
+    font-weight: 700;
+    color-scheme: light;
+    forced-color-adjust: none;
+    color-adjust: exact;
+    -webkit-text-fill-color: currentColor;
+}
+
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -598,12 +607,61 @@ nav {
 }
 
 /* Article Content */
+#product-detail,
+#post-content {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    color-scheme: light;
+    forced-color-adjust: none;
+    color-adjust: exact;
+    print-color-adjust: exact;
+    -webkit-text-fill-color: currentColor;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    margin: 0 auto 3rem;
+    max-width: 1200px;
+}
+
 #article-content {
     max-width: 100%;
     margin: 0 auto;
     padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    color: #1a1a1a;
+    color-scheme: light;
+    forced-color-adjust: none;
+    color-adjust: exact;
+    print-color-adjust: exact;
+    -webkit-text-fill-color: currentColor;
 }
 
+#article-content p,
+#article-content ul,
+#article-content ol,
+#article-content li {
+    color: #1a1a1a !important;
+}
+
+#article-content a {
+    color: var(--primary-color, #667eea);
+}
+
+#article-content table,
+#article-content table th,
+#article-content table td {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+#article-content blockquote {
+    color: #333;
+}
+
+#article-content header,
+#article-content header h1,
+#article-content header p,
 #article-content h1,
 #article-content h2,
 #article-content h3,
@@ -614,6 +672,17 @@ nav {
 #article-content pre {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
+}
+
+#article-content header {
+    background-color: #ffffff;
+    padding: 0;
+}
+
+#article-content table,
+#article-content table th,
+#article-content table td {
+    background-color: #ffffff;
 }
 
 #article-content blockquote {
@@ -906,6 +975,16 @@ footer {
     padding-top: 2rem;
     border-top: 1px solid var(--border-color, #e0e0e0);
     text-align: center;
+    color: #1a1a1a;
+    color-scheme: light;
+    forced-color-adjust: none;
+}
+
+footer p,
+.footer-layout p,
+.footer-layout li,
+.footer-layout a {
+    color: #1a1a1a;
 }
 
 /* Responsive */
@@ -978,6 +1057,16 @@ section h2 {
     padding: 2rem;
     border-radius: 0.5rem;
     margin-top: 3rem;
+    color: #1a1a1a;
+    color-scheme: light;
+    forced-color-adjust: none;
+}
+
+#about p,
+#about ul,
+#about ol,
+#about li {
+    color: #1a1a1a;
 }
 
 /* Collection Section */
