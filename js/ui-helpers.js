@@ -170,7 +170,7 @@ function getLanguageSwitchPath(lang) {
 function createProductCard(product) {
     const lang = window.currentLanguage || 'vi';
     const card = document.createElement('div');
-    card.className = 'product-card';
+    card.className = 'product-card collection-item';
 
     const productName = getProductByLang(product, 'name', lang);
     const productDescription = getProductByLang(product, 'shortDescription', lang);

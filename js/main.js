@@ -593,8 +593,234 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize slideshow if needed
     initSlideshow();
-    
+
+    // Initialize scroll-triggered animations
+    initializeScrollAnimations();
+
+    // Initialize page transitions
+    initializePageTransitions();
+
     console.log('Color Aquatic blog initialized successfully!');
+});
+
+/**
+ * Initialize scroll-triggered animations using Intersection Observer
+ */
+function initializeScrollAnimations() {
+    // Check if browser supports Intersection Observer
+    if (!('IntersectionObserver' in window)) {
+        console.warn('Intersection Observer not supported, falling back to basic animations');
+        return;
+    }
+
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add staggered animation delay
+                const delay = index * 100;
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, delay);
+
+                // Stop observing after animation is triggered
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe section transitions and cards
+    const sectionsToAnimate = ['.section-transition'];
+
+    const cardsToAnimate = ['.product-card', '.post-card'];
+
+    // Observe sections
+    sectionsToAnimate.forEach(selector => {
+        document.querySelectorAll(selector).forEach(element => {
+            observer.observe(element);
+        });
+    });
+
+    // Observe cards with staggered animation
+    cardsToAnimate.forEach(selector => {
+        document.querySelectorAll(selector).forEach((element, index) => {
+            element.style.animationDelay = `${index * 0.1}s`;
+            observer.observe(element);
+        });
+    });
+}
+
+/**
+ * Initialize smooth page transitions
+ */
+function initializePageTransitions() {
+    // Override navigation functions to add transitions
+    const originalNavigateToSection = window.navigateToSection;
+    const originalLoadPost = window.loadPost;
+    const originalLoadProduct = window.loadProduct;
+    const originalShowHomePage = window.showHomePage;
+
+    if (originalNavigateToSection) {
+        window.navigateToSection = function(section) {
+            smoothPageTransition(() => originalNavigateToSection(section));
+        };
+    }
+
+    if (originalLoadPost) {
+        window.loadPost = function(postId) {
+            smoothPageTransition(() => originalLoadPost(postId));
+        };
+    }
+
+    if (originalLoadProduct) {
+        window.loadProduct = function(productId) {
+            smoothPageTransition(() => originalLoadProduct(productId));
+        };
+    }
+
+    if (originalShowHomePage) {
+        window.showHomePage = function() {
+            smoothPageTransition(() => originalShowHomePage());
+        };
+    }
+}
+
+/**
+ * Smooth page transition wrapper
+ * @param {Function} callback - Function to execute after transition
+ */
+function smoothPageTransition(callback) {
+    // Add loading overlay
+    const loadingOverlay = document.createElement('div');
+    loadingOverlay.className = 'loading-overlay';
+    loadingOverlay.innerHTML = '<div class="loading-spinner"></div>';
+    document.body.appendChild(loadingOverlay);
+
+    // Fade out current content
+    const sections = document.querySelectorAll('.section-transition');
+    sections.forEach(section => {
+        if (section.style.display !== 'none') {
+            section.classList.add('fade-out');
+        }
+    });
+
+    // Execute callback after fade out
+    setTimeout(() => {
+        callback();
+
+        // Fade in new content
+        setTimeout(() => {
+            const newSections = document.querySelectorAll('.section-transition');
+            newSections.forEach(section => {
+                if (section.style.display !== 'none') {
+                    section.classList.remove('fade-out');
+                    section.classList.add('fade-in');
+                }
+            });
+
+            // Remove loading overlay
+            setTimeout(() => {
+                if (loadingOverlay.parentNode) {
+                    loadingOverlay.parentNode.removeChild(loadingOverlay);
+                }
+            }, 300);
+        }, 50);
+    }, 300);
+}
+
+/**
+ * Add loading animation to async operations
+ * @param {Function} asyncFunction - Async function to wrap
+ * @returns {Function} Wrapped function with loading animation
+ */
+function withLoadingAnimation(asyncFunction) {
+    return async function(...args) {
+        // Add loading overlay
+        const loadingOverlay = document.createElement('div');
+        loadingOverlay.className = 'loading-overlay';
+        loadingOverlay.innerHTML = '<div class="loading-spinner"></div>';
+        document.body.appendChild(loadingOverlay);
+
+        try {
+            const result = await asyncFunction.apply(this, args);
+            return result;
+        } finally {
+            // Remove loading overlay
+            setTimeout(() => {
+                if (loadingOverlay.parentNode) {
+                    loadingOverlay.parentNode.removeChild(loadingOverlay);
+                }
+            }, 300);
+        }
+    };
+}
+
+/**
+ * Enhanced image loading with fade-in animation
+ * @param {HTMLImageElement} img - Image element to enhance
+ */
+function enhanceImageLoading(img) {
+    if (img.complete) {
+        img.style.opacity = '1';
+        return;
+    }
+
+    img.style.opacity = '0';
+    img.style.transition = 'opacity 0.3s ease-in-out';
+
+    img.addEventListener('load', () => {
+        img.style.opacity = '1';
+    });
+
+    img.addEventListener('error', () => {
+        img.style.opacity = '1';
+        // Fallback to placeholder
+        img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpnaHQ9IjEwMCUiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+S2jDrOG6o25nIGNo4bupYyDDrOG6o25nPC90ZXh0Pjwvc3ZnPg==';
+    });
+}
+
+/**
+ * Initialize enhanced image loading for all images
+ */
+function initializeEnhancedImageLoading() {
+    const images = document.querySelectorAll('img[loading="lazy"], .product-images img, .main-image img');
+    images.forEach(enhanceImageLoading);
+}
+
+/**
+ * Add bounce animation to elements on click
+ * @param {HTMLElement} element - Element to add bounce effect to
+ */
+function addBounceEffect(element) {
+    element.addEventListener('click', function() {
+        this.style.animation = 'none';
+        setTimeout(() => {
+            this.style.animation = 'bounceIn 0.6s ease-out';
+        }, 10);
+    });
+}
+
+/**
+ * Initialize bounce effects for interactive elements
+ */
+function initializeBounceEffects() {
+    const interactiveElements = document.querySelectorAll('.btn, .nav-link, .product-card, .post-card');
+    interactiveElements.forEach(addBounceEffect);
+}
+
+// Initialize enhanced features when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize enhanced image loading
+    initializeEnhancedImageLoading();
+
+    // Initialize bounce effects
+    initializeBounceEffects();
+
+    console.log('Enhanced animations initialized!');
 });
 
 window.filterCollection = filterCollection;

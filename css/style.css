@@ -600,27 +600,27 @@ header nav ul li strong {
     .social-stick {
         display: flex;
         position: fixed;
-        bottom: 10px;
-        right: 50%;
-        transform: translateX(50%);
-        top: auto;
-        flex-direction: row;
+        top: 50%;
+        right: 10px;
+        bottom: auto;
+        transform: translateY(-50%);
+        flex-direction: column;
         background: rgba(255, 255, 255, 0.95);
-        border-radius: 999px;
-        padding: 0.25rem;
-        gap: 0.25rem;
+        border-radius: 1rem;
+        padding: 0.35rem;
+        gap: 0.35rem;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     .social-link {
-        width: 40px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
         font-size: 16px;
-        border-radius: 50%;
+        border-radius: 12px;
     }
 
     .social-link:hover {
-        width: 40px;
+        width: 42px;
     }
 }
 
@@ -1556,4 +1556,332 @@ section h2 {
 /* Dark mode support for footer map */
 [data-theme="dark"] .footer-map {
     border-color: var(--border-color, #333);
+}
+
+/* ========================================
+   ANIMATIONS & MICRO-INTERACTIONS
+   ======================================== */
+
+/* Keyframe Animations */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Hero Section Animations */
+.hero-content {
+    animation: slideInUp 1s ease-out;
+}
+
+.hero-title {
+    animation: fadeInScale 1.2s ease-out 0.3s both;
+}
+
+.hero-subtitle {
+    animation: fadeInScale 1.2s ease-out 0.6s both;
+}
+
+.hero-buttons {
+    animation: slideInUp 1s ease-out 0.9s both;
+}
+
+/* Enhanced Slideshow Animations */
+.slide {
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.slide:not(.active) {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.95);
+}
+
+/* Collection Cards Enhanced Hover Effects */
+.product-card, .post-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+    will-change: transform, box-shadow;
+}
+
+.product-card:hover, .post-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12),
+                0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.product-images {
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.product-images:hover .main-image img {
+    transform: scale(1.05);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-image img {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Thumbnail Images Animation */
+.thumbnail-images {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.thumbnail-images img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.thumbnail-images img:hover {
+    transform: scale(1.1);
+    border-color: var(--primary-color, #667eea);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail-images .thumb-img.active {
+    border-color: var(--primary-color, #667eea);
+    transform: scale(1.05);
+}
+
+/* Loading Animations */
+.loading-spinner {
+    animation: spin 1s linear infinite;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color, #667eea);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+}
+
+/* Staggered Content Loading */
+.collection-item:nth-child(1) { animation-delay: 0.1s; }
+.collection-item:nth-child(2) { animation-delay: 0.2s; }
+.collection-item:nth-child(3) { animation-delay: 0.3s; }
+.collection-item:nth-child(4) { animation-delay: 0.4s; }
+.collection-item:nth-child(5) { animation-delay: 0.5s; }
+.collection-item:nth-child(6) { animation-delay: 0.6s; }
+.collection-item:nth-child(7) { animation-delay: 0.7s; }
+.collection-item:nth-child(8) { animation-delay: 0.8s; }
+
+/* Scroll-triggered Animation Classes */
+.animate-in {
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.animate-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-bounce {
+    animation: bounceIn 0.8s ease-out forwards;
+}
+
+/* Button Enhanced Interactions */
+.btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, box-shadow;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+    transition-duration: 0.1s;
+}
+
+/* Search Input Focus Animation */
+#search-input {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#search-input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1),
+                0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Link Hover Effects */
+.nav-link {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color, #667eea);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-link:hover {
+    transform: translateY(-1px);
+    color: var(--primary-color, #667eea) !important;
+}
+
+/* Page Transition Effects */
+.section-transition {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-transition.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.section-transition.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Social Links Animation */
+.social-links a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Footer Animation */
+footer {
+    animation: slideInUp 1s ease-out 1.2s both;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Performance optimizations */
+.product-card,
+.post-card,
+.btn,
+.nav-link,
+#search-input {
+    will-change: auto;
+}
+
+.product-card:hover,
+.post-card:hover,
+.btn:hover,
+.nav-link:hover {
+    will-change: transform, box-shadow;
 }
