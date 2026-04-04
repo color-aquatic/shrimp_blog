@@ -1,7 +1,9 @@
 // Language management for Color Aquatic
 console.log('language.js loaded');
 
-// Initialize language functionality
+/**
+ * Initialize language functionality
+ */
 function initializeLanguage() {
     const langToggle = document.getElementById('language-toggle');
     if (langToggle) {
@@ -21,22 +23,27 @@ function initializeLanguage() {
     });
 }
 
-// Language switching functionality
+/**
+ * Toggle between Vietnamese and English
+ */
 function toggleLanguage() {
     console.log('Đang chuyển đổi ngôn ngữ...');
     const currentLang = window.currentLanguage || 'vi';
     const newLang = currentLang === 'vi' ? 'en' : 'vi';
-    
+
     switchToLanguage(newLang);
 }
 
-// Switch to specific language
+/**
+ * Switch to a specific language
+ * @param {string} lang - Language code ('vi' or 'en')
+ */
 function switchToLanguage(lang) {
     console.log(`Chuyển đổi sang ngôn ngữ: ${lang}`);
-    
+
     // Update global language
     window.currentLanguage = lang;
-    
+
     // Store in localStorage
     localStorage.setItem('colorAquaticLanguage', lang);
     localStorage.setItem('blogLanguage', lang);
@@ -49,19 +56,19 @@ function switchToLanguage(lang) {
         window.location.href = targetPath;
         return;
     }
-    
+
     // Update language toggle button
     updateLanguageToggleButton();
     updateLanguageSummary();
-    
+
     // Update all page texts
     updatePageTexts();
-    
+
     // Check if we're on a detail page and reload it with new language
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get('post');
     const productId = urlParams.get('product');
-    
+
     if (postId && window.loadPost) {
         console.log('Reloading post with new language:', lang);
         window.loadPost(postId);
@@ -73,11 +80,13 @@ function switchToLanguage(lang) {
         displayPostList();
         displayCollectionProducts();
     }
-    
+
     console.log(`Đã chuyển đổi sang ngôn ngữ: ${lang}`);
 }
 
-// Update visible language label in header summary
+/**
+ * Update visible language label in header summary
+ */
 function updateLanguageSummary() {
     const lang = window.currentLanguage || 'vi';
     const summary = document.getElementById('language-summary');
@@ -95,11 +104,13 @@ function updateLanguageSummary() {
     }
 }
 
-// Update language toggle button
+/**
+ * Update language toggle button
+ */
 function updateLanguageToggleButton() {
     const langToggle = document.getElementById('language-toggle');
     const lang = window.currentLanguage || 'vi';
-    
+
     if (langToggle) {
         if (lang === 'vi') {
             langToggle.innerHTML = '<i class="fas fa-language"></i> EN';
@@ -111,7 +122,9 @@ function updateLanguageToggleButton() {
     }
 }
 
-// Update all page texts
+/**
+ * Update all page texts with translations
+ */
 function updatePageTexts() {
     const lang = window.currentLanguage || 'vi';
 
@@ -143,11 +156,13 @@ function updatePageTexts() {
     updateLanguageSummary();
 }
 
-// Update navigation
+/**
+ * Update navigation elements
+ */
 function updateNavigation() {
     const lang = window.currentLanguage || 'vi';
     const navLinks = document.querySelectorAll('nav a[data-translate^="nav."]');
-    
+
     navLinks.forEach(link => {
         switch(link.getAttribute('href') || link.getAttribute('onclick')) {
             case '#collection':
@@ -158,7 +173,7 @@ function updateNavigation() {
                 break;
         }
     });
-    
+
     // Update dropdown menu if exists
     const categoryFilter = document.getElementById('category-filter');
     if (categoryFilter) {
@@ -183,12 +198,20 @@ function updateNavigation() {
     }
 }
 
-// Update footer
+/**
+ * Update footer elements (now handled by data-translate bindings)
+ */
 function updateFooter() {
     // Footer is now translated by data-translate bindings in updatePageTexts().
 }
 
-// Get text by language with fallback
+/**
+ * Get post text by language with fallback
+ * @param {Object} post - Post object
+ * @param {string} field - Field name
+ * @param {string} lang - Language code
+ * @returns {string} Translated text
+ */
 function getPostByLang(post, field, lang) {
     if (!post) return '';
 
@@ -202,7 +225,13 @@ function getPostByLang(post, field, lang) {
     return post[field] || '';
 }
 
-// Get product text by language with fallback
+/**
+ * Get product text by language with fallback
+ * @param {Object} product - Product object
+ * @param {string} field - Field name
+ * @param {string} lang - Language code
+ * @returns {string} Translated text
+ */
 function getProductByLang(product, field, lang) {
     if (!product) return '';
 
@@ -216,32 +245,40 @@ function getProductByLang(product, field, lang) {
     return product[field] || '';
 }
 
-// Initialize language from URL or localStorage
+/**
+ * Initialize language from URL or localStorage
+ * @returns {string} Initial language code
+ */
 function initializeLanguageFromStorage() {
     const pathLang = typeof getLanguageFromPath === 'function' ? getLanguageFromPath() : null;
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
     const storedLang = localStorage.getItem('colorAquaticLanguage') || localStorage.getItem('blogLanguage');
-    
+
     let initialLang = pathLang || urlLang || storedLang || 'vi';
-    
+
     // Validate language
     if (!['vi', 'en'].includes(initialLang)) {
         initialLang = 'vi';
     }
-    
+
     window.currentLanguage = initialLang;
     updateLanguageSummary();
-    
+
     console.log(`Language initialized: ${initialLang}`);
     return initialLang;
 }
 
-// Format date for current language
+/**
+ * Format date for current language
+ * @param {string} dateString - Date string
+ * @param {string} lang - Language code
+ * @returns {string} Formatted date
+ */
 function formatDateForLanguage(dateString, lang) {
     const date = new Date(dateString);
     const locale = lang === 'en' ? 'en-US' : 'vi-VN';
-    
+
     return date.toLocaleDateString(locale, {
         year: 'numeric',
         month: 'long',
@@ -249,14 +286,19 @@ function formatDateForLanguage(dateString, lang) {
     });
 }
 
-// Get translated text helper
+/**
+ * Get translated text helper
+ * @param {string} key - Translation key
+ * @param {string} lang - Language code
+ * @returns {string} Translated text or key if not found
+ */
 function t(key, lang) {
     const source = window.translations || (typeof translations !== 'undefined' ? translations : null);
     if (!source) return key;
-    
+
     const keys = key.split('.');
     let value = source[lang] || source['vi'];
-    
+
     for (const k of keys) {
         if (value && typeof value === 'object') {
             value = value[k];
@@ -264,6 +306,6 @@ function t(key, lang) {
             return key; // fallback to key if not found
         }
     }
-    
+
     return value || key;
 }

@@ -1,7 +1,9 @@
-// Main JavaScript for Color Aquatic - Refactored version
-console.log('main.js loaded - Refactored modular version');
+// Main JavaScript for Color Aquatic - Optimized and Cleaned Version
+console.log('main.js loaded - Optimized version');
 
-// Global variables
+/**
+ * Global variables for application state
+ */
 window.currentLanguage = 'vi';
 let currentCollectionPage = 1;
 let currentFilter = 'all';
@@ -9,79 +11,78 @@ const productsPerPage = 20;
 let currentSlideIndex = 0;
 let slideshowInterval;
 
-// Mobile Hamburger Menu
+/**
+ * Initialize mobile hamburger menu functionality
+ * Handles menu toggle, overlay, and keyboard events
+ */
 function initializeHamburgerMenu() {
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const navMenu = document.getElementById('nav-menu');
     const navOverlay = document.getElementById('nav-overlay');
-    
+
     if (!hamburgerMenu || !navMenu || !navOverlay) {
         console.error('Hamburger menu elements not found');
         return;
     }
-    
-    // Toggle menu function
+
+    /**
+     * Toggle menu visibility with animation
+     */
     function toggleMenu() {
         const isActive = hamburgerMenu.classList.contains('active');
-        
+
         if (isActive) {
             closeMenu();
         } else {
-            // Show overlay first
             navOverlay.classList.add('active');
-            
-            // Then show menu with slight delay
             setTimeout(() => {
                 hamburgerMenu.classList.add('active');
                 navMenu.classList.add('active');
             }, 10);
-            
-            // Prevent body scroll when menu is open
             document.body.style.overflow = 'hidden';
         }
     }
-    
-    // Close menu function
+
+    /**
+     * Close menu with animation
+     */
     function closeMenu() {
         if (!navMenu.classList.contains('active')) return;
-        
+
         hamburgerMenu.classList.remove('active');
         navMenu.classList.remove('active');
-        
-        // Hide overlay after menu animation
+
         setTimeout(() => {
             navOverlay.classList.remove('active');
         }, 300);
-        
+
         document.body.style.overflow = '';
     }
-    
+
     // Event listeners
     hamburgerMenu.addEventListener('click', toggleMenu);
     navOverlay.addEventListener('click', closeMenu);
-    
-    // Close menu when clicking on nav links (except language selector)
-    const navLinks = navMenu.querySelectorAll('a:not(.lang-option)');
-    navLinks.forEach(link => {
+
+    // Close menu on nav link clicks
+    navMenu.querySelectorAll('a:not(.lang-option)').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
-    
-    // Handle window resize
+
+    // Handle window resize and escape key
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            closeMenu();
-        }
+        if (window.innerWidth > 768) closeMenu();
     });
-    
-    // Handle escape key
+
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-            closeMenu();
-        }
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu();
     });
 }
 
-// Display collection products with pagination and filtering
+/**
+ * Display collection products with pagination and filtering
+ * @param {number} page - Current page number
+ * @param {string} filter - Category filter ('all', 'shrimps', 'plants', 'accessory')
+ */
 function displayCollectionProducts(page = 1, filter = currentFilter) {
     const collectionContainer = document.getElementById('collection-list');
     if (!collectionContainer) return;
@@ -118,7 +119,7 @@ function displayCollectionProducts(page = 1, filter = currentFilter) {
         accessory: t('collection.filterAccessory', lang)
     };
 
-    // Group items by category so users can scan and manage each type more easily.
+    // Group products by category for better organization
     const groupedProducts = productsToShow.reduce((groups, product) => {
         const key = product.category || 'other';
         if (!groups[key]) groups[key] = [];
@@ -131,6 +132,7 @@ function displayCollectionProducts(page = 1, filter = currentFilter) {
         ...Object.keys(groupedProducts).filter(category => !categoryOrder.includes(category))
     ];
 
+    // Render each category section
     sortedCategories.forEach((category) => {
         const section = document.createElement('section');
         section.className = 'collection-category-section';
@@ -153,7 +155,7 @@ function displayCollectionProducts(page = 1, filter = currentFilter) {
         collectionContainer.appendChild(section);
     });
 
-    // Add pagination
+    // Add pagination if needed
     if (totalPages > 1) {
         const paginationContainer = document.createElement('div');
         paginationContainer.className = 'pagination';
@@ -164,11 +166,14 @@ function displayCollectionProducts(page = 1, filter = currentFilter) {
     console.log(`Displayed ${productsToShow.length} products (page ${page}/${totalPages}, filter: ${filter})`);
 }
 
-// Filter collection
+/**
+ * Filter collection by category and reset to first page
+ * @param {string} category - Category to filter by
+ */
 function filterCollection(category) {
-    currentCollectionPage = 1; // Reset về trang đầu khi filter
+    currentCollectionPage = 1;
     displayCollectionProducts(1, category);
-    
+
     // Update filter dropdown
     const filterDropdown = document.getElementById('category-filter');
     if (filterDropdown) {
@@ -176,18 +181,20 @@ function filterCollection(category) {
     }
 }
 
-// Display posts
+/**
+ * Display list of posts sorted by date
+ * @param {number} page - Page number (currently unused, all posts shown)
+ */
 function displayPostList(page = 1) {
     const postsContainer = document.getElementById('post-list');
     if (!postsContainer) return;
 
     const lang = window.currentLanguage || 'vi';
-    // Clear existing content
     postsContainer.innerHTML = '';
-    
+
     // Sort posts by date (newest first)
     const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
-    
+
     // Create card for each post
     sortedPosts.forEach(post => {
         const postCard = createPostCard(post);
@@ -195,10 +202,13 @@ function displayPostList(page = 1) {
     });
 }
 
-// Display post detail
+/**
+ * Display detailed view of a post
+ * @param {Object} post - Post object to display
+ */
 function displayPostDetail(post) {
     if (!post) return;
-    
+
     const postDetailSection = document.getElementById('post-content');
     const articleContent = document.getElementById('article-content');
     if (!postDetailSection || !articleContent) return;
@@ -207,12 +217,15 @@ function displayPostDetail(post) {
     articleContent.innerHTML = `<div class="loading">${t('post.loading', lang)}</div>`;
 
     postDetailSection.style.display = 'block';
-    
-    // Load markdown content using old source structure
+
+    // Load markdown content
     loadMarkdownContent(post.id, lang, 'post');
 }
 
-// Display product detail
+/**
+ * Display detailed view of a product
+ * @param {Object} product - Product object to display
+ */
 function displayProductDetail(product) {
     if (!product) return;
 
@@ -223,11 +236,15 @@ function displayProductDetail(product) {
     const lang = window.currentLanguage || 'vi';
     articleContent.innerHTML = `<div class="loading">${t('post.loading', lang)}</div>`;
     postDetailSection.style.display = 'block';
-    
-    // Load markdown content using old source structure
+
+    // Load markdown content
     loadMarkdownContent(product.id, lang, 'product');
 }
 
+/**
+ * Extract product ID from URL path for static builds
+ * @returns {string|null} Product ID or null if not found
+ */
 function getProductIdFromUrlPath() {
     const path = (typeof getBasePath === 'function' ? window.location.pathname.replace(getBasePath(), '') : window.location.pathname).replace(/^\//, '');
     const segments = path.split('/').filter(Boolean);
@@ -237,10 +254,12 @@ function getProductIdFromUrlPath() {
     return null;
 }
 
+/**
+ * Ensure product images are displayed for static builds
+ */
 function ensureStaticProductImages() {
     const articleContent = document.getElementById('article-content');
-    if (!articleContent) return;
-    if (articleContent.querySelector('.product-images')) return;
+    if (!articleContent || articleContent.querySelector('.product-images')) return;
 
     const productId = getProductIdFromUrlPath();
     if (!productId) return;
@@ -274,7 +293,7 @@ function ensureStaticProductImages() {
         articleContent.insertAdjacentHTML('afterbegin', productImagesHtml);
     }
 
-    // Keep thumbnail click behavior as in current JS
+    // Add thumbnail click handlers
     const thumbnails = articleContent.querySelectorAll('.thumbnail-images img');
     thumbnails.forEach((thumb) => {
         thumb.addEventListener('click', () => {
@@ -283,25 +302,29 @@ function ensureStaticProductImages() {
     });
 }
 
-// Load markdown content dynamically
+/**
+ * Load and render markdown content for posts/products
+ * @param {string} id - Content ID
+ * @param {string} lang - Language code
+ * @param {string} type - 'post' or 'product'
+ */
 async function loadMarkdownContent(id, lang, type) {
     try {
         const basePath = type === 'post' ? 'posts' : 'collection';
         const category = type === 'product'
             ? (collectionProducts.find(p => p.id === id)?.category || '')
             : '';
-        
+
         const filePath = type === 'post'
-            ?
-            `${basePath}/${lang}/${id}.md` :
-            `${basePath}/${category}/${lang}/${id}.md`;
-        
+            ? `${basePath}/${lang}/${id}.md`
+            : `${basePath}/${category}/${lang}/${id}.md`;
+
         const response = await fetch(filePath);
-        
+
         if (!response.ok) {
             throw new Error(`Failed to load content: ${response.status}`);
         }
-        
+
         const markdown = await response.text();
         const articleContent = document.getElementById('article-content');
         if (!articleContent) return;
@@ -365,7 +388,7 @@ async function loadMarkdownContent(id, lang, type) {
                 ${safeHtml}
             `;
         }
-        
+
     } catch (error) {
         console.error(`Error loading ${type} content:`, error);
         const articleContent = document.getElementById('article-content');
@@ -380,24 +403,11 @@ async function loadMarkdownContent(id, lang, type) {
     }
 }
 
-// Simple markdown parser (basic implementation)
-function parseSimpleMarkdown(content) {
-    return content
-        // Headers
-        .replace(/^### (.*$)/gm, '<h3>$1</h3>')
-        .replace(/^## (.*$)/gm, '<h2>$1</h2>')
-        .replace(/^# (.*$)/gm, '<h1>$1</h1>')
-        // Bold
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        // Italic
-        .replace(/\*(.*?)\*/g, '<em>$1</em>')
-        // Links
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-        // Line breaks
-        .replace(/\n/g, '<br>');
-}
-
-// Change main product image
+/**
+ * Change the main product image when thumbnail is clicked
+ * @param {string} src - Image source URL
+ * @param {HTMLElement} thumbEl - Thumbnail element
+ */
 function changeMainImage(src, thumbEl) {
     const mainImage = document.getElementById('main-product-image');
     if (mainImage) {
@@ -412,7 +422,9 @@ function changeMainImage(src, thumbEl) {
     }
 }
 
-// Initialize slideshow functionality
+/**
+ * Initialize slideshow functionality for hero section
+ */
 function initSlideshow() {
     const slides = document.querySelectorAll('.slide');
     const indicators = document.querySelectorAll('.indicator');
@@ -420,6 +432,10 @@ function initSlideshow() {
     const nextButton = document.getElementById('slide-next');
     if (!slides.length) return;
 
+    /**
+     * Render the current slide
+     * @param {number} index - Slide index to show
+     */
     function renderSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === index);
@@ -429,35 +445,46 @@ function initSlideshow() {
         });
     }
 
+    /**
+     * Show next slide
+     */
     function showNextSlide() {
         if (slides.length === 0) return;
         currentSlideIndex = (currentSlideIndex + 1) % slides.length;
         renderSlide(currentSlideIndex);
     }
 
+    /**
+     * Start automatic slideshow
+     */
     function startAutoSlideshow() {
         if (slides.length > 1) {
-            // Clear any existing interval first
             clearInterval(slideshowInterval);
-            // Start automatic slideshow with 3 second interval
             slideshowInterval = setInterval(showNextSlide, 3000);
         }
     }
 
+    /**
+     * Go to specific slide
+     * @param {number} index - Target slide index
+     */
     function goToSlide(index) {
         currentSlideIndex = (index + slides.length) % slides.length;
         renderSlide(currentSlideIndex);
-        // Restart auto slideshow after manual interaction
         startAutoSlideshow();
     }
 
+    /**
+     * Change slide by direction
+     * @param {number} direction - -1 for previous, 1 for next
+     */
     function changeSlide(direction) {
         currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
         renderSlide(currentSlideIndex);
-        // Restart auto slideshow after manual interaction
         startAutoSlideshow();
     }
 
+    // Event listeners
     if (prevButton) {
         prevButton.addEventListener('click', () => changeSlide(-1));
     }
@@ -474,21 +501,25 @@ function initSlideshow() {
     });
 
     renderSlide(currentSlideIndex);
-    // Start auto slideshow
     startAutoSlideshow();
 }
 
-// Setup category filter dropdown
+/**
+ * Setup category filter dropdown
+ */
 function setupCategoryFilter() {
     const filterSelect = document.getElementById('category-filter');
     if (!filterSelect) return;
-    
+
     filterSelect.addEventListener('change', function() {
         const selectedCategory = this.value;
         filterCollection(selectedCategory);
     });
 }
 
+/**
+ * Setup collection interaction handlers
+ */
 function setupCollectionInteractions() {
     const collectionContainer = document.getElementById('collection-list');
     if (!collectionContainer) return;
@@ -503,16 +534,19 @@ function setupCollectionInteractions() {
     });
 }
 
-// Initialize everything when DOM is loaded
+/**
+ * Initialize everything when DOM is loaded
+ */
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded event fired');
-    console.log('Current script version: Refactored modular version');
+    console.log('Current script version: Optimized version');
+
     const staticPageType = typeof getCurrentStaticPageType === 'function' ? getCurrentStaticPageType() : '';
-    
+
     // Initialize language from storage
     const initialLang = initializeLanguageFromStorage();
     window.currentLanguage = initialLang;
-    
+
     // Initialize all modules
     console.log('Initializing language...');
     initializeLanguage();
@@ -529,17 +563,17 @@ document.addEventListener('DOMContentLoaded', function() {
         ensureStaticProductImages();
         return;
     }
-    
+
     console.log('Initializing navigation...');
     initializeNavigation();
-    
+
     console.log('Initializing search...');
     initializeSearch();
-    
+
     console.log('Setting up category filter...');
     setupCategoryFilter();
     setupCollectionInteractions();
-    
+
     // Check URL parameters for specific content
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get('post');
@@ -556,7 +590,7 @@ document.addEventListener('DOMContentLoaded', function() {
         displayPostList();
         displayCollectionProducts();
     }
-    
+
     // Initialize slideshow if needed
     initSlideshow();
     

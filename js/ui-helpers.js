@@ -1,15 +1,29 @@
 // UI Helper Functions for Color Aquatic
 console.log('ui-helpers.js loaded');
 
-// Helper function to get post file path based on language
+/**
+ * Get post file path based on language
+ * @param {string} postId - Post ID
+ * @param {string} lang - Language code
+ * @returns {string} File path
+ */
 function getPostFile(postId, lang) {
     return `posts/${lang}/${postId}.md`;
 }
 
+/**
+ * Get base path for the application
+ * @returns {string} Base path
+ */
 function getBasePath() {
     return (typeof window.__BASE_PATH__ === 'string' ? window.__BASE_PATH__ : '');
 }
 
+/**
+ * Get language from URL path
+ * @param {string} pathname - URL pathname
+ * @returns {string|null} Language code or null
+ */
 function getLanguageFromPath(pathname = window.location.pathname) {
     const bp = getBasePath();
     const stripped = bp ? pathname.replace(bp, '') : pathname;
@@ -18,14 +32,31 @@ function getLanguageFromPath(pathname = window.location.pathname) {
     return ['vi', 'en'].includes(lang) ? lang : null;
 }
 
+/**
+ * Get current static page type
+ * @returns {string} Page type
+ */
 function getCurrentStaticPageType() {
     return document.body?.dataset?.staticPageType || '';
 }
 
+/**
+ * Check if running in static build mode
+ * @returns {boolean} True if static build mode
+ */
 function isStaticBuildMode() {
     return Boolean(getCurrentStaticPageType());
 }
 
+/**
+ * Build source URL with parameters
+ * @param {Object} params - URL parameters
+ * @param {string} params.lang - Language code
+ * @param {string} params.postId - Post ID
+ * @param {string} params.productId - Product ID
+ * @param {string} params.section - Section name
+ * @returns {string} Built URL
+ */
 function buildSourceUrl({ lang, postId, productId, section } = {}) {
     const params = new URLSearchParams();
 
@@ -46,6 +77,11 @@ function buildSourceUrl({ lang, postId, productId, section } = {}) {
     return `${getBasePath()}/index.html${query ? `?${query}` : ''}`;
 }
 
+/**
+ * Get home page path
+ * @param {string} lang - Language code
+ * @returns {string} Home path
+ */
 function getHomePath(lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
     if (!isStaticBuildMode()) {
         return buildSourceUrl({ lang });
@@ -54,6 +90,12 @@ function getHomePath(lang = window.currentLanguage || getLanguageFromPath() || '
     return `${getBasePath()}/${lang}/`;
 }
 
+/**
+ * Get post page path
+ * @param {string} postId - Post ID
+ * @param {string} lang - Language code
+ * @returns {string} Post path
+ */
 function getPostPath(postId, lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
     if (!isStaticBuildMode()) {
         return buildSourceUrl({ lang, postId });
@@ -62,6 +104,12 @@ function getPostPath(postId, lang = window.currentLanguage || getLanguageFromPat
     return `${getBasePath()}/${lang}/posts/${postId}/`;
 }
 
+/**
+ * Get product page path
+ * @param {string|Object} productOrId - Product object or ID
+ * @param {string} lang - Language code
+ * @returns {string} Product path
+ */
 function getProductPath(productOrId, lang = window.currentLanguage || getLanguageFromPath() || 'vi') {
     const product = typeof productOrId === 'string'
         ? collectionProducts.find((item) => item.id === productOrId)
@@ -76,6 +124,11 @@ function getProductPath(productOrId, lang = window.currentLanguage || getLanguag
     return `${getBasePath()}/${lang}/collection/${category}/${productId}/`;
 }
 
+/**
+ * Get language switch path
+ * @param {string} lang - Target language code
+ * @returns {string} Switch path
+ */
 function getLanguageSwitchPath(lang) {
     const body = document.body;
     const staticSwitch = lang === 'vi' ? body?.dataset?.switchVi : body?.dataset?.switchEn;
@@ -109,8 +162,11 @@ function getLanguageSwitchPath(lang) {
     return getHomePath(lang);
 }
 
-
-// Create product card HTML
+/**
+ * Create product card HTML element
+ * @param {Object} product - Product object
+ * @returns {HTMLElement} Product card element
+ */
 function createProductCard(product) {
     const lang = window.currentLanguage || 'vi';
     const card = document.createElement('div');
@@ -162,7 +218,13 @@ function createProductCard(product) {
     return card;
 }
 
-// Create pagination HTML
+/**
+ * Create pagination HTML
+ * @param {number} currentPage - Current page number
+ * @param {number} totalPages - Total number of pages
+ * @param {string} filter - Current filter
+ * @returns {string} Pagination HTML
+ */
 function createPaginationHTML(currentPage, totalPages, filter = 'all') {
     const lang = window.currentLanguage || 'vi';
     let paginationHTML = '<div class="pagination-controls">';
@@ -191,13 +253,17 @@ function createPaginationHTML(currentPage, totalPages, filter = 'all') {
     return paginationHTML;
 }
 
-// Create post card HTML
+/**
+ * Create post card HTML element
+ * @param {Object} post - Post object
+ * @returns {HTMLElement} Post card element
+ */
 function createPostCard(post) {
     const lang = window.currentLanguage || 'vi';
     const card = document.createElement('a');
     card.href = getPostPath(post.id, lang);
     card.className = 'post-card';
-    
+
     const date = new Date(post.date);
     const locale = lang === 'en' ? 'en-US' : 'vi-VN';
     const formattedDate = date.toLocaleDateString(locale, {
@@ -205,7 +271,7 @@ function createPostCard(post) {
         month: 'long',
         day: 'numeric'
     });
-    
+
     const title = getPostByLang(post, 'title', lang);
     const description = getPostByLang(post, 'description', lang);
 
@@ -218,46 +284,49 @@ function createPostCard(post) {
     return card;
 }
 
-// Update meta tags for SEO
+/**
+ * Update meta tags for SEO
+ * @param {Object} post - Post object
+ */
 function updateMetaTags(post) {
     const lang = window.currentLanguage || 'vi';
     const title = getPostByLang(post, 'title', lang);
     const description = getPostByLang(post, 'description', lang);
     const keywords = getPostByLang(post, 'keywords', lang);
-    
+
     // Cập nhật title
     document.title = `${title} - Color Aquatic`;
-    
+
     // Cập nhật meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
         metaDescription.setAttribute('content', description);
     }
-    
+
     // Cập nhật meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords && keywords) {
         metaKeywords.setAttribute('content', keywords);
     }
-    
+
     // Cập nhật canonical URL
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
         const baseUrl = window.location.origin + window.location.pathname;
         canonical.setAttribute('href', `${baseUrl}?post=${post.id}`);
     }
-    
+
     // Cập nhật Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
         ogTitle.setAttribute('content', `${title} - Color Aquatic`);
     }
-    
+
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
         ogDescription.setAttribute('content', description);
     }
-    
+
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) {
         const baseUrl = window.location.origin + window.location.pathname;
@@ -265,7 +334,11 @@ function updateMetaTags(post) {
     }
 }
 
-// Update meta tags for product pages
+/**
+ * Update meta tags for product pages
+ * @param {Object} product - Product object
+ * @param {string} productName - Product name
+ */
 function updateProductMetaTags(product, productName) {
     const lang = window.currentLanguage || 'vi';
     document.title = `${productName} - Color Aquatic`;
@@ -294,7 +367,9 @@ function updateProductMetaTags(product, productName) {
     }
 }
 
-// Reset meta tags về trang chủ
+/**
+ * Reset meta tags to home page defaults
+ */
 function resetMetaTags() {
     const lang = window.currentLanguage || 'vi';
     if (lang === 'en') {
@@ -310,7 +385,7 @@ function resetMetaTags() {
             metaDescription.setAttribute('content', 'Blog chia sẻ kiến thức về nuôi tép cảnh, các loại tép phổ biến, cách chăm sóc, setup bể và kinh nghiệm thực tế từ người chơi tép lâu năm.');
         }
     }
-    
+
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
         const baseUrl = window.location.origin + window.location.pathname;

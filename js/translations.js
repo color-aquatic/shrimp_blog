@@ -10,13 +10,13 @@ const translations = {
             posts: 'Bài viết',
             about: 'Giới thiệu'
         },
-        
+
         // Hero Section
         hero: {
             title: 'Chào mừng đến với Color Aquatic',
             subtitle: 'Nơi chia sẻ kiến thức và kinh nghiệm về nuôi tép cảnh'
         },
-        
+
         // Collection Section
         collection: {
             title: '🦐 Bộ sưu tập',
@@ -40,7 +40,7 @@ const translations = {
         posts: {
             title: '📝 Bài viết mới nhất'
         },
-        
+
         // Post Content
         post: {
             backButton: '← Quay lại trang chủ',
@@ -53,13 +53,13 @@ const translations = {
             loading: 'Đang tải',
             contentLoadError: 'Không thể tải nội dung. Vui lòng thử lại sau.'
         },
-        
+
         // About Section
         about: {
             title: 'Giới thiệu',
             content: 'Blog này được tạo ra để chia sẻ kiến thức, kinh nghiệm và niềm đam mê về tép cảnh. Từ những người mới bắt đầu đến những người chơi lâu năm, chúng tôi hy vọng sẽ mang đến những thông tin hữu ích cho cộng đồng yêu thích tép cảnh.'
         },
-        
+
         // Footer
         contact: {
             copyright: '© 2024 Color Aquatic',
@@ -73,7 +73,7 @@ const translations = {
             vi: 'Tiếng Việt',
             en: 'English'
         },
-        
+
         // Search
         search: {
             placeholder: '',
@@ -93,7 +93,7 @@ const translations = {
             }
         }
     },
-    
+
     en: {
         // Navigation
         nav: {
@@ -102,13 +102,13 @@ const translations = {
             posts: 'Posts',
             about: 'About'
         },
-        
+
         // Hero Section
         hero: {
             title: 'Welcome to Color Aquatic',
             subtitle: 'A place to share knowledge and experience about keeping aquarium shrimp'
         },
-        
+
         // Collection Section
         collection: {
             title: '🦐 Collection',
@@ -132,7 +132,7 @@ const translations = {
         posts: {
             title: '📝 Latest Posts'
         },
-        
+
         // Post Content
         post: {
             backButton: '← Back to Home',
@@ -145,13 +145,13 @@ const translations = {
             loading: 'Loading',
             contentLoadError: 'Unable to load content. Please try again later.'
         },
-        
+
         // About Section
         about: {
             title: 'About',
             content: 'This blog was created to share knowledge, experience, and passion for aquarium shrimp. From beginners to experienced hobbyists, we hope to provide useful information for the aquarium shrimp community.'
         },
-        
+
 
         // Footer
         contact: {
@@ -166,7 +166,7 @@ const translations = {
             vi: 'Tiếng Việt',
             en: 'English'
         },
-        
+
         // Search
         search: {
             placeholder: 'Search articles and collection...',
@@ -188,11 +188,16 @@ const translations = {
     }
 };
 
-// Function to get translation for a key
+/**
+ * Get translation for a key
+ * @param {string} key - Translation key (dot notation)
+ * @param {string} lang - Language code ('vi' or 'en')
+ * @returns {string} Translated text or key if not found
+ */
 function t(key, lang = 'vi') {
     const keys = key.split('.');
     let value = translations[lang];
-    
+
     for (const k of keys) {
         if (value && value[k]) {
             value = value[k];
@@ -201,18 +206,24 @@ function t(key, lang = 'vi') {
             return key;
         }
     }
-    
+
     return value;
 }
 
-// Function to get current language from localStorage or default to Vietnamese
+/**
+ * Get current language from localStorage or default to Vietnamese
+ * @returns {string} Current language code
+ */
 function getCurrentLanguage() {
     const lang = localStorage.getItem('blogLanguage') || 'vi';
     console.log('getCurrentLanguage() called, returning:', lang);
     return lang;
 }
 
-// Function to set language in localStorage
+/**
+ * Set language in localStorage
+ * @param {string} lang - Language code to set
+ */
 function setLanguage(lang) {
     console.log('setLanguage() called with:', lang);
     localStorage.setItem('blogLanguage', lang);

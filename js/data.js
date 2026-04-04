@@ -1,7 +1,10 @@
 // Data for Color Aquatic Blog
 console.log('data.js loaded');
 
-// Danh sách bài viết (chung cho cả hai ngôn ngữ, file path sẽ được thay đổi dựa trên ngôn ngữ)
+/**
+ * Posts data array containing blog articles
+ * Each post has multilingual support (Vietnamese/English) with metadata
+ */
 const posts = [
     {
         id: 'tep-mau',
@@ -45,6 +48,10 @@ const posts = [
     }
 ];
 
+/**
+ * Collection products data array containing shrimp, plants, and accessories
+ * Each product has multilingual support and detailed specifications
+ */
 const collectionProducts = [
     {
         id: 'tep-bluedream',
