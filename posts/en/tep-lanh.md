@@ -1,234 +1,284 @@
-# Cold Water Shrimp (Caridina)
+# Caridina Shrimp - Premium Shrimp Group
 
-Cold water shrimp are a group of aquarium shrimp that can thrive at lower temperatures compared to common tropical shrimp. They are suitable for cool climates and don't require a heater, helping save electricity and making them easier to care for.
+Caridina shrimp (*Caridina cantonensis*) are the most sought-after premium aquarium shrimp in the hobby. They are renowned for their vibrant colors, unique patterns, and require more meticulous care compared to common Neocaridina shrimp.
 
-## Overview of Cold Water Shrimp
+## Overview of Caridina Shrimp
 
-Cold water shrimp typically live in temperate regions and have good cold tolerance. They can live at temperatures from 5-20°C, and some species can even live at lower temperatures.
+Caridina shrimp originate from Taiwan and Southeast Asian regions. They live in soft water environments with low pH and require stable water conditions to develop optimal coloration and breeding success.
 
 ### General Characteristics
 
-- **Living Temperature**: 5-20°C (optimal: 10-18°C)
-- **Size**: 2-4 cm depending on species
-- **Lifespan**: 1-3 years
+- **Temperature Range**: 21-26°C (optimal: 24-25°C for best coloration)
+- **Size**: 2-3 cm
+- **Lifespan**: 18 months
 - **Temperament**: Peaceful, prefer living in groups
-- **Difficulty**: ⭐⭐ Medium (need to pay attention to temperature)
+- **Difficulty**: ⭐⭐⭐⭐ Difficult (requires experience and stable water conditions)
 
-### Common Types of Cold Water Shrimp
+### Popular Caridina Strains
 
-1. **Amano Shrimp** (*Caridina multidentata*)
-   - Temperature: 18-24°C
-   - Size: 4-5 cm
-   - Color: Gray-green with yellow spots
-   - Special: Excellent algae eater
+1. **Pure Red Line (PRL)**
+   - Color: Deep red with crisp white stripes
+   - Grades: SS, S, A
+   - Special: Most popular strain
 
-2. **Ghost Shrimp** (*Palaemonetes paludosus*)
-   - Temperature: 15-25°C
-   - Size: 3-4 cm
-   - Color: Transparent, can change color
-   - Special: Easy to keep, adapts well
+2. **Pure Black Line (PBL)**
+   - Color: Glossy black with white stripes
+   - Grades: SS, S, A  
+   - Special: Strong color contrast
 
-3. **Whisker Shrimp** (*Macrobrachium* sp.)
-   - Temperature: 18-26°C
-   - Size: 5-8 cm
-   - Color: Brown, gray
-   - Special: Large claws, need spacious environment
+3. **Black Galaxy Tiger**
+   - Color: Black with orange/yellow stripes
+   - Pattern: Characteristic horizontal tiger stripes
+   - Special: Very striking coloration
 
-4. **Bamboo Shrimp** (*Atyopsis moluccensis*)
-   - Temperature: 20-26°C
-   - Size: 5-6 cm
-   - Color: Brown, yellow with vertical stripes
-   - Special: Filter feeds from water
+4. **Blue Bolt**
+   - Color: Deep blue with white
+   - Variants: Deep Blue, Ocean Blue
+   - Special: Rare and unique blue coloration
+
+5. **Galaxy/Boa Series**
+   - Black Galaxy Boa, Red Galaxy Tiger
+   - Pattern: Circular spots like galaxies
+   - Special: From modern breeding lines
+
+6. **Fancy Tiger Series**  
+   - Red Fancy Tiger, Black Fancy Tiger
+   - Pattern: Tiger stripes with distinctive base colors
+   - Special: Variants from original Tiger lineage
 
 ## Care Conditions
 
-### Water Parameters
+### Water Parameters - EXTREMELY IMPORTANT
 
-| Parameter | Recommended Value |
-|-----------|-------------------|
-| Temperature | 10-20°C (optimal: 15-18°C) |
-| pH | 6.5-8.0 (optimal: 7.0-7.5) |
-| Hardness (GH) | 4-15 dGH |
-| Carbonate Hardness (KH) | 2-8 dKH |
+| Parameter | Value |
+|-----------|-------|
+| Temperature | 21-26°C (optimal: 24-25°C) |
+| pH | 5.5-6.5 (optimal: 6.0-6.2) |
+| Hardness (GH) | 3-6 dGH |
+| Carbonate Hardness (KH) | 0-2 dKH |
+| TDS | 100-200 ppm |
 | Ammonia (NH3) | 0 ppm |
 | Nitrite (NO2) | 0 ppm |
-| Nitrate (NO3) | < 20 ppm |
+| Nitrate (NO3) | < 10 ppm |
+
+⚠️ **IMPORTANT NOTE**: Caridina shrimp REQUIRE soft water and low pH. Use RO/DI water mixed with specialized salts.
 
 ### Tank Size
 
-- **Minimum**: 30 liters for small group
-- **Recommended**: 50-80 liters for good growth space
-- **Larger**: The bigger, the better, helps stabilize temperature
+- **Minimum**: 40 liters (for beginners)
+- **Recommended**: 60-100 liters for better stability
+- **Reason**: Larger tanks have less parameter fluctuations
 
 ### Temperature Management
 
-**Important**: Cold water shrimp DO NOT need a heater, and a heater may even be harmful!
+**NEED heater**: Caridina shrimp are tropical shrimp, requiring stable temperature of 24-25°C.
 
-**Ways to keep temperature low**:
-- Place tank in cool area of house
-- Avoid direct sunlight
-- Can use cooling fan if needed
-- In summer, may need chiller if temperature > 25°C
+**Maintaining temperature**:
+- Use heater with thermostat
+- Set to 24-25°C for best coloration
+- Avoid temperature fluctuations > 2°C daily
+- In summer, may need fan cooling if > 28°C
+- Monitor with accurate digital thermometer
+
+### Special Water Quality Requirements
+
+**Water usage**:
+- RO/DI water is mandatory (tap water NOT suitable)
+- Mix with specialized Caridina salts (Salty Shrimp GH/KH+, SaltyShrimp GH+)
+- Regular TDS, GH, KH testing
+- 10-20% weekly water changes with same parameters
 
 ## Tank Setup
 
 ### Required Equipment
 
 1. **Filter**: 
-   - Hang-on-back or external filter
-   - Avoid filters with strong suction
-   - Sponge filter is a good choice
+   - Gentle hang-on-back or external filter
+   - Sponge filter combination is ideal
+   - Avoid excessive flow
 
 2. **Heater**: 
-   - ❌ **NOT NEEDED**
-   - Only need to monitor temperature
+   - ✅ **MANDATORY** 50-100W heater
+   - Accurate thermostat ±0.5°C
+   - Set to 24-25°C
 
 3. **Lighting**:
-   - LED lights to save electricity
+   - Full spectrum LED for aquatic plants
    - Lighting time: 6-8 hours/day
-   - Helps aquatic plants grow
+   - Avoid overpower lighting causing algae blooms
 
 4. **Aeration**:
-   - Small air pump to increase dissolved oxygen
-   - Important because cold water holds oxygen better
+   - Air pump with fine air stones
+   - Gentle aeration at night
+   - CO2 may be needed for plants
 
-5. **Thermometer**:
-   - Monitor temperature regularly
-   - Ensure it doesn't exceed 20°C
+5. **Measurement Tools**:
+   - TDS meter (mandatory)
+   - pH meter or test kit
+   - GH/KH test kit
+   - Digital thermometer
 
 ### Substrate and Decorations
 
-- **Substrate**: 
-  - Fine sand or small gravel
-  - Avoid substrates with sharp edges
-  - Can use specialized substrate
+- **Active Soil (Essential)**: 
+  - Mandatory for Caridina: ADA Amazonia, Fluval Stratum, SL-Aqua
+  - Helps lower pH and soften water
+  - 3-5 cm depth, create natural slope
 
 - **Aquatic Plants**:
-  - Cold-tolerant plants: Java Moss, Java Fern
-  - Easy-growing plants
-  - Provides hiding places for shrimp
+  - Mosses: Java Moss, Christmas Moss, Fissidens
+  - Ferns: Java Fern, Anubias (slow growing)
+  - Carpet plants: Monte Carlo, HC Cuba (with CO2)
+  - Helps stabilize water parameters and provides hiding places
 
 - **Driftwood and Rocks**:
-  - Creates hiding places for shrimp
-  - Helps beneficial bacteria grow
+  - Cholla or spider wood (dried)
+  - Inert rocks (no pH impact): Dragon stone
+  - Creates caves and surface for biofilm development
 
 ## Feeding
 
-Cold water shrimp are omnivorous and can eat various types of food.
+Caridina shrimp have high nutritional needs and require balanced diet for optimal coloration.
 
 ### Natural Foods
 
-- **Algae**: Natural algae in tank
-- **Biofilm**: Bacterial film on surfaces
-- **Leaves**: Mulberry leaves, dried Indian almond leaves (soaked in water)
-- **Carcasses**: Dead fish, shrimp (natural cleanup)
+- **Biofilm**: Most important microbial film on wood and leaves
+- **Soft algae**: Green algae on glass and plants
+- **Leaves**: Mulberry, banana, guava leaves (dried, boiled)
+- **Detritus**: Natural plant decomposition
 
-### Commercial Foods
+### Specialized Caridina Foods
 
-- **Specialized shrimp pellets**: Contains complete nutrition
-- **Spirulina algae**: Helps enhance colors
-- **Frozen foods**: Artemia, bloodworms (feed sparingly)
-- **Vegetables**: Cucumber, zucchini (blanched)
+- **Premium foods**: Genchem, ShrimpKing, Borneowild
+- **Color enhancing pellets**: Contains spirulina, astaxanthin
+- **Protein foods**: Artemia, bloodworms (1-2 times/week)
+- **Organic foods**: Blanched vegetables (low sugar)
 
 ### Feeding Schedule
 
-- **Frequency**: 1-2 times/day
-- **Amount**: Just enough for shrimp to finish in 2-3 hours
-- **Note**: At low temperatures, shrimp eat less and metabolize slower
+- **Frequency**: Once daily, skip 1 day/week
+- **Amount**: Finish in 2-3 hours
+- **Timing**: Feed when lights are off (more active)
 
 ## Care and Maintenance
 
-### Water Changes
+### Water Changes for Caridina
 
-- **Frequency**: 20-30% per week
-- **New water**: Must be dechlorinated and at room temperature
-- **Important**: New water must be at similar temperature as tank water to avoid thermal shock
-- **Avoid**: Changing too much water or too suddenly
+- **Frequency**: 10-20% weekly (NO MORE than 20%)
+- **New water**: RO/DI mixed with salts, same TDS, pH, temperature
+- **Method**: Slow drip, avoid parameter shock
+- **Check**: TDS and pH before changes to ensure equivalency
 
-### Water Quality Testing
+### Water Parameter Testing (Daily)
 
-- Use test kit for regular testing
-- Pay special attention to NH3, NO2, NO3
-- Adjust pH and hardness if needed
-- **Monitor temperature**: Ensure always in appropriate range
+- **TDS**: 100-200 ppm (check with TDS meter)
+- **pH**: 6.0-6.5 (test kit or pH meter)
+- **Temperature**: Stable 24-25°C
+- **Observation**: Color, activity of shrimp
 
-### Tank Cleaning
+### Equipment Maintenance
 
-- Siphon substrate periodically
-- Clean filter according to instructions
-- Avoid over-cleaning (removes beneficial bacteria)
+- **Filter**: Squeeze sponge in old tank water (never tap water)
+- **Substrate**: Gentle vacuum, avoid disturbing substrate
+- **Driftwood**: Leave natural, important biofilm source
 
 ## Breeding
 
-Cold water shrimp breeding depends on species:
+Caridina shrimp breeding requires stable water conditions and high experience.
 
-### Amano Shrimp
+### Breeding Conditions
 
-- **Difficulty**: ⭐⭐⭐ Hard
-- **Characteristics**: Need brackish water for larvae development
-- **Process**: Complex, requires separate setup
+- **Difficulty**: ⭐⭐⭐⭐⭐ Very Difficult
+- **Gestation period**: 28-30 days at 24°C
+- **Water conditions**: Must be absolutely stable (TDS ±5ppm)
+- **Optimal temperature**: 24-25°C for best coloration
+- **Breeding age**: 3-4 months old
 
-### Ghost Shrimp
+### Breeding Process
 
-- **Difficulty**: ⭐⭐ Medium
-- **Characteristics**: Breed in fresh water
-- **Process**: Similar to color shrimp, but need stable conditions
+1. **Breeding tank preparation**:
+   - Separate 40-60L tank, stabilized 2-3 months
+   - Active soil through nitrogen cycle
+   - Completely stable water parameters
 
-### Bamboo Shrimp
+2. **Parent selection**:
+   - Same line/grade to avoid crossing
+   - Healthy shrimp with good coloration
+   - Ratio 1 male : 2-3 females
 
-- **Difficulty**: ⭐⭐⭐ Very Hard
-- **Characteristics**: Larvae need saltwater to develop
-- **Process**: Very complex, usually don't breed in home tanks
+3. **Offspring care**:
+   - Shrimplets born fully formed (no larval stage)
+   - Same food as adults (crushed small)
+   - Development time: 3-6 months to full coloration
 
-## Common Problems
+## Common Caridina Problems
 
-### Death from High Temperature
+### Sudden Death - Problem #1 with Caridina
+
+**Common causes**:
+- **Parameter shock**: TDS, pH sudden changes
+- **Tap water**: Chlorine/Chloramine toxicity
+- **Fast water changes**: No drip acclimation
+- **Unstable active soil**: Ammonia spikes
+
+**Solutions**:
+- Only use RO/DI water mixed with salts
+- Drip acclimation during water changes (30-60 minutes)
+- Check TDS before and after water changes
+- Cycle tank 6-8 weeks before adding shrimp
+
+### Loss of Color/Pale Colors
 
 **Causes**:
-- Temperature exceeds 25°C
-- Heater accidentally turned on
-- Tank placed near heat source
+- Improper temperature (< 22°C or > 26°C)
+- Nutritional deficiency (protein, carotenoids)
+- Stress from unstable water parameters
+- Cross-breeding between different lines
 
 **Solutions**:
-- Turn off heater immediately
-- Move tank to cooler location
-- Use fan or chiller to cool down
+- Maintain stable 24-25°C temperature
+- Specialized color enhancing foods
+- Complete water parameter stability
+- Only breed same line/grade
 
-### Sudden Death
-
-**Possible causes**:
-- Poor water quality (high NH3, NO2)
-- Changing too much water or too suddenly
-- Thermal shock (sudden temperature change)
-- Lack of oxygen
-
-**Solutions**:
-- Test water quality immediately
-- Change water gradually, ensure similar temperature
-- Ensure adequate aeration
-
-### Inactive Shrimp
+### No Breeding
 
 **Causes**:
-- Temperature too low (< 5°C)
-- Stress
-- Disease
+- Active soil too new (< 3 months)
+- Unstable TDS (fluctuations > 10ppm)
+- Lack of biofilm/microorganisms
+- Stress from unsuitable environment
 
 **Solutions**:
-- Check temperature
-- Ensure good water conditions
-- Observe for disease signs
+- Patience for 3-6 months tank stability
+- Keep TDS absolutely stable
+- Add leaves, driftwood for biofilm
+- Avoid excessive water changes (< 10%/week)
+## Why Choose Caridina Shrimp
 
-## Benefits of Keeping Cold Water Shrimp
+1. **Most Beautiful Colors**: No shrimp group matches Caridina
+2. **Pattern Diversity**: Tiger, Galaxy, Boa, Crystal - countless variants
+3. **High Value**: Good investment for premium shrimp enthusiasts
+4. **Personal Challenge**: Improve aquarium keeping skills
+5. **Passionate Community**: Connect with professional shrimp keepers
 
-1. **Save electricity**: No heater needed
-2. **Easy maintenance**: Less equipment
-3. **Climate suitable**: Good for areas with cold winters
-4. **Diverse**: Many species with different characteristics
-5. **Cleanup**: Some species (like Amano) are excellent algae eaters
+## Total Cost for 60L Caridina Setup
+
+| Equipment | Price Range (USD) |
+|-----------|-------------------|
+| 60x30x36cm glass tank | $80 - $120 |
+| Active Soil 8L | $60 - $100 |
+| Filter + Heater + Light | $160 - $240 |
+| TDS Meter + Test Kits | $60 - $100 |
+| RO Water + Caridina Salts | $40 - $60 |
+| **Total** | **$400 - $620** |
+
+*Monthly costs: $20-40 USD (salts, food, RO water)*
 
 ## Conclusion
 
-Cold water shrimp are an excellent choice for those living in cool climates or wanting to save electricity. With proper care and good temperature management, they will thrive and create a unique aquarium.
+Caridina shrimp represent the pinnacle of aquarium shrimp keeping. While requiring high technical skill and investment, the beauty and satisfaction when successful are incomparable.
 
-> **Advice**: The most important thing when keeping cold water shrimp is temperature management. Ensure temperature always stays in appropriate range and avoid sudden temperature increases. If you live in a hot area, consider investing in a chiller or choose cold water shrimp species that can tolerate slightly higher temperatures.
+**Final advice**: Start with an easier strain like Crystal Red grade A, learn to stabilize water parameters, then progress to more premium lines. Patience is the key to success!
+
+> **Important**: Caridina are NOT cold water shrimp - they need stable 24-25°C temperature and are the most premium tropical shrimp species. Invest correctly from the start to avoid disappointing failures.
