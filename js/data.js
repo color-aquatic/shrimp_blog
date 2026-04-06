@@ -341,7 +341,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['nanapettie.png', 'nanapettie.png', 'nanapettie.png', 'nanapettie.png']
+        images: ['nanapettie1.png', 'nanapettie2.png', 'nanapettie3.png', 'nanapettie1.png']
     },
     {
         id: 'bucephalandra',
