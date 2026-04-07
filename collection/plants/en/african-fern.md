@@ -2,7 +2,7 @@
 
 ## Introduction
 
-African Fern (Bolbitis heudelotii) is a beautiful and unique aquatic fern, popular in aquascaping for its distinctive leaf shape and easy care characteristics. This plant originates from Africa and thrives well in aquatic conditions.
+African Fern (Bolbitis heudelotii) is a beautiful and unique aquatic fern, popular in aquascaping for its distinctive leaf shape and easy care. It originates from Africa and grows well in aquatic conditions.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ African Fern (Bolbitis heudelotii) is a beautiful and unique aquatic fern, popul
 
 ## Growth Characteristics
 
-African Fern grows from a rhizome and produces compound leaves with unique shapes featuring finely divided segments. The plant can attach firmly to rough surfaces and develop into large clumps.
+African Fern grows from a rhizome and produces compound leaves with finely divided segments. The plant attaches firmly to rough surfaces and can develop into large clumps over time.
 
 ## Planting and Care
 
@@ -58,7 +58,7 @@ African Fern is commonly used for:
 
 - Never bury the rhizome in substrate
 - Prefers gentle water flow
-- Slow development requires patience
+- Slow growing — patience is needed
 - May compete with algae under strong light
 - New leaves are reddish-brown, mature leaves are dark green
 - Sensitive to sudden parameter changes

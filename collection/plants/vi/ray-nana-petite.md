@@ -1,21 +1,21 @@
-# Ray Nana Petite
+# Ráy Nana Petite
 
-## Gioi thieu
+## Giới thiệu
 
-Ray Nana Petite la phien ban mini cua ray nana, noi bat voi la rat nho, day va toc do phat trien cham. Cay phu hop cho be nano va bo cuc can canh.
+Ráy Nana Petite là phiên bản mini của Ráy Nana, nổi bật với lá rất nhỏ, dày và tốc độ phát triển chậm. Cây phù hợp cho bể nano và bố cục cận cảnh.
 
-## Dieu kien nuoi trong
+## Điều kiện nuôi trồng
 
-| Thong so | Gia tri de nghi |
+| Thông số | Giá trị đề nghị |
 |----------|------------------|
-| Nhiet do | 20-28C |
+| Nhiệt độ | 20-28°C |
 | pH | 6.0-7.8 |
-| Do cung | Mem den cung |
-| Anh sang | Thap den trung binh |
-| CO2 | Khong bat buoc |
+| Độ cứng | Mềm đến cứng |
+| Ánh sáng | Thấp đến trung bình |
+| CO2 | Không bắt buộc |
 
-## Luu y
+## Lưu ý
 
-- Khong chon than re vao nen.
-- Nen buoc len da, lua hoac gia the cung.
-- Cat la gia de kich thich la moi.
+- Không chôn thân rễ vào nền.
+- Nên buộc lên đá, lũa hoặc giá thể cứng.
+- Cắt lá già để kích thích lá mới.

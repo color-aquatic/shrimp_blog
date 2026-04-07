@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Tép Red Galaxy Tiger là sự kết hợp hoàn hảo giữa màu đỏ rực rỡ và họa tiết tiger (sọc hổ) cùng với các chấm galaxy lấp lánh. Đây là một trong những giống tép lạnh được yêu thích nhất nhờ vẻ đẹp năng động và đặc sắc.
+Tép Red Galaxy Tiger kết hợp giữa màu đỏ rực rỡ và họa tiết sọc hổ (tiger) cùng các chấm galaxy lấp lánh. Đây là dòng tép lạnh được yêu thích nhờ vẻ đẹp năng động và đặc sắc.
 
 ## Đặc điểm
 
@@ -14,7 +14,7 @@ Tép Red Galaxy Tiger là sự kết hợp hoàn hảo giữa màu đỏ rực r
 
 ## Thông số nước
 
-| Thông số | Gía trị |
+| Thông số | Giá trị |
 |----------|---------------------|
 | Nhiệt độ | 20-24°C |
 | pH | 5.8-6.8 |
@@ -24,7 +24,7 @@ Tép Red Galaxy Tiger là sự kết hợp hoàn hảo giữa màu đỏ rực r
 
 ## Đặc điểm sinh học
 
-Red Galaxy Tiger có nguồn gốc từ việc lai tạo giữa các dòng Tiger và Galaxy. Họa tiết tiger tạo nên sức sống năng động trong khi các chấm galaxy thêm vào vẻ bí ẩn và thu hút.
+Red Galaxy Tiger có nguồn gốc từ việc lai giữa các dòng Tiger và Galaxy. Họa tiết tiger mang lại cảm giác năng động, còn các chấm galaxy thêm phần cuốn hút.
 
 ## Cách nuôi
 
@@ -43,7 +43,7 @@ Red Galaxy Tiger có nguồn gốc từ việc lai tạo giữa các dòng Tiger
 
 ## Sinh sản
 
-Khó sinh sản hơn Neocaridina. Tép cái mang trứng 25-30 ngày với 15-25 tép con.
+Khó sinh sản hơn Neocaridina. Tép cái mang trứng 25-30 ngày, mỗi lứa khoảng 15-25 con.
 
 ## Tuổi thọ
 

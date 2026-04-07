@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Orange Eye Red Dragon Shrimp is a premium tiger shrimp line recognized for its bright orange eyes and intense red dragon-like body pattern. Its high contrast look and relative rarity make it highly desirable among collectors.
+Orange Eye Red Dragon Shrimp is a premium tiger shrimp line recognized for its bright orange eyes and intense red body pattern. Its impressive color contrast and relative rarity make it a favorite among shrimp enthusiasts.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Orange Eye Red Dragon Shrimp is a premium tiger shrimp line recognized for its b
 
 ## Biological Features
 
-Orange Eye Red Dragon is commonly categorized among high-grade tiger shrimp, valued for clear orange eyes and strong red pigmentation. Color intensity depends heavily on stable water parameters, substrate quality, and feeding.
+Orange Eye Red Dragon is categorized among high-grade tiger shrimp, easily recognized by its clear orange eyes and strong red pigmentation. Color intensity depends heavily on water stability, substrate quality, and feeding.
 
 ## Care Instructions
 
@@ -45,7 +45,7 @@ Orange Eye Red Dragon is commonly categorized among high-grade tiger shrimp, val
 
 ## Breeding
 
-Females usually carry eggs for about 25-30 days, and brood size is typically moderate. To maintain strong phenotype consistency, select high-quality breeders and keep water parameters stable.
+Females usually carry eggs for about 25-30 days, and brood size is typically moderate. To maintain strong phenotype, select high-quality breeders and keep water parameters stable.
 
 ## Special Notes
 

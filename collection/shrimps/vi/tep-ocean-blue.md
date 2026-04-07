@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Tép Ocean Blue là dòng tép cảnh nổi bật với tông xanh biển lạnh, độ chuyển sắc từ xanh ngọc đến xanh dương đậm tùy ánh sáng và nền bể. Đây là lựa chọn rất đẹp cho các layout thủy sinh nền tối hoặc bể nhiều moss.
+Tép Ocean Blue là dòng tép cảnh với tông xanh biển lạnh, chuyển sắc từ xanh ngọc đến xanh dương đậm tùy ánh sáng và nền bể. Rất đẹp trong các layout nền tối hoặc bể nhiều moss.
 
 ## Đặc điểm
 
@@ -14,7 +14,7 @@ Tép Ocean Blue là dòng tép cảnh nổi bật với tông xanh biển lạnh
 
 ## Thông số nước
 
-| Thông số | Gía trị |
+| Thông số | Giá trị |
 |----------|---------------------|
 | Nhiệt độ | 20-24°C |
 | pH | 5.8-6.8 |
@@ -41,7 +41,7 @@ Tép Ocean Blue là dòng tép cảnh nổi bật với tông xanh biển lạnh
 
 ## Sinh sản
 
-Tép Ocean Blue có thể sinh sản ổn định khi nước sạch và thông số giữ đều. Tép cái thường mang trứng khoảng 24-30 ngày và nở ra tép con có màu nhạt hơn, đậm dần khi lớn.
+Ocean Blue có thể sinh sản ổn định khi nước sạch và thông số giữ đều. Tép cái mang trứng khoảng 24-30 ngày. Tép con khi mới nở thường màu nhạt, sẽ đậm dần khi lớn.
 
 ## Lưu ý đặc biệt
 

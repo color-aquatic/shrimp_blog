@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Blue Diamond Shrimp is one of the most prominent aquarium shrimp species with its characteristic diamond-blue coloration. With their sparkling diamond-like beauty, they create excellent focal points in aquascaping tanks and are highly favored among the aquarium community.
+Blue Diamond Shrimp is an eye-catching Neocaridina variety with a distinctive blue coloration that shimmers under light. Easy to keep, easy to breed, and a beautiful addition to any planted tank — great for both beginners and experienced hobbyists.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Blue Diamond Shrimp is one of the most prominent aquarium shrimp species with it
 
 ## Biological Features
 
-Blue Diamond Shrimp belongs to the Neocaridina family, with good adaptability to various water conditions. Their unique diamond-blue color is created by light reflection on their shell, producing an attractive shimmering effect.
+Blue Diamond Shrimp belongs to the Neocaridina family, adapting well to various water conditions. Their distinctive blue color comes from light reflecting off the shell, producing an attractive shimmer.
 
 ## Care Instructions
 
@@ -43,7 +43,7 @@ Blue Diamond Shrimp belongs to the Neocaridina family, with good adaptability to
 
 ## Breeding
 
-Blue Diamond Shrimp breed easily under good conditions. Females carry eggs for about 20-30 days and produce around 20-40 shrimplets per batch.
+Blue Diamond Shrimp breed easily in stable conditions. Females carry eggs for about 20-30 days and produce around 20-40 shrimplets per batch.
 
 ## Lifespan
 

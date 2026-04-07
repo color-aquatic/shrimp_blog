@@ -2,14 +2,14 @@
 
 ## Introduction
 
-Mixed Cold-Water Shrimp, known as "Loạn Lạnh" in Vietnamese, represents a diverse assortment of cold-water shrimp varieties combined in one package. This economical option provides aquarists with an opportunity to experience multiple species and color variations while creating a dynamic, colorful aquarium community.
+Mixed Cold-Water Shrimp, known as "Loạn Lạnh" in Vietnamese, is a combo pack of various cold-water shrimp varieties bundled together. It's a budget-friendly way to experience different species, colors, and patterns without purchasing each one individually.
 
 ## Characteristics
 
 - **Composition**: Various cold-water shrimp species mixed together
 - **Size**: 1-2.5 cm depending on species and age
-- **Coloration**: Multiple colors and patterns in one collection
-- **Temperament**: Generally peaceful, community-oriented
+- **Coloration**: Multiple colors and patterns in one set
+- **Temperament**: Generally peaceful, community-friendly
 - **Care difficulty**: Easy to Intermediate (variety dependent)
 
 ## Water Parameters
@@ -24,36 +24,36 @@ Mixed Cold-Water Shrimp, known as "Loạn Lạnh" in Vietnamese, represents a di
 
 ## Biological Features
 
-Mixed cold-water shrimp collections typically include various hardy species that can adapt to similar water conditions. This diversity provides an excellent learning opportunity for beginners to observe different behaviors, feeding habits, and breeding patterns within a single aquarium setup.
+Mixed cold-water packs typically include hardy species that can share similar water conditions. This diversity lets you observe different behaviors, feeding habits, and breeding patterns all in one tank.
 
 ## Care Instructions
 
 ### Required Equipment
 
-1. **Tank**: Minimum 40 liters to accommodate mixed species
-2. **Filter**: Reliable biological filtration system
-3. **Temperature control**: Stable heating/cooling system
-4. **LED lighting**: Moderate lighting for plant growth
-5. **Aquatic plants**: Variety of live plants for different species preferences
+1. **Tank**: Minimum 40 liters to give all species enough space
+2. **Filter**: Stable biological filtration
+3. **Temperature control**: Consistent heating system
+4. **LED lighting**: Moderate intensity
+5. **Aquatic plants**: A variety of live plants to suit different species
 
 ### Diet
 
-- General aquarium shrimp pellets
+- Quality ornamental shrimp pellets
 - Blanched vegetables: Various types to suit different species
-- Natural foods: Biofilm, algae, leaf litter
-- Supplemental feeding: Species-specific treats
+- Natural foods: Biofilm, soft algae, leaf litter
+- Species-specific treats as needed
 
 ## Breeding
 
-Mixed species may interbreed or maintain separate breeding patterns. Observation of different reproductive strategies provides educational value. Some crosses may produce interesting hybrid offspring while others maintain genetic isolation.
+Mixed species may interbreed or maintain separate breeding patterns depending on the varieties. You'll get to observe different reproductive strategies firsthand. Some crosses can produce interesting offspring, while others will stay genetically separate.
 
 ## Special Notes
 
 - **Species variety**: Contents may vary by supplier
-- **Educational value**: Excellent for learning about different cold-water species
-- **Economic option**: Cost-effective way to sample multiple varieties
-- **Community dynamics**: Observe inter-species interactions
+- **Great for learning**: Helps you get familiar with different cold-water species
+- **Cost-effective**: An affordable way to sample multiple varieties at once
+- **Fun to watch**: Observe how different species interact in the same tank
 
 ## Lifespan
 
-Varies by species, typically 1-2 years depending on individual varieties included in the mix.
+Varies by species, typically 1-2 years with proper care.

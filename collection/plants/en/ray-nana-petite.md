@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Anubias Nana Petite is a tiny Anubias cultivar with compact leaves, ideal for nano tanks and foreground details.
+Anubias Nana Petite is a tiny Anubias cultivar with compact leaves — ideal for nano tanks and foreground details.
 
 ## Growing Conditions
 

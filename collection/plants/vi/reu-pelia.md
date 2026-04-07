@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Rêu Pelia (Monosolenium tenerum) là một loại rêu thủy sinh độc đáo, có hình dạng giống như lá gan và được ưa chuộng trong bộ môn aquascape. Rêu này có tốc độ phát triển chậm nhưng tạo được hiệu ứng thị giác rất đẹp mắt.
+Rêu Pelia (Monosolenium tenerum) là loại rêu thủy sinh độc đáo, có dạng thùy phẳng và dày, được ưa chuộng trong aquascape. Rêu phát triển chậm nhưng tạo hiệu ứng thị giác rất đẹp.
 
 ## Đặc điểm
 
@@ -24,7 +24,7 @@ Rêu Pelia (Monosolenium tenerum) là một loại rêu thủy sinh độc đáo
 
 ## Đặc điểm sinh trưởng
 
-Rêu Pelia phát triển theo dạng thùy lá phẳng, tạo thành những cụm dày đặc. Khác với các loại rêu khác, Pelia không có thân chính mà lan tỏa theo chiều ngang, tạo thành thảm xanh đặc trưng.
+Rêu Pelia phát triển dạng thùy phẳng, tạo cụm dày đặc. Khác với các loại rêu khác, Pelia không có thân chính mà lan theo chiều ngang, tạo thảm xanh đặc trưng.
 
 ## Cách trồng và chăm sóc
 
@@ -51,7 +51,7 @@ Rêu Pelia thường được sử dụng:
 - Tạo điểm nhấn trong bể Nature Aquarium
 - Kết hợp với đá và gỗ lũa tạo cảnh quan tự nhiên
 
-## Lưy ý
+## Lưu ý
 
 - Tránh di chuyển thường xuyên
 - Cần thời gian để thích nghi với môi trường mới

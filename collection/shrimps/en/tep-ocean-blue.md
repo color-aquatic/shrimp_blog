@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Ocean Blue Shrimp is an eye-catching ornamental shrimp variety known for cool ocean-like blue tones, ranging from turquoise to deep blue depending on lighting and substrate. It is a great choice for dark aquascapes and moss-focused planted tanks.
+Ocean Blue Shrimp is an eye-catching variety with cool ocean-like blue tones, ranging from turquoise to deep blue depending on lighting and substrate. A great pick for dark aquascapes and moss-heavy planted tanks.
 
 ## Characteristics
 
@@ -41,7 +41,7 @@ Ocean Blue Shrimp is an eye-catching ornamental shrimp variety known for cool oc
 
 ## Breeding
 
-Ocean Blue Shrimp can breed consistently in clean, stable conditions. Females usually carry eggs for around 24-30 days. Juveniles often hatch with lighter coloration, which deepens as they mature.
+Ocean Blue Shrimp can breed consistently in clean, stable conditions. Females carry eggs for around 24-30 days. Juveniles typically hatch with lighter coloration that deepens as they grow.
 
 ## Special Notes
 

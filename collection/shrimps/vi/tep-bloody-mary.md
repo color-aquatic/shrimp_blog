@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Tép Bloody Mary là một giống tép cảnh cao cấp với màu đỏ thẫm đặc trưng và phần đầu trong suốt. Tên gọi xuất phát từ màu đỏ máu đặc biệt, tạo nên vẻ đẹp bí ẩn và thu hút trong bể thủy sinh.
+Tép Bloody Mary là dòng tép cảnh với màu đỏ thẫm đặc trưng, phần đầu gần như trong suốt tạo nên sự tương phản rất bắt mắt. Tên gọi lấy cảm hứng từ màu đỏ máu lồng lộng, mang đến vẻ đẹp cuốn hút trong bể thủy sinh.
 
 ## Đặc điểm
 
@@ -14,7 +14,7 @@ Tép Bloody Mary là một giống tép cảnh cao cấp với màu đỏ thẫm
 
 ## Thông số nước
 
-| Thông số | Gía trị |
+| Thông số | Giá trị |
 |----------|---------------------|
 | Nhiệt độ | 20-24°C |
 | pH | 6.2-7.2 |
@@ -24,7 +24,7 @@ Tép Bloody Mary là một giống tép cảnh cao cấp với màu đỏ thẫm
 
 ## Đặc điểm sinh học
 
-Tép Bloody Mary là kết quả của quá trình lai tạo chọn lọc từ dòng tép Cherry. Đặc điểm nổi bật là cơ thể màu đỏ đậm trong khi vùng đầu và chân bơi gần như trong suốt, tạo nên sự tương phản độc đáo.
+Tép Bloody Mary được chọn lọc từ dòng tép Cherry. Điểm nổi bật là thân màu đỏ đậm trong khi vùng đầu và chân bơi gần như trong suốt, tạo nên sự tương phản rất độc đáo.
 
 ## Cách nuôi
 
@@ -43,7 +43,7 @@ Tép Bloody Mary là kết quả của quá trình lai tạo chọn lọc từ d
 
 ## Sinh sản
 
-Trong điều kiện thích hợp, tép cái mang trứng 20-25 ngày và sinh 15-30 tép con. Cần môi trường ổn định để tăng tỷ lệ sống của tép con.
+Trong điều kiện ổn định, tép cái mang trứng 20-25 ngày và mỗi lứa khoảng 15-30 con. Bạn nên giữ nước ổn định để tép con có tỷ lệ sống tốt hơn.
 
 ## Tuổi thọ
 
@@ -51,4 +51,4 @@ Trong điều kiện thích hợp, tép cái mang trứng 20-25 ngày và sinh 1
 
 ## Lưu ý
 
-🔥 **Đặc biệt**: Bloody Mary cần chế độ dinh dưỡng tốt để duy trì màu đỏ đậm đặc trưng.
+🔥 **Lưu ý**: Bloody Mary cần chế độ dinh dưỡng tốt để giữ được màu đỏ đậm đặc trưng.

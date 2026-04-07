@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Thai Yellow Shrimp is an ornamental shrimp line recognized for its distinct yellow-orange coloration that stands out clearly in planted tanks. It is hardy, easy to breed, and especially suitable for beginners.
+Thai Yellow Shrimp is an ornamental line with a vivid yellow-orange color that stands out in any planted tank. Hardy, easy to breed, and especially beginner-friendly.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Thai Yellow Shrimp is an ornamental shrimp line recognized for its distinct yell
 
 ## Biological Features
 
-Thai Yellow Shrimp adapts well in community planted setups. Under stable conditions, this line breeds consistently, helping hobbyists establish healthy colonies quickly.
+Thai Yellow Shrimp adapts well to community planted setups. Under stable conditions, this line breeds consistently, helping you build a healthy colony quickly.
 
 ## Care Instructions
 

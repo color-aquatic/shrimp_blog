@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Pure Black Line (PBL) Shrimp is a special and relatively rare variety in the ornamental shrimp market. This unique genetic line produces pure black and white offspring, maintaining consistent coloration patterns unlike other bee shrimp varieties that may produce red and black combinations. When kept in groups, PBL creates a striking visual effect reminiscent of a herd of dairy cattle.
+Pure Black Line (PBL) Shrimp is a special and relatively rare variety in the shrimp hobby. This genetic line consistently produces pure black and white offspring, unlike other bee shrimp that may throw both red and black variants. When kept in groups, PBL creates a striking black-and-white visual effect.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Pure Black Line (PBL) Shrimp is a special and relatively rare variety in the orn
 
 ## Biological Features
 
-PBL represents a true-breeding line that produces consistent black and white coloration in offspring. This genetic stability makes them valuable for breeders seeking predictable results. Unlike mixed bee shrimp lines, PBL should not be crossed with other cold-water shrimp varieties to maintain genetic purity.
+PBL is a true-breeding line that produces consistent black and white coloration in offspring. This genetic stability is valuable for breeders who want predictable results. To maintain purity, PBL should not be crossed with other bee shrimp lines.
 
 ## Care Instructions
 
@@ -45,14 +45,14 @@ PBL represents a true-breeding line that produces consistent black and white col
 
 ## Breeding
 
-PBL breeds reliably and produces consistent black and white offspring. Females carry eggs for 25-30 days and produce 20-30 shrimplets per batch. The genetic stability makes breeding planning more predictable compared to other bee shrimp varieties.
+PBL breeds reliably and produces consistent black and white offspring. Females carry eggs for 25-30 days and produce 20-30 shrimplets per batch. Thanks to their genetic stability, breeding planning is more predictable compared to other bee shrimp varieties.
 
 ## Special Notes
 
-- **Genetic isolation**: Should not be mixed with other bee shrimp varieties
+- **Genetic isolation**: Should not be mixed with other bee shrimp lines
 - **True breeding**: Maintains consistent coloration through generations
-- **Visual impact**: Creates stunning contrast when kept in large groups
-- **Market rarity**: Relatively uncommon in the ornamental trade
+- **Visual impact**: Creates striking contrast when kept in large groups
+- **Market rarity**: Relatively uncommon in the shrimp trade
 
 ## Lifespan
 

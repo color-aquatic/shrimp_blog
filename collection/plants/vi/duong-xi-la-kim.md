@@ -1,21 +1,21 @@
-# Duong Xi La Kim
+# Dương Xỉ Lá Kim
 
-## Gioi thieu
+## Giới thiệu
 
-Duong Xi La Kim la bien the cua duong xi Java voi la mong va dai, tao chuyen dong mem mai trong dong nuoc. Cay ben, de cham soc.
+Dương Xỉ Lá Kim là biến thể của Dương Xỉ Java với lá mỏng và dài, tạo chuyển động mềm mại trong dòng nước. Cây bền, dễ chăm sóc.
 
-## Dieu kien nuoi trong
+## Điều kiện nuôi trồng
 
-| Thong so | Gia tri de nghi |
+| Thông số | Giá trị đề nghị |
 |----------|------------------|
-| Nhiet do | 18-30C |
+| Nhiệt độ | 18-30°C |
 | pH | 6.0-7.8 |
-| Do cung | Mem den cung |
-| Anh sang | Thap den trung binh |
-| CO2 | Khong bat buoc |
+| Độ cứng | Mềm đến cứng |
+| Ánh sáng | Thấp đến trung bình |
+| CO2 | Không bắt buộc |
 
-## Luu y
+## Lưu ý
 
-- Khong chon than re vao nen.
-- Nen dat o vi tri dong chay nhe.
-- Cat tia dinh ky de giu form dep.
+- Không chôn thân rễ vào nền.
+- Nên đặt ở vị trí có dòng chảy nhẹ.
+- Cắt tỉa định kỳ để giữ form đẹp.

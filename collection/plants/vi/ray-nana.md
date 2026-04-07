@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Ráy Nana (Anubias nana) là một trong những loại cây thủy sinh phổ biến và dễ trồng nhất. Với lá xanh đậm, bóng và khả năng thích nghi tốt, Ráy Nana là lựa chọn hoàn hảo cho người mới bắt đầu aquascape.
+Ráy Nana (Anubias nana) là một trong những loại cây thủy sinh phổ biến và dễ trồng nhất. Lá xanh đậm, bóng và rất dễ thích nghi — lựa chọn lý tưởng cho người mới bắt đầu aquascape.
 
 ## Đặc điểm
 
@@ -24,7 +24,7 @@ Ráy Nana (Anubias nana) là một trong những loại cây thủy sinh phổ b
 
 ## Đặc điểm sinh trưởng
 
-Ráy Nana phát triển từ thân rễ bò ngang và tạo ra những lá dày, có cuống lá rõ ràng. Cây có khả năng sống lâu và chịu được nhiều điều kiện nước khác nhau, làm cho nó trở thành lựa chọn lý tưởng cho aquascape.
+Ráy Nana phát triển từ thân rễ bò ngang, tạo ra lá dày với cuống rõ ràng. Cây sống lâu và chịu được nhiều điều kiện nước khác nhau, rất phù hợp cho aquascape.
 
 ## Cách trồng và chăm sóc
 
@@ -67,7 +67,7 @@ Cây nhân giống bằng cách:
 - Mỗi đoạn thân rễ phải có ít nhất 3-4 lá
 - Cây con sẽ phát triển từ các đoạn thân rễ này
 
-## Lưy ý
+## Lưu ý
 
 - Phát triển rất chậm (1-2 lá mới/tháng)
 - Dễ bị tảo phủ nếu ánh sáng quá mạnh

@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Tép Orange Eye Red Dragon là dòng tép tiger cao cấp nổi bật nhờ đôi mắt cam sáng và họa tiết đỏ đậm chạy dọc thân. Màu sắc mạnh, độ tương phản cao và độ hiếm trên thị trường khiến dòng này rất được giới chơi tép sưu tầm.
+Tép Orange Eye Red Dragon là dòng tép tiger cao cấp, nổi bật với đôi mắt cam sáng và họa tiết đỏ đậm chạy dọc thân. Sự tương phản màu sắc ấn tượng cùng độ hiếm trên thị trường khiến dòng này rất được giới chơi tép yêu thích.
 
 ## Đặc điểm
 
@@ -14,7 +14,7 @@ Tép Orange Eye Red Dragon là dòng tép tiger cao cấp nổi bật nhờ đô
 
 ## Thông số nước
 
-| Thông số | Gía trị |
+| Thông số | Giá trị |
 |----------|---------------------|
 | Nhiệt độ | 22-26°C |
 | pH | 5.2-6.6 |
@@ -24,7 +24,7 @@ Tép Orange Eye Red Dragon là dòng tép tiger cao cấp nổi bật nhờ đô
 
 ## Đặc điểm sinh học
 
-Orange Eye Red Dragon thường được xếp trong nhóm tiger cao cấp với đặc trưng mắt cam rõ và sắc đỏ mạnh. Cường độ màu phụ thuộc nhiều vào độ ổn định nước, nền bể và chất lượng thức ăn.
+Orange Eye Red Dragon thuộc nhóm tiger cao cấp, dễ nhận biết nhờ mắt cam rõ và sắc đỏ mạnh. Cường độ màu phụ thuộc nhiều vào độ ổn định của nước, loại nền bể và chất lượng thức ăn.
 
 ## Cách nuôi
 
@@ -45,7 +45,7 @@ Orange Eye Red Dragon thường được xếp trong nhóm tiger cao cấp với
 
 ## Sinh sản
 
-Tép cái thường mang trứng khoảng 25-30 ngày và số lượng con non không quá cao mỗi lứa. Để giữ form đẹp của đàn, cần chọn lọc bố mẹ tốt và hạn chế biến động thông số nước.
+Tép cái thường mang trứng khoảng 25-30 ngày, mỗi lứa cho số lượng con vừa phải. Để giữ form đẹp cho đàn, bạn nên chọn lọc bố mẹ tốt và giữ thông số nước thật ổn định.
 
 ## Lưu ý đặc biệt
 

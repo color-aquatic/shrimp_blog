@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Neo-Helios Flat XP Series Solar Light RGB 3 in 1 is a premium lighting device for aquariums. The product integrates advanced RGB LED technology, modern flat design and convenient 3-in-1 features.
+The Neo-Helios Flat XP Series Solar Light RGB 3 in 1 is a premium lighting device for aquariums. It features advanced RGB LED technology, a modern flat design, and convenient 3-in-1 functionality.
 
 ## Features
 

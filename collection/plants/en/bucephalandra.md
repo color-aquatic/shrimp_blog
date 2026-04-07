@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Bucephalandra is a premium rhizome plant group from Borneo, valued for its leaf texture and subtle color variations.
+Bucephalandra is a premium rhizome plant group from Borneo, valued for its diverse leaf textures and subtle color variations.
 
 ## Growing Conditions
 
@@ -17,5 +17,5 @@ Bucephalandra is a premium rhizome plant group from Borneo, valued for its leaf 
 ## Notes
 
 - Do not bury the rhizome.
-- Initial melt can happen after transfer, new leaves will regrow.
+- Initial leaf melt can happen after transfer — new leaves will regrow.
 - Stable water and gentle flow improve long-term growth.

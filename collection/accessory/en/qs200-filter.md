@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The QS200 Filter is a premium biological filtration combo from Qanvee brand, specially designed for shrimp aquariums. The product integrates advanced denitrate technology to effectively eliminate nitrates, creating an ideal water environment for shrimp development.
+The QS200 Filter is a premium biological filtration combo from Qanvee, designed specifically for shrimp tanks. It features denitrate technology to effectively remove nitrates, creating ideal water conditions for shrimp.
 
 ## Features
 
@@ -14,7 +14,7 @@ The QS200 Filter is a premium biological filtration combo from Qanvee brand, spe
 
 ## Application and Usage
 
-The QS200 Filter is suitable for shrimp aquariums that require clean and stable water environment. The biological system helps decompose waste and maintain biological balance in the tank.
+The QS200 Filter is suited for shrimp tanks that need clean, stable water. The biological system helps break down waste and maintain balance in the tank.
 
 ### Installation Guide:
 1. Place the filter in an appropriate position in the tank

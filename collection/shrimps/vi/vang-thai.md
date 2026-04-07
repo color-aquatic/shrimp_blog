@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Tép Vàng Thái là dòng tép cảnh nổi bật với màu vàng cam đặc trưng, rất dễ nhận biết trong bể thủy sinh. Đây là dòng tép dễ nuôi, dễ đẻ và đặc biệt phù hợp cho người mới bắt đầu chơi tép cảnh.
+Tép Vàng Thái là dòng tép cảnh với màu vàng cam rực, rất dễ nhận biết trong bể thủy sinh. Dễ nuôi, dễ sinh sản và rất phù hợp cho người mới bắt đầu.
 
 ## Đặc điểm
 
@@ -14,7 +14,7 @@ Tép Vàng Thái là dòng tép cảnh nổi bật với màu vàng cam đặc t
 
 ## Thông số nước
 
-| Thông số | Gía trị |
+| Thông số | Giá trị |
 |----------|---------------------|
 | Nhiệt độ | 22-31°C |
 | pH | 6.0-7.8 |
@@ -24,7 +24,7 @@ Tép Vàng Thái là dòng tép cảnh nổi bật với màu vàng cam đặc t
 
 ## Đặc điểm sinh học
 
-Tép Vàng Thái có khả năng thích nghi tốt với bể thủy sinh cộng đồng. Dòng này sinh sản khá đều trong môi trường ổn định, giúp người chơi nhanh chóng xây dựng đàn tép khỏe mạnh.
+Tép Vàng Thái thích nghi tốt với bể cộng đồng. Sinh sản khá đều khi môi trường ổn định, giúp bạn nhanh chóng có một đàn tép khỏe mạnh.
 
 ## Cách nuôi
 

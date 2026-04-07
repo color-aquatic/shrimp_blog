@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Anubias Nana (Anubias nana) is one of the most popular and easy-to-grow aquatic plants. With its dark green, glossy leaves and excellent adaptability, Anubias Nana is the perfect choice for beginner aquascapers.
+Anubias Nana (Anubias nana) is one of the most popular and easy-to-grow aquatic plants. With dark green, glossy leaves and excellent adaptability, it's an ideal choice for beginner aquascapers.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Anubias Nana (Anubias nana) is one of the most popular and easy-to-grow aquatic 
 
 ## Growth Characteristics
 
-Anubias Nana grows from a creeping rhizome and produces thick leaves with distinct petioles. The plant can live long and tolerate various water conditions, making it an ideal choice for aquascaping.
+Anubias Nana grows from a creeping rhizome and produces thick leaves with distinct petioles. The plant is long-lived and tolerates a wide range of water conditions, making it ideal for aquascaping.
 
 ## Planting and Care
 
@@ -73,5 +73,5 @@ The plant reproduces by:
 - Prone to algae coverage under strong light
 - May flower under suitable conditions
 - Can survive emersed with adequate humidity
-- Never bury rhizome to prevent rot
-- Excellent for low-maintenance aquariums
+- Never bury the rhizome to prevent rot
+- Great for low-maintenance setups

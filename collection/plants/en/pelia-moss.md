@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Pelia Moss (Monosolenium tenerum) is a unique aquatic liverwort with a distinctive leaf-like appearance, highly valued in aquascaping. This plant has a slow growth rate but creates stunning visual effects in aquarium layouts.
+Pelia Moss (Monosolenium tenerum) is a unique aquatic liverwort with flat, thick lobes, highly valued in aquascaping. It grows slowly but creates a beautiful visual texture in planted tanks.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Pelia Moss (Monosolenium tenerum) is a unique aquatic liverwort with a distincti
 
 ## Growth Characteristics
 
-Pelia moss develops in flat, thick lobes forming dense clusters. Unlike other mosses, Pelia doesn't have a main stem but spreads horizontally, creating distinctive green carpets.
+Pelia moss develops in flat, thick lobes forming dense clusters. Unlike other mosses, Pelia doesn't have a main stem — it spreads horizontally, creating distinctive green carpets.
 
 ## Planting and Care
 
@@ -56,6 +56,6 @@ Pelia moss is commonly used for:
 ## Important Notes
 
 - Avoid frequent repositioning
-- Requires time to adapt to new environments
-- Slow development requires patience
+- Needs time to adapt to new environments
+- Slow growing — patience is needed
 - Sensitive to sudden environmental changes

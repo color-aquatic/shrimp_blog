@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Blue Dream shrimp is one of the most precious and beloved aquarium shrimp varieties today. With their distinctive blue color, they create a beautiful highlight in aquariums.
+Blue Dream shrimp is a well-loved ornamental shrimp variety known for its distinctive blue coloration. They make a beautiful highlight in aquarium setups.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Blue Dream shrimp is one of the most precious and beloved aquarium shrimp variet
 
 ## Biological Characteristics
 
-Blue Dream shrimp originates from Southeast Asia and has been selectively bred for their special coloration. They require stable and high-quality water conditions to maintain their color.
+Blue Dream shrimp originates from Southeast Asia and has been selectively bred for its special coloration. They need stable, high-quality water to maintain their color.
 
 ## Care Guide
 
@@ -43,9 +43,9 @@ Blue Dream shrimp originates from Southeast Asia and has been selectively bred f
 
 ## Important Notes
 
-⚠️ **Important**: Blue Dream shrimp are very sensitive to water quality changes. Monitor TDS and water parameters regularly.
+⚠️ **Note**: Blue Dream shrimp are fairly sensitive to water changes. Keep an eye on TDS and other parameters regularly.
 
-## Lifespan (year)
+## Lifespan
 
 1-2 years under good care conditions.
 

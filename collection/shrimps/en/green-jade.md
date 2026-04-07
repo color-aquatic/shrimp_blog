@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Green Jade Shrimp is a popular jade-green Neocaridina line loved for its unique coloration, easy care, and compatibility with many planted tank setups. It is a strong choice for beginners and hobbyists looking for a distinct green accent colony.
+Green Jade Shrimp is a popular jade-green Neocaridina line loved for its unique coloration, easy care, and compatibility with many planted tank setups. A solid choice for both beginners and hobbyists looking to add a distinct green tone to their tanks.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Green Jade Shrimp is a popular jade-green Neocaridina line loved for its unique 
 
 ## Biological Features
 
-Green Jade is a hardy color line with good breeding potential under stable conditions. Color intensity can vary across individuals, so hobbyists often select darker green breeders over generations for better consistency.
+Green Jade is a hardy color line that breeds well under stable conditions. Color intensity can vary between individuals, so you can selectively breed darker green specimens over generations for better consistency.
 
 ## Care Instructions
 
@@ -44,7 +44,7 @@ Green Jade is a hardy color line with good breeding potential under stable condi
 
 ## Breeding
 
-Green Jade Shrimp generally breeds well in stable tanks. Females usually carry eggs for around 3-4 weeks and produce consistent batches of shrimplets.
+Green Jade Shrimp generally breed well in stable tanks. Females carry eggs for around 3-4 weeks and produce consistent batches of shrimplets.
 
 ## Lifespan
 
@@ -52,4 +52,4 @@ Around 1-2 years with proper care.
 
 ## Notes
 
-Keep water changes consistent and avoid temperature shock. For stronger colony color, select deep-green individuals as breeding stock.
+Keep water changes consistent and avoid temperature shock. To improve colony color, simply select your deepest green individuals as breeding stock.

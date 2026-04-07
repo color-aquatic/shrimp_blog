@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Red Galaxy Tiger Shrimp is a perfect combination of vibrant red coloration and tiger stripes along with sparkling galaxy spots. This is one of the most beloved cold-water shrimp species thanks to its dynamic and distinctive beauty.
+Red Galaxy Tiger Shrimp combines vibrant red coloration with bold tiger stripes and sparkling galaxy spots. It's one of the most popular cold-water shrimp lines thanks to its dynamic, eye-catching appearance.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Red Galaxy Tiger Shrimp is a perfect combination of vibrant red coloration and t
 
 ## Biological Features
 
-Red Galaxy Tiger originates from breeding between Tiger and Galaxy lineages. The tiger pattern creates dynamic vitality while galaxy spots add mystery and attraction.
+Red Galaxy Tiger comes from crossing Tiger and Galaxy lineages. The tiger pattern gives them a dynamic look, while the galaxy spots add extra visual appeal.
 
 ## Care Instructions
 
@@ -43,7 +43,7 @@ Red Galaxy Tiger originates from breeding between Tiger and Galaxy lineages. The
 
 ## Breeding
 
-More difficult to breed than Neocaridina. Females carry eggs for 25-30 days with 15-25 shrimplets.
+Harder to breed than Neocaridina. Females carry eggs for 25-30 days, producing around 15-25 shrimplets.
 
 ## Lifespan
 

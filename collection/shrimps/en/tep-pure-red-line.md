@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Pure Red Line shrimp are aquarium shrimp with pure red stripes running along their backs. They have an attractive appearance and sustainable colors, suitable for both beginners and experienced hobbyists.
+Pure Red Line shrimp have a distinctive pure red stripe running along their back. With attractive looks, stable coloration, and easy care — they're a good fit for both beginners and experienced keepers.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Pure Red Line shrimp are aquarium shrimp with pure red stripes running along the
 
 ## Biological Characteristics
 
-Pure Red Line shrimp are bred to have characteristic red stripes. They have good adaptability to various water conditions and breed easily in captivity.
+Pure Red Line shrimp are selectively bred for their characteristic red stripe. They adapt well to various water conditions and breed easily in captivity.
 
 ## Care Guide
 
@@ -44,7 +44,7 @@ Pure Red Line shrimp are bred to have characteristic red stripes. They have good
 
 ## Breeding
 
-Pure Red Line shrimp breed easily under good conditions. Females carry eggs for about 3-4 weeks and can produce 20-50 shrimp per brood.
+Pure Red Line shrimp breed easily under stable conditions. Females carry eggs for about 3-4 weeks and can produce 20-50 shrimplets per brood.
 
 ### Baby Shrimp Care
 
@@ -54,9 +54,9 @@ Pure Red Line shrimp breed easily under good conditions. Females carry eggs for 
 
 ## Important Notes
 
-⚠️ **Important**: Keep pure red color by breeding separately or accept hybridization to create new colors.
+⚠️ **Note**: To keep the red color pure, breed them separately. Otherwise, crossbreeding can produce interesting new color variations.
 
-## Lifespan (year)
+## Lifespan
 
 1-2 years under good care conditions.
 

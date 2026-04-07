@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Deep Blue Shrimp, also known as Deep Blue Extreme, represents the pinnacle of Bluebolt breeding. This remarkable shrimp displays intense blue coloration from head to tail, unlike regular Bluebolt which only shows blue on the head and back. This full-body blue variant is extremely rare and highly valued by collectors.
+Deep Blue Shrimp, also known as Deep Blue Extreme, represents the peak of Bluebolt breeding. Unlike regular Bluebolt which only shows blue on the head and back, Deep Blue displays intense blue coloration from head to tail. This full-body blue variant is extremely rare and highly valued by collectors.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Deep Blue Shrimp, also known as Deep Blue Extreme, represents the pinnacle of Bl
 
 ## Biological Features
 
-Deep Blue Extreme is the highest grade classification within the Bluebolt lineage. The mutation rate for achieving this phenotype is quite low, requiring high genetic purity and selective breeding. This rarity makes them significantly more expensive than standard Bluebolt varieties.
+Deep Blue Extreme is the highest grade within the Bluebolt lineage. The mutation rate for achieving this phenotype is quite low, requiring high genetic purity and careful selection. This rarity makes them significantly more expensive than standard Bluebolt.
 
 ## Care Instructions
 
@@ -45,7 +45,7 @@ Deep Blue Extreme is the highest grade classification within the Bluebolt lineag
 
 ## Breeding
 
-Deep Blue breeding requires advanced expertise and pristine water conditions. The extreme phenotype has a low occurrence rate, making successful breeding particularly challenging. Females carry eggs for approximately 25-30 days.
+Deep Blue breeding requires advanced expertise and very stable water conditions. The full-body blue phenotype has a low occurrence rate, making successful breeding particularly challenging. Females carry eggs for approximately 25-30 days.
 
 ## Special Notes
 

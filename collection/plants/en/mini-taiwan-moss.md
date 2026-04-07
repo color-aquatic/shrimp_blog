@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Mini Taiwan Moss is a very small aquatic moss with slow growth rate, popular in aquascaping for its ability to create dense, beautiful green carpets. It's a popular choice for foreground planting.
+Mini Taiwan Moss is a very small aquatic moss with a slow growth rate, popular in aquascaping for creating dense, beautiful green carpets. A great choice for foreground planting.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Mini Taiwan Moss is a very small aquatic moss with slow growth rate, popular in 
 
 ## Growth Characteristics
 
-Mini Taiwan Moss grows horizontally, forming dense moss carpets with low height. The moss has extremely small leaves, creating the appearance of natural underwater grass.
+Mini Taiwan Moss grows horizontally, forming dense carpets with low height. The extremely small leaves create the look of natural underwater grass.
 
 ## Planting and Care
 
@@ -55,8 +55,8 @@ Mini Taiwan Moss is widely used for:
 
 ## Important Notes
 
-- Very slow growth requires patience
+- Very slow growth — patience is needed
 - Susceptible to algae competition without proper care
 - Avoid strong water flow
 - Sensitive to sudden environmental changes
-- Perfect for low-tech aquariums
+- Great for low-tech aquariums

@@ -1,21 +1,21 @@
-# Duong Xi Java
+# Dương Xỉ Java
 
-## Gioi thieu
+## Giới thiệu
 
-Duong Xi Java la mot trong nhung loai cay thuy sinh de trong nhat, phu hop cho nguoi moi. Cay co la xanh ben, it yeu cau CO2 va anh sang.
+Dương Xỉ Java là một trong những loại cây thủy sinh dễ trồng nhất, rất phù hợp cho người mới. Cây có lá xanh bền, ít yêu cầu CO2 và ánh sáng.
 
-## Dieu kien nuoi trong
+## Điều kiện nuôi trồng
 
-| Thong so | Gia tri de nghi |
+| Thông số | Giá trị đề nghị |
 |----------|------------------|
-| Nhiet do | 20-30C |
+| Nhiệt độ | 20-30°C |
 | pH | 6.0-7.8 |
-| Do cung | Mem den cung |
-| Anh sang | Thap den trung binh |
-| CO2 | Khong bat buoc |
+| Độ cứng | Mềm đến cứng |
+| Ánh sáng | Thấp đến trung bình |
+| CO2 | Không bắt buộc |
 
-## Luu y
+## Lưu ý
 
-- Khong chon than re vao nen.
-- Co the buoc len da, lua, gia the.
-- Cat la cu, la hong de cay thong thoang.
+- Không chôn thân rễ vào nền.
+- Có thể buộc lên đá, lũa hoặc giá thể.
+- Cắt lá cũ, lá hỏng để cây thông thoáng.

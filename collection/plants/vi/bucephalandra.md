@@ -1,21 +1,21 @@
 # Bucephalandra
 
-## Gioi thieu
+## Giới thiệu
 
-Bucephalandra la nhom cay than re den tu Borneo, co nhieu mau la va hieu ung anh kim dep. Cay phat trien cham, de choi khi moi truong on dinh.
+Bucephalandra là nhóm cây thân rễ đến từ Borneo, có nhiều màu lá và hiệu ứng ánh kim rất đẹp. Cây phát triển chậm, dễ chăm sóc khi môi trường ổn định.
 
-## Dieu kien nuoi trong
+## Điều kiện nuôi trồng
 
-| Thong so | Gia tri de nghi |
+| Thông số | Giá trị đề nghị |
 |----------|------------------|
-| Nhiet do | 22-28C |
+| Nhiệt độ | 22-28°C |
 | pH | 6.0-7.5 |
-| Do cung | Mem den trung binh |
-| Anh sang | Thap den trung binh |
-| CO2 | Khuyen nghi |
+| Độ cứng | Mềm đến trung bình |
+| Ánh sáng | Thấp đến trung bình |
+| CO2 | Khuyến nghị |
 
-## Luu y
+## Lưu ý
 
-- Khong chon than re vao nen.
-- Co the bi "tan la" luc moi dua vao be, la moi se moc lai.
-- Uu tien dong chay nhe va nuoc sach.
+- Không chôn thân rễ vào nền.
+- Có thể bị "tan lá" lúc mới đưa vào bể — lá mới sẽ mọc lại.
+- Ưu tiên dòng chảy nhẹ và nước sạch.

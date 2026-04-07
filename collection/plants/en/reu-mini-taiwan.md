@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Mini Taiwan Moss is a very small aquatic moss that creates compact green carpets in the foreground. It is popular in nano aquascapes.
+Mini Taiwan Moss is a very small aquatic moss that forms compact green carpets in the foreground. Popular in nano aquascapes and Nature Aquarium layouts.
 
 ## Growing Conditions
 

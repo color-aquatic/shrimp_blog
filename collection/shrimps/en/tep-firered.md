@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Fire Red Shrimp is a highly popular ornamental shrimp line known for its deep, solid red coloration. With strong adaptability and hardy behavior, Fire Red is suitable for both beginners and experienced hobbyists who want a bold color accent in planted tanks.
+Fire Red Shrimp is a hugely popular ornamental shrimp known for its deep, solid red coloration. Hardy and adaptable, it's great for both beginners wanting an easy first shrimp and experienced hobbyists looking for a bold color accent in their tanks.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Fire Red Shrimp is a highly popular ornamental shrimp line known for its deep, s
 
 ## Biological Features
 
-Fire Red is developed through selective breeding from red Cherry shrimp to improve color depth and body coverage. This line is hardy, omnivorous, and adaptable to many tank setups.
+Fire Red is selectively bred from red Cherry shrimp to improve color depth and body coverage. This line is hardy, omnivorous, and adapts easily to many tank setups.
 
 ## Care Instructions
 
@@ -43,7 +43,7 @@ Fire Red is developed through selective breeding from red Cherry shrimp to impro
 
 ## Breeding
 
-Fire Red Shrimp breeds readily in stable conditions. Females can carry eggs every 3-4 weeks with 20-50 offspring per batch.
+Fire Red Shrimp breed readily in stable conditions. Females can carry eggs every 3-4 weeks, producing 20-50 shrimplets per batch.
 
 ## Lifespan
 
@@ -51,4 +51,4 @@ Fire Red Shrimp breeds readily in stable conditions. Females can carry eggs ever
 
 ## Notes
 
-⚠️ **Important**: Avoid mixing Fire Red with other colored Neocaridina lines if you want to preserve pure red coloration over generations.
+⚠️ **Note**: Avoid mixing Fire Red with other colored Neocaridina lines if you want to keep the red color pure over generations.

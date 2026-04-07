@@ -2,15 +2,15 @@
 
 ## Introduction
 
-Black Galaxy Fishbone Snowflake Shrimp is one of the most premium cold-water shrimp species with unique patterns resembling black galaxies and snowflakes. With luxurious and noble beauty, they are the pride of experienced shrimp keepers.
+Black Galaxy Fishbone Snowflake is a premium cold-water shrimp line featuring striking black and white patterns — a combination of fishbone markings and galaxy-like white spots resembling snowflakes. This shrimp is best suited for hobbyists with prior cold-water shrimp experience.
 
 ## Characteristics
 
 - **Scientific name**: Caridina cf. cantonensis "Black Galaxy Fishbone Snowflake"
 - **Size**: 2.5-3 cm when fully grown
-- **Coloration**: Glossy black with white patterns like galaxies and falling snow
+- **Coloration**: Glossy black with white fishbone patterns and galaxy spots
 - **Temperament**: Shy, prefers hiding
-- **Care difficulty**: Very difficult (experts only)
+- **Care difficulty**: Very difficult (requires cold-water shrimp experience)
 
 ## Water Parameters
 
@@ -24,13 +24,13 @@ Black Galaxy Fishbone Snowflake Shrimp is one of the most premium cold-water shr
 
 ## Biological Features
 
-Black Galaxy Fishbone Snowflake Shrimp originates from premium Caridina lineages. The special patterns are created by combinations of rare color genes, producing indescribable beauty.
+Black Galaxy Fishbone Snowflake belongs to high-grade Caridina lines. The distinctive patterns are produced by a combination of rare color genes, resulting in an appearance seldom seen in other shrimp varieties.
 
 ## Care Instructions
 
 ### Required Equipment
 
-1. **Tank**: Minimum 60 liters, specialized tank
+1. **Tank**: Minimum 60 liters, dedicated setup
 2. **Filter**: Premium filtration system with specialized media
 3. **Heater**: Precise temperature control ±1°C
 4. **Substrate**: Specialized cold-water shrimp substrate (Active Soil)
@@ -43,7 +43,7 @@ Black Galaxy Fishbone Snowflake Shrimp originates from premium Caridina lineages
 
 ## Breeding
 
-Very difficult to breed, requires perfect environment. Only 10-15 shrimplets per batch with low survival rate.
+Very difficult to breed — requires highly stable conditions. Expect around 10-15 shrimplets per batch with a relatively low survival rate.
 
 ## Lifespan
 
@@ -51,6 +51,6 @@ Very difficult to breed, requires perfect environment. Only 10-15 shrimplets per
 
 ## Important Notes
 
-⚠️ **Special attention**: This is a very sensitive species, should only be kept by those with at least 2-3 years of cold-water shrimp experience.
+⚠️ **Note**: This is a sensitive species. You should have at least 2-3 years of cold-water shrimp experience before getting started.
 
-🌟 **Value**: This is one of the rarest shrimp species, suitable for premium collections.
+🌟 **Value**: One of the rarest shrimp lines, well suited for premium collections.

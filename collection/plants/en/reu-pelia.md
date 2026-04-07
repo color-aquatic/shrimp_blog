@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Pelia Moss (Monosolenium tenerum) is a liverwort-like aquatic plant with a unique texture and shape. It is often used as a natural accent in aquascapes.
+Pelia Moss (Monosolenium tenerum) is a liverwort-like aquatic plant with a unique flat texture. Often used as a natural accent in aquascapes.
 
 ## Growing Conditions
 

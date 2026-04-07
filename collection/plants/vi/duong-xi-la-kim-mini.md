@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Dương Xỉ Lá Kim Mini (Microsorum pteropus "Needle Leaf") là một biến thể đặc biệt của dương xỉ Java với lá hẹp, dài như kim. Loại cây này được yêu thích trong aquascape nhờ hình dạng độc đáo và khả năng thích nghi tốt.
+Dương Xỉ Lá Kim Mini (Microsorum pteropus "Needle Leaf") là biến thể của Dương Xỉ Java với lá hẹp, dài như kim. Cây được yêu thích trong aquascape nhờ hình dạng độc đáo và dễ chăm sóc.
 
 ## Đặc điểm
 
@@ -24,7 +24,7 @@ Dương Xỉ Lá Kim Mini (Microsorum pteropus "Needle Leaf") là một biến t
 
 ## Đặc điểm sinh trưởng
 
-Dương Xỉ Lá Kim Mini có thân rễ bò ngang và tạo ra những lá có hình dạng đặc biệt như kim khâu. Lá cây có màu xanh đậm và có thể hơi cong, tạo hiệu ứng động trong dòng nước.
+Dương Xỉ Lá Kim Mini có thân rễ bò ngang, tạo ra lá hình kim màu xanh đậm. Lá có thể hơi cong, tạo hiệu ứng chuyển động rất đẹp trong dòng nước.
 
 ## Cách trồng và chăm sóc
 
@@ -61,9 +61,9 @@ Cây nhân giống qua:
 - Cây con mọc từ lá già (plantlet)
 - Spore (bào tử) trên mặt dưới lá
 
-## Lưy ý
+## Lưu ý
 
-- Rất chậm lớn, cần kiên nhẫn
+- Rất chậm lớn, bạn cần kiên nhẫn
 - Lá dễ gãy nếu xử lý thô bạo
 - Không chịu được ánh sáng mạnh
 - Là lựa chọn tốt cho bể low-light

@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Tép Wine Red là một loài tép cảnh tuyệt đẹp được biết đến với màu đỏ rượu vang và trắng đặc trưng giống như rượu vang đỏ cao cấp. Màu sắc bắt mắt này khiến Wine Red được các người chơi tép săn lùng rất nhiều, tuy nhiên việc làm chủ loài hơi đòi hỏi này cần sự tận tụy và kinh nghiệm.
+Tép Wine Red là dòng tép cảnh với màu đỏ rượu vang và trắng rất bắt mắt. Màu sắc độc đáo này khiến Wine Red được nhiều người chơi tép yêu thích, tuy nhiên dòng này cần sự kiên nhẫn và kinh nghiệm để nuôi tốt.
 
 ## Đặc điểm
 
@@ -14,7 +14,7 @@ Tép Wine Red là một loài tép cảnh tuyệt đẹp được biết đến 
 
 ## Thông số nước
 
-| Thông số | Gía trị |
+| Thông số | Giá trị |
 |----------|---------------------|
 | Nhiệt độ | 22-26°C |
 | pH | 5.0-6.5 |
@@ -24,7 +24,7 @@ Tép Wine Red là một loài tép cảnh tuyệt đẹp được biết đến 
 
 ## Đặc điểm sinh học
 
-Wine Red thuộc họ Taiwan Bee và cần điều kiện nước mềm, acid để phát triển. Sắc tố đỏ rượu vang độc đáo phát triển đầy đủ dưới điều kiện tối ưu và dinh dưỡng phù hợp. Những chú tép này được biết đến là khá nhạy cảm với biến động thông số nước.
+Wine Red thuộc dòng Taiwan Bee, cần nước mềm và hơi acid để phát triển tốt. Sắc đỏ rượu vang đặc trưng sẽ lên đẹp nhất khi điều kiện nước ổn định và dinh dưỡng đầy đủ. Dòng này khá nhạy cảm với biến động thông số nước.
 
 ## Cách nuôi
 
@@ -45,7 +45,7 @@ Wine Red thuộc họ Taiwan Bee và cần điều kiện nước mềm, acid đ
 
 ## Sinh sản
 
-Sinh sản Wine Red cần thông số nước ổn định và kiên nhẫn. Tép cái mang trứng 25-28 ngày và sinh 20-30 tép con mỗi lứa. Duy trì màu đỏ rượu vang qua các thế hệ cần chọn lọc cẩn thận đàn bố mẹ.
+Wine Red cần thông số nước ổn định và kiên nhẫn. Tép cái mang trứng 25-28 ngày, mỗi lứa khoảng 20-30 con. Để giữ màu đỏ rượu vang đẹp qua các thế hệ, bạn cần chọn lọc đàn bố mẹ cẩn thận.
 
 ## Lưu ý đặc biệt
 

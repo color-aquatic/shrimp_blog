@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Bloody Mary Shrimp is a premium aquarium shrimp with distinctive deep red coloration and transparent head section. The name derives from its special blood-red color, creating a mysterious and captivating beauty in aquascaping tanks.
+Bloody Mary Shrimp is a striking ornamental shrimp with a deep red body and a nearly transparent head. The name comes from its rich blood-red coloration, which creates a captivating look in planted tanks.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Bloody Mary Shrimp is a premium aquarium shrimp with distinctive deep red colora
 
 ## Biological Features
 
-Bloody Mary Shrimp is a result of selective breeding from Cherry shrimp lineage. The distinctive feature is the deep red body while the head and swimming legs are nearly transparent, creating a unique contrast.
+Bloody Mary Shrimp is selectively bred from the Cherry shrimp line. The standout feature is a deep red body while the head and swimming legs are nearly transparent, creating a unique contrast.
 
 ## Care Instructions
 
@@ -43,7 +43,7 @@ Bloody Mary Shrimp is a result of selective breeding from Cherry shrimp lineage.
 
 ## Breeding
 
-Under suitable conditions, females carry eggs for 20-25 days and produce 15-30 shrimplets. Stable environment is needed to increase survival rate of young shrimp.
+Under stable conditions, females carry eggs for 20-25 days and produce 15-30 shrimplets. Keeping the water parameters steady helps improve survival rates among the young.
 
 ## Lifespan
 
@@ -51,4 +51,4 @@ Under suitable conditions, females carry eggs for 20-25 days and produce 15-30 s
 
 ## Notes
 
-🔥 **Special**: Bloody Mary requires good nutrition to maintain their characteristic deep red color.
+🔥 **Note**: Bloody Mary needs good nutrition to maintain their characteristic deep red color.

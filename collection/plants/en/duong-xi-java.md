@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Java Fern is one of the easiest aquatic plants for beginners. It is hardy and performs well in low-tech aquariums.
+Java Fern is one of the easiest aquatic plants for beginners. Hardy and low-maintenance, it does well in low-tech setups.
 
 ## Growing Conditions
 

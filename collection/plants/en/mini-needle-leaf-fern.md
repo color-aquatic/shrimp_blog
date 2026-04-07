@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Mini Needle Leaf Fern (Microsorum pteropus "Needle Leaf") is a special variant of Java Fern with narrow, needle-like leaves. This plant is loved in aquascaping for its unique appearance and good adaptability.
+Mini Needle Leaf Fern (Microsorum pteropus "Needle Leaf") is a variant of Java Fern with narrow, needle-like leaves. It's well loved in aquascaping for its unique look and easy care.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Mini Needle Leaf Fern (Microsorum pteropus "Needle Leaf") is a special variant o
 
 ## Growth Characteristics
 
-Mini Needle Leaf Fern has a creeping rhizome and produces distinctively needle-shaped leaves. The leaves are dark green and may curve slightly, creating dynamic effects in water flow.
+Mini Needle Leaf Fern has a creeping rhizome and produces distinctively needle-shaped leaves. The dark green leaves may curve slightly, creating a nice flowing effect in water current.
 
 ## Planting and Care
 
@@ -63,9 +63,9 @@ The plant reproduces through:
 
 ## Important Notes
 
-- Very slow growth requires patience
+- Very slow growth — patience is needed
 - Leaves break easily if handled roughly
 - Cannot tolerate strong lighting
 - Excellent choice for low-light aquariums
 - Can grow emersed with high humidity
-- Perfect for beginner aquascapers
+- Great for beginner aquascapers

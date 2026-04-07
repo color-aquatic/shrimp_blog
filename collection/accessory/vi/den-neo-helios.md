@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Đèn thủy sinh Neo-Helios Flat XP Series Solar Light RGB 3 in 1 là thiết bị chiếu sáng cao cấp dành cho bể thủy sinh. Sản phẩm tích hợp công nghệ LED RGB tiên tiến, thiết kế phẳng hiện đại và tính năng 3 trong 1 tiện ích.
+Đèn thủy sinh Neo-Helios Flat XP Series Solar Light RGB 3 in 1 là thiết bị chiếu sáng cao cấp cho bể thủy sinh. Sản phẩm tích hợp LED RGB, thiết kế phẳng hiện đại và tính năng 3 trong 1 tiện lợi.
 
 ## Đặc điểm
 

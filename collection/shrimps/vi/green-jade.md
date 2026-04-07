@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Tép Green Jade là dòng tép màu xanh ngọc đang rất được ưa chuộng nhờ màu sắc lạ mắt, dễ chơi và phù hợp với nhiều kiểu bể thủy sinh. Đây là lựa chọn tốt cho cả người mới bắt đầu lẫn người chơi muốn bổ sung tông xanh khác biệt cho hồ.
+Tép Green Jade là dòng tép màu xanh ngọc đang rất được ưa chuộng nhờ màu sắc lạ mắt, dễ nuôi và phù hợp với nhiều kiểu bể thủy sinh. Đây là lựa chọn tốt cho cả người mới bắt đầu lẫn người chơi muốn thêm tông xanh khác biệt vào hồ.
 
 ## Đặc điểm
 
@@ -14,7 +14,7 @@ Tép Green Jade là dòng tép màu xanh ngọc đang rất được ưa chuộn
 
 ## Thông số nước
 
-| Thông số | Gía trị |
+| Thông số | Giá trị |
 |----------|---------------------|
 | Nhiệt độ | 22-30°C |
 | pH | 6.2-7.8 |
@@ -24,7 +24,7 @@ Tép Green Jade là dòng tép màu xanh ngọc đang rất được ưa chuộn
 
 ## Đặc điểm sinh học
 
-Green Jade là dòng tép màu không quá khó, sinh sản khá tốt trong điều kiện ổn định. Màu xanh của đàn có thể khác nhau giữa các cá thể, vì vậy người chơi thường chọn lọc qua nhiều thế hệ để cải thiện độ đồng đều màu.
+Green Jade là dòng tép màu không quá khó tính, sinh sản khá tốt khi nước ổn định. Màu xanh có thể đậm nhạt khác nhau giữa các cá thể, nên bạn có thể chọn lọc dần qua nhiều thế hệ để đàn đồng đều hơn.
 
 ## Cách nuôi
 
@@ -44,7 +44,7 @@ Green Jade là dòng tép màu không quá khó, sinh sản khá tốt trong đi
 
 ## Sinh sản
 
-Tép Green Jade sinh sản khá dễ trong bể ổn định. Tép cái thường mang trứng khoảng 3-4 tuần và cho số lượng con non tương đối đều theo từng lứa.
+Green Jade sinh sản khá dễ trong bể ổn định. Tép cái thường mang trứng khoảng 3-4 tuần và mỗi lứa cho số lượng con non khá đều.
 
 ## Tuổi thọ
 
@@ -52,4 +52,4 @@ Khoảng 1-2 năm trong điều kiện chăm sóc phù hợp.
 
 ## Lưu ý
 
-Nên duy trì thay nước đều và tránh sốc nhiệt. Nếu muốn cải thiện màu đàn, hãy chọn lọc cá thể xanh đậm làm tép giống.
+Bạn nên thay nước đều đặn và tránh sốc nhiệt. Nếu muốn cải thiện màu đàn, chỉ cần chọn những cá thể xanh đậm nhất làm tép giống.

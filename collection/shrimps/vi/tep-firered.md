@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Tép Fire Red là một dòng tép cảnh rất được ưa chuộng với màu đỏ đậm, đồng đều và bắt mắt. Nhờ khả năng thích nghi tốt cùng sức sống cao, Fire Red phù hợp cho cả người mới bắt đầu lẫn người chơi lâu năm muốn tạo điểm nhấn mạnh trong bể thủy sinh.
+Tép Fire Red là dòng tép cảnh rất được ưa chuộng với màu đỏ đậm, đồng đều và bắt mắt. Khỏe, dễ thích nghi và rất phù hợp cho người mới lẫn người chơi lâu năm muốn tạo điểm nhấn mạnh trong bể.
 
 ## Đặc điểm
 
@@ -14,7 +14,7 @@ Tép Fire Red là một dòng tép cảnh rất được ưa chuộng với màu
 
 ## Thông số nước
 
-| Thông số | Gía trị |
+| Thông số | Giá trị |
 |----------|---------------------|
 | Nhiệt độ | 18-25°C |
 | pH | 6.0-8.0 |
@@ -24,7 +24,7 @@ Tép Fire Red là một dòng tép cảnh rất được ưa chuộng với màu
 
 ## Đặc điểm sinh học
 
-Fire Red là kết quả của quá trình chọn lọc di truyền từ dòng Cherry đỏ để tăng độ đậm màu và độ phủ màu trên cơ thể. Dòng này có sức đề kháng tốt, ăn tạp và dễ thích nghi với nhiều kiểu bể.
+Fire Red được chọn lọc từ dòng Cherry đỏ để tăng độ đậm và độ phủ màu trên thân. Dòng này khỏe, ăn tạp và thích nghi tốt với nhiều kiểu bể.
 
 ## Cách nuôi
 
@@ -43,7 +43,7 @@ Fire Red là kết quả của quá trình chọn lọc di truyền từ dòng C
 
 ## Sinh sản
 
-Tép Fire Red sinh sản tốt trong điều kiện ổn định. Tép cái có thể mang trứng 3-4 tuần một lần với số lượng 20-50 con mỗi lứa.
+Fire Red sinh sản tốt khi nước ổn định. Tép cái có thể mang trứng 3-4 tuần một lần, mỗi lứa khoảng 20-50 con.
 
 ## Tuổi thọ
 

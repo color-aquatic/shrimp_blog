@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Wine Red Shrimp is a stunning ornamental shrimp variety known for its distinctive wine-red and white coloration that resembles fine red wine. This eye-catching coloration makes Wine Red highly sought after by aquarium enthusiasts, though mastering the care of this somewhat demanding species requires dedication and experience.
+Wine Red Shrimp is a beautiful ornamental variety with a distinctive wine-red and white coloration. This eye-catching look makes Wine Red highly sought after, though the species needs patience and experience to keep well.
 
 ## Characteristics
 
@@ -24,7 +24,7 @@ Wine Red Shrimp is a stunning ornamental shrimp variety known for its distinctiv
 
 ## Biological Features
 
-Wine Red belongs to the Taiwan Bee family and requires soft, acidic water conditions to thrive. The unique wine-red pigmentation develops fully under optimal conditions and proper nutrition. These shrimp are known for being somewhat sensitive to water parameter fluctuations.
+Wine Red belongs to the Taiwan Bee family and needs soft, acidic water to thrive. The wine-red pigmentation develops best under stable conditions with proper nutrition. These shrimp are fairly sensitive to water parameter changes.
 
 ## Care Instructions
 
@@ -45,7 +45,7 @@ Wine Red belongs to the Taiwan Bee family and requires soft, acidic water condit
 
 ## Breeding
 
-Wine Red breeding requires stable water parameters and patience. Females carry eggs for 25-28 days and produce 20-30 shrimplets per batch. Maintaining the wine-red coloration through generations requires careful selection of breeding stock.
+Wine Red breeding requires stable water parameters and patience. Females carry eggs for 25-28 days and produce 20-30 shrimplets per batch. Maintaining the wine-red color through generations requires careful breeder selection.
 
 ## Special Notes
 

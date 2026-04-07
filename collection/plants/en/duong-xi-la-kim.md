@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Needle Leaf Fern is a narrow-leaf form of Java Fern that adds a soft, flowing texture to aquascapes.
+Needle Leaf Fern is a narrow-leaf variant of Java Fern that adds a soft, flowing look to aquascapes.
 
 ## Growing Conditions
 
