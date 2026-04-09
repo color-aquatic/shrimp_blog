@@ -199,7 +199,7 @@ function buildDetailPageFromTemplate(template, { lang, title, description, keywo
   html = hideSection(html, 'benefits');
   html = hideSection(html, 'collection');
   html = hideSection(html, 'posts');
-  html = replaceRequired(html, /<section id="post-content" class="is-hidden">/, '<section id="post-content">', 'show post content section');
+  html = replaceRequired(html, /<section id="post-content" class="[^"]*is-hidden[^"]*">/, '<section id="post-content">', 'show post content section');
   html = replaceRequired(html, '<!-- Markdown content will be rendered here -->', buildDetailContent({ title, htmlContent, metaLine }), 'detail article content');
   return html;
 }
