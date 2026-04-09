@@ -79,6 +79,7 @@ function extractDescriptionFromMarkdown(markdown) {
 function normalizeTemplateAssets(template) {
   return template
     .replace(/href="favicon\.ico"/g, `href="${basePath}/favicon.ico"`)
+    .replace(/href="images\//g, `href="${basePath}/images/`)
     .replace(/href="css\//g, `href="${basePath}/css/`)
     .replace(/src="js\//g, `src="${basePath}/js/`)
     .replace(/src="images\//g, `src="${basePath}/images/`)
