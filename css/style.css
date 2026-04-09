@@ -35,6 +35,21 @@ nav .nav-menu a {
     color-scheme: light;
 }
 
+nav .nav-menu .nav-consultation-btn {
+    background: var(--primary-color, #667eea);
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.45rem 0.9rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+nav .nav-menu .nav-consultation-btn:hover {
+    background: var(--primary-hover, #5a6fd8);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(102, 126, 234, 0.32);
+}
+
 [data-theme="dark"] nav .nav-menu a {
     color: #f2f2f2 !important;
     font-weight: 700;
@@ -162,6 +177,12 @@ header nav ul li strong {
     .nav-menu a:hover {
         background: var(--primary-color, #667eea);
         color: white;
+    }
+
+    .nav-menu .nav-consultation-btn {
+        width: 100%;
+        border-radius: 0.5rem;
+        text-align: center;
     }
     
     .language-selector {
@@ -557,6 +578,46 @@ header nav ul li strong {
     box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.consultation-float-btn {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1001;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #3a78ff, #57a5ff);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 10px 22px rgba(30, 110, 255, 0.28);
+    animation: consultationFloat 2.6s ease-in-out infinite;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.consultation-float-btn:hover {
+    color: #fff;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(30, 110, 255, 0.32);
+    filter: saturate(1.08);
+}
+
+.consultation-float-btn i {
+    font-size: 0.95rem;
+}
+
+@keyframes consultationFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
 /* Social Platform Colors */
 .facebook {
     background: linear-gradient(45deg, #1877f2, #42a5f5);
@@ -621,6 +682,13 @@ header nav ul li strong {
 
     .social-link:hover {
         width: 42px;
+    }
+
+    .consultation-float-btn {
+        right: 0.75rem;
+        bottom: 0.75rem;
+        padding: 0.62rem 0.9rem;
+        font-size: 0.9rem;
     }
 }
 

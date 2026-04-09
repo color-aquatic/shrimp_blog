@@ -8,7 +8,8 @@ const translations = {
             home: 'Trang chủ',
             collection: 'Bộ sưu tập',
             posts: 'Bài viết',
-            about: 'Giới thiệu'
+            about: 'Giới thiệu',
+            consultation: 'Liên hệ tư vấn'
         },
 
         // Hero Section
@@ -76,7 +77,7 @@ const translations = {
 
         // Search
         search: {
-            placeholder: '',
+            placeholder: 'Tìm kiếm bài viết và bộ sưu tập...',
             resultsTitle: 'Kết quả tìm kiếm',
             noResults: 'Không tìm thấy kết quả cho',
             tryDifferentKeywords: 'Thử sử dụng từ khóa khác hoặc kiểm tra chính tả',
@@ -100,7 +101,8 @@ const translations = {
             home: 'Home',
             collection: 'Collection',
             posts: 'Posts',
-            about: 'About'
+            about: 'About',
+            consultation: 'Contact Consultation'
         },
 
         // Hero Section
