@@ -9,7 +9,7 @@ const translations = {
             collection: 'Bộ sưu tập',
             posts: 'Bài viết',
             about: 'Giới thiệu',
-            consultation: 'Liên hệ tư vấn'
+            consultation: 'Liên hệ'
         },
 
         // Hero Section
@@ -102,7 +102,7 @@ const translations = {
             collection: 'Collection',
             posts: 'Posts',
             about: 'About',
-            consultation: 'Contact Consultation'
+            consultation: 'Contact Us'
         },
 
         // Hero Section
