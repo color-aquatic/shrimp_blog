@@ -64,7 +64,7 @@ const collectionProducts = [
         tds: '150-250 ppm',
         gh: '6-12 dGH',
         lifespan: '1-2',
-        images: ['bluedream1.png', 'bluedream2.png', 'bluedream3.png', 'bluedream4.png']
+        images: ['shrimps/bluedream1.png', 'shrimps/bluedream2.png', 'shrimps/bluedream3.png', 'shrimps/bluedream4.png']
     },
     {
         id: 'tep-pure-red-line',
@@ -77,7 +77,7 @@ const collectionProducts = [
         tds: '120-200 ppm',
         gh: '4-10 dGH',
         lifespan: '1-2',
-        images: ['prl1.png', 'prl2.png', 'prl3.png', 'prl4.png']
+        images: ['shrimps/prl1.png', 'shrimps/prl2.png', 'shrimps/prl3.png', 'shrimps/prl4.png']
     },
     {
         id: 'tep-firered',
@@ -90,7 +90,7 @@ const collectionProducts = [
         tds: '150-350 ppm',
         gh: '3-15 dGH',
         lifespan: '1-1.5',
-        images: ['firered1.png', 'firered2.png', 'firered3.png', 'firered4.png']
+        images: ['shrimps/firered1.png', 'shrimps/firered2.png', 'shrimps/firered3.png', 'shrimps/firered4.png']
     },
     {
         id: 'green-jade',
@@ -103,7 +103,7 @@ const collectionProducts = [
         tds: '150-300 ppm',
         gh: '7-9 dGH',
         lifespan: '1-2',
-        images: ['green1.png', 'green1.png', 'green1.png', 'green1.png']
+        images: ['shrimps/green1.png', 'shrimps/green1.png', 'shrimps/green1.png', 'shrimps/green1.png']
     },
     {
         id: 'vang-thai',
@@ -116,7 +116,7 @@ const collectionProducts = [
         tds: '150-300 ppm',
         gh: '7-9 dGH',
         lifespan: '1-2',
-        images: ['yellow1.png', 'yellow2.png', 'yellow3.png', 'yellow3.png']
+        images: ['shrimps/yellow1.png', 'shrimps/yellow2.png', 'shrimps/yellow3.png', 'shrimps/yellow3.png']
     },
     {
         id: 'orange-eye-red-dragon',
@@ -129,7 +129,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['oe1.png', 'oe1.png', 'oe1.png', 'oe1.png']
+        images: ['shrimps/oe1.png', 'shrimps/oe1.png', 'shrimps/oe1.png', 'shrimps/oe1.png']
     },
     {
         id: 'tep-pure-black-line',
@@ -142,7 +142,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['pbl1.png', 'pbl2.png', 'pbl1.png', 'pbl2.png']
+        images: ['shrimps/pbl1.png', 'shrimps/pbl2.png', 'shrimps/pbl1.png', 'shrimps/pbl2.png']
     },
     {
         id: 'tep-ocean-blue',
@@ -155,7 +155,7 @@ const collectionProducts = [
         tds: '110-170 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['ocean1.png', 'ocean1.png', 'ocean1.png', 'ocean1.png']
+        images: ['shrimps/ocean1.png', 'shrimps/ocean1.png', 'shrimps/ocean1.png', 'shrimps/ocean1.png']
     },
     {
         id: 'tep-loan-lanh',
@@ -168,7 +168,7 @@ const collectionProducts = [
         tds: '150-250 ppm',
         gh: '4-8 dGH',
         lifespan: '1-2',
-        images: ['loanlanh1.png', 'loanlanh1.png', 'loanlanh1.png', 'loanlanh1.png']
+        images: ['shrimps/loanlanh1.png', 'shrimps/loanlanh1.png', 'shrimps/loanlanh1.png', 'shrimps/loanlanh1.png']
     },
     {
         id: 'tep-deep-blue',
@@ -181,7 +181,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['deepblue1.png', 'deepblue2.png', 'deepblue3.png', 'deepblue3.png']
+        images: ['shrimps/deepblue1.png', 'shrimps/deepblue2.png', 'shrimps/deepblue3.png', 'shrimps/deepblue3.png']
     },
     {
         id: 'tep-bluebolt',
@@ -194,7 +194,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['bluebolt1.png', 'bluebolt1.png', 'bluebolt1.png', 'bluebolt1.png']
+        images: ['shrimps/bluebolt1.png', 'shrimps/bluebolt1.png', 'shrimps/bluebolt1.png', 'shrimps/bluebolt1.png']
     },
     {
         id: 'tep-wine-red',
@@ -207,7 +207,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['dark-winered1.png', 'red-mosura1.png', 'red-mosura1.png', 'red-mosura1.png']
+        images: ['shrimps/dark-winered1.png', 'shrimps/red-mosura1.png', 'shrimps/red-mosura1.png', 'shrimps/red-mosura1.png']
     },
     {
         id: 'tep-black-galaxy-fishbone-snowflake',
@@ -220,7 +220,7 @@ const collectionProducts = [
         tds: '90-150 ppm',
         gh: '3-6 dGH',
         lifespan: '2-3',
-        images: ['black-glx1.png', 'black-glx2.png', 'black-glx3.png', 'black-glx4.png']
+        images: ['shrimps/black-glx1.png', 'shrimps/black-glx2.png', 'shrimps/black-glx3.png', 'shrimps/black-glx4.png']
     },
     {
         id: 'tep-black-galaxy-boa',
@@ -233,7 +233,7 @@ const collectionProducts = [
         tds: '80-120 ppm',
         gh: '2-5 dGH',
         lifespan: '3-4',
-        images: ['black-glx5.png', 'black-glx6.png', 'black-glx7.png', 'black-glx8.png']
+        images: ['shrimps/black-glx5.png', 'shrimps/black-glx6.png', 'shrimps/black-glx7.png', 'shrimps/black-glx8.png']
     },
     {
         id: 'tep-red-galaxy-tiger',
@@ -246,7 +246,7 @@ const collectionProducts = [
         tds: '100-160 ppm',
         gh: '3-6 dGH',
         lifespan: '2-2.5',
-        images: ['red-glx1.png', 'red-glx2.png', 'red-glx3.png', 'red-glx4.png']
+        images: ['shrimps/red-glx1.png', 'shrimps/red-glx2.png', 'shrimps/red-glx3.png', 'shrimps/red-glx4.png']
     },
     // Sample plants products (replaced old fish samples)
     {
@@ -260,7 +260,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['mini-taiwan.png', 'mini-taiwan.png', 'mini-taiwan.png', 'mini-taiwan.png']
+        images: ['plants/mini-taiwan.png', 'plants/mini-taiwan.png', 'plants/mini-taiwan.png', 'plants/mini-taiwan.png']
     },
     {
         id: 'reu-pelia',
@@ -273,7 +273,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: ['pelia.png', 'pelia.png', 'pelia.png', 'pelia.png']
+        images: ['plants/pelia.png', 'plants/pelia.png', 'plants/pelia.png', 'plants/pelia.png']
     },
     // Sample accessory products
     {
@@ -287,7 +287,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '1-2',
-        images: ['hbl-803.png', 'hbl-803.png', 'hbl-803.png', 'hbl-803.png']
+        images: ['accessories/hbl-803.png', 'accessories/hbl-803.png', 'accessories/hbl-803.png', 'accessories/hbl-803.png']
     },
     {
         id: 'den-led-thuy-sinh',
@@ -300,7 +300,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '3-5',
-        images: ['flat-nano.png', 'plant2.png', 'plant3.png', 'plant4.png']
+        images: ['accessories/flat-nano.png', 'accessories/plant2.png', 'accessories/plant3.png', 'accessories/plant4.png']
     },
     // New accessory products
     {
@@ -314,7 +314,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '2-3',
-        images: ['qs200a.png', 'qs200a.png', 'qs200a.png', 'qs200a.png']
+        images: ['accessories/qs200a.png', 'accessories/qs200a.png', 'accessories/qs200a.png', 'accessories/qs200a.png']
     },
     {
         id: 'den-neo-helios',
@@ -327,7 +327,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '5-7',
-        images: ['flat-nano.png', 'flat-nano.png', 'flat-nano.png', 'flat-nano.png']
+        images: ['accessories/flat-nano.png', 'accessories/flat-nano.png', 'accessories/flat-nano.png', 'accessories/flat-nano.png']
     },
     // Plants products
     {
@@ -341,7 +341,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['nanapettie1.png', 'nanapettie2.png', 'nanapettie3.png', 'nanapettie1.png']
+        images: ['plants/nanapettie1.png', 'plants/nanapettie2.png', 'plants/nanapettie3.png', 'plants/nanapettie1.png']
     },
     {
         id: 'bucephalandra',
@@ -354,7 +354,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: ['bucep.png', 'bucep.png', 'bucep.png', 'bucep.png']
+        images: ['plants/bucep.png', 'plants/bucep.png', 'plants/bucep.png', 'plants/bucep.png']
     },
     {
         id: 'duong-xi-java',
@@ -367,7 +367,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['java.png', 'java.png', 'java.png', 'java.png']
+        images: ['plants/java.png', 'plants/java.png', 'plants/java.png', 'plants/java.png']
     },
     {
         id: 'duong-xi-chau-phi',
@@ -380,7 +380,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: ['dxcp.png', 'dxcp.png', 'dxcp.png', 'dxcp.png']
+        images: ['plants/dxcp.png', 'plants/dxcp.png', 'plants/dxcp.png', 'plants/dxcp.png']
     },
     {
         id: 'duong-xi-la-kim',
@@ -393,6 +393,6 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['dxlk.png', 'dxlk.png', 'dxlk.png', 'dxlk.png']
+        images: ['plants/dxlk.png', 'plants/dxlk.png', 'plants/dxlk.png', 'plants/dxlk.png']
     }
 ];
