@@ -456,22 +456,28 @@ async function copyRootSupportFiles() {
   }
 }
 
+async function copyRequiredImageAssets() {
+  await ensureDir(path.join(distDir, 'images'));
+  const files = ['flag-vn.svg', 'flag-gb.svg'];
+  for (const fileName of files) {
+    await cp(path.join(rootDir, 'images', fileName), path.join(distDir, 'images', fileName));
+  }
+}
+
 async function main() {
   await rm(distDir, { recursive: true, force: true });
   await ensureDir(distDir);
 
   let indexTemplate = await readFile(path.join(rootDir, 'index.html'), 'utf8');
 
-  // Replace individual JS script tags with single bundle.js for production build
+  // Replace the dev script block with one production bundle script.
   indexTemplate = indexTemplate.replace(
-    /<!-- JavaScript modules[\s\S]*?<\/script>\s*<\/body>/,
+    /<!-- JavaScript modules[\s\S]*?<script src="js\/main\.js" defer><\/script>/,
     `<!-- Bundled JavaScript -->
-    <script src="${basePath}/js/bundle.js" defer></script>
-
-    <\/body>`
+    <script src="${basePath}/js/bundle.js" defer></script>`
   );
 
-  await Promise.all([buildJsAndCss(), copyStaticDirectories(), copyRootSupportFiles()]);
+  await Promise.all([buildJsAndCss(), copyStaticDirectories(), copyRootSupportFiles(), copyRequiredImageAssets()]);
   await buildRootRedirect();
   const pages = await buildStaticMarkdownPages(indexTemplate);
   await buildSitemap(pages);
