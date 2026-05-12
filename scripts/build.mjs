@@ -460,7 +460,16 @@ async function main() {
   await rm(distDir, { recursive: true, force: true });
   await ensureDir(distDir);
 
-  const indexTemplate = await readFile(path.join(rootDir, 'index.html'), 'utf8');
+  let indexTemplate = await readFile(path.join(rootDir, 'index.html'), 'utf8');
+
+  // Replace individual JS script tags with single bundle.js for production build
+  indexTemplate = indexTemplate.replace(
+    /<!-- JavaScript modules[\s\S]*?<\/script>\s*<\/body>/,
+    `<!-- Bundled JavaScript -->
+    <script src="${basePath}/js/bundle.js" defer></script>
+
+    <\/body>`
+  );
 
   await Promise.all([buildJsAndCss(), copyStaticDirectories(), copyRootSupportFiles()]);
   await buildRootRedirect();

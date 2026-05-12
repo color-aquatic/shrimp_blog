@@ -4,7 +4,7 @@ const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/ima
 
 /**
  * Build a Cloudinary image URL with automatic format (WebP/AVIF) and quality.
- * @param {string} publicId - The Cloudinary public ID (e.g. 'shrimp-blog/shrimps/bluedream1')
+ * @param {string} publicId - The Cloudinary public ID (e.g. 'shrimp_blog/images/shrimps/bluedream1')
  * @param {number} width    - Desired display width in pixels (default 600)
  * @returns {string} Optimized Cloudinary URL
  */

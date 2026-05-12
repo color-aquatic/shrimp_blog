@@ -1,4 +1,4 @@
-const CLOUDINARY_FOLDER = 'shrimp-blog'; // Cloudinary folder where images are uploaded
+const CLOUDINARY_FOLDER = 'shrimp_blog/images'; // Cloudinary folder where images are uploaded
 
 // Data for Color Aquatic Blog
 
@@ -301,7 +301,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '3-5',
-        images: [`${CLOUDINARY_FOLDER}/accessories/flat-nano`, `${CLOUDINARY_FOLDER}/accessories/plant2`, `${CLOUDINARY_FOLDER}/accessories/plant3`, `${CLOUDINARY_FOLDER}/accessories/plant4`]
+        images: [`${CLOUDINARY_FOLDER}/accessories/flat-nano`, `${CLOUDINARY_FOLDER}/accessories/plant3`, `${CLOUDINARY_FOLDER}/accessories/plant4`, `${CLOUDINARY_FOLDER}/accessories/plant5`]
     },
     // New accessory products
     {
