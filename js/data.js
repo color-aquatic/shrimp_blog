@@ -1,5 +1,6 @@
+const CLOUDINARY_FOLDER = 'shrimp-blog'; // Cloudinary folder where images are uploaded
+
 // Data for Color Aquatic Blog
-console.log('data.js loaded');
 
 /**
  * Posts data array containing blog articles
@@ -64,7 +65,7 @@ const collectionProducts = [
         tds: '150-250 ppm',
         gh: '6-12 dGH',
         lifespan: '1-2',
-        images: ['shrimps/bluedream1.png', 'shrimps/bluedream2.png', 'shrimps/bluedream3.png', 'shrimps/bluedream4.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/bluedream1`, `${CLOUDINARY_FOLDER}/shrimps/bluedream2`, `${CLOUDINARY_FOLDER}/shrimps/bluedream3`, `${CLOUDINARY_FOLDER}/shrimps/bluedream4`]
     },
     {
         id: 'tep-pure-red-line',
@@ -77,7 +78,7 @@ const collectionProducts = [
         tds: '120-200 ppm',
         gh: '4-10 dGH',
         lifespan: '1-2',
-        images: ['shrimps/prl1.png', 'shrimps/prl2.png', 'shrimps/prl3.png', 'shrimps/prl4.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/prl1`, `${CLOUDINARY_FOLDER}/shrimps/prl2`, `${CLOUDINARY_FOLDER}/shrimps/prl3`, `${CLOUDINARY_FOLDER}/shrimps/prl4`]
     },
     {
         id: 'tep-firered',
@@ -90,7 +91,7 @@ const collectionProducts = [
         tds: '150-350 ppm',
         gh: '3-15 dGH',
         lifespan: '1-1.5',
-        images: ['shrimps/firered1.png', 'shrimps/firered2.png', 'shrimps/firered3.png', 'shrimps/firered4.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/firered1`, `${CLOUDINARY_FOLDER}/shrimps/firered2`, `${CLOUDINARY_FOLDER}/shrimps/firered3`, `${CLOUDINARY_FOLDER}/shrimps/firered4`]
     },
     {
         id: 'green-jade',
@@ -103,7 +104,7 @@ const collectionProducts = [
         tds: '150-300 ppm',
         gh: '7-9 dGH',
         lifespan: '1-2',
-        images: ['shrimps/green1.png', 'shrimps/green1.png', 'shrimps/green1.png', 'shrimps/green1.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/green1`, `${CLOUDINARY_FOLDER}/shrimps/green1`, `${CLOUDINARY_FOLDER}/shrimps/green1`, `${CLOUDINARY_FOLDER}/shrimps/green1`]
     },
     {
         id: 'vang-thai',
@@ -116,7 +117,7 @@ const collectionProducts = [
         tds: '150-300 ppm',
         gh: '7-9 dGH',
         lifespan: '1-2',
-        images: ['shrimps/yellow1.png', 'shrimps/yellow2.png', 'shrimps/yellow3.png', 'shrimps/yellow3.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/yellow1`, `${CLOUDINARY_FOLDER}/shrimps/yellow2`, `${CLOUDINARY_FOLDER}/shrimps/yellow3`, `${CLOUDINARY_FOLDER}/shrimps/yellow3`]
     },
     {
         id: 'orange-eye-red-dragon',
@@ -129,7 +130,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['shrimps/oe1.png', 'shrimps/oe1.png', 'shrimps/oe1.png', 'shrimps/oe1.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/oe1`, `${CLOUDINARY_FOLDER}/shrimps/oe1`, `${CLOUDINARY_FOLDER}/shrimps/oe1`, `${CLOUDINARY_FOLDER}/shrimps/oe1`]
     },
     {
         id: 'tep-pure-black-line',
@@ -142,7 +143,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['shrimps/pbl1.png', 'shrimps/pbl2.png', 'shrimps/pbl1.png', 'shrimps/pbl2.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/pbl1`, `${CLOUDINARY_FOLDER}/shrimps/pbl2`, `${CLOUDINARY_FOLDER}/shrimps/pbl1`, `${CLOUDINARY_FOLDER}/shrimps/pbl2`]
     },
     {
         id: 'tep-ocean-blue',
@@ -155,7 +156,7 @@ const collectionProducts = [
         tds: '110-170 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['shrimps/ocean1.png', 'shrimps/ocean1.png', 'shrimps/ocean1.png', 'shrimps/ocean1.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/ocean1`, `${CLOUDINARY_FOLDER}/shrimps/ocean1`, `${CLOUDINARY_FOLDER}/shrimps/ocean1`, `${CLOUDINARY_FOLDER}/shrimps/ocean1`]
     },
     {
         id: 'tep-loan-lanh',
@@ -168,7 +169,7 @@ const collectionProducts = [
         tds: '150-250 ppm',
         gh: '4-8 dGH',
         lifespan: '1-2',
-        images: ['shrimps/loanlanh1.png', 'shrimps/loanlanh1.png', 'shrimps/loanlanh1.png', 'shrimps/loanlanh1.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/loanlanh1`, `${CLOUDINARY_FOLDER}/shrimps/loanlanh1`, `${CLOUDINARY_FOLDER}/shrimps/loanlanh1`, `${CLOUDINARY_FOLDER}/shrimps/loanlanh1`]
     },
     {
         id: 'tep-deep-blue',
@@ -181,7 +182,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['shrimps/deepblue1.png', 'shrimps/deepblue2.png', 'shrimps/deepblue3.png', 'shrimps/deepblue3.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/deepblue1`, `${CLOUDINARY_FOLDER}/shrimps/deepblue2`, `${CLOUDINARY_FOLDER}/shrimps/deepblue3`, `${CLOUDINARY_FOLDER}/shrimps/deepblue3`]
     },
     {
         id: 'tep-bluebolt',
@@ -194,7 +195,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['shrimps/bluebolt1.png', 'shrimps/bluebolt1.png', 'shrimps/bluebolt1.png', 'shrimps/bluebolt1.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/bluebolt1`, `${CLOUDINARY_FOLDER}/shrimps/bluebolt1`, `${CLOUDINARY_FOLDER}/shrimps/bluebolt1`, `${CLOUDINARY_FOLDER}/shrimps/bluebolt1`]
     },
     {
         id: 'tep-wine-red',
@@ -207,7 +208,7 @@ const collectionProducts = [
         tds: '120-180 ppm',
         gh: '4-6 dGH',
         lifespan: '1.5-2',
-        images: ['shrimps/dark-winered1.png', 'shrimps/red-mosura1.png', 'shrimps/red-mosura1.png', 'shrimps/red-mosura1.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/dark-winered1`, `${CLOUDINARY_FOLDER}/shrimps/red-mosura1`, `${CLOUDINARY_FOLDER}/shrimps/red-mosura1`, `${CLOUDINARY_FOLDER}/shrimps/red-mosura1`]
     },
     {
         id: 'tep-black-galaxy-fishbone-snowflake',
@@ -220,7 +221,7 @@ const collectionProducts = [
         tds: '90-150 ppm',
         gh: '3-6 dGH',
         lifespan: '2-3',
-        images: ['shrimps/black-glx1.png', 'shrimps/black-glx2.png', 'shrimps/black-glx3.png', 'shrimps/black-glx4.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/black-glx1`, `${CLOUDINARY_FOLDER}/shrimps/black-glx2`, `${CLOUDINARY_FOLDER}/shrimps/black-glx3`, `${CLOUDINARY_FOLDER}/shrimps/black-glx4`]
     },
     {
         id: 'tep-black-galaxy-boa',
@@ -233,7 +234,7 @@ const collectionProducts = [
         tds: '80-120 ppm',
         gh: '2-5 dGH',
         lifespan: '3-4',
-        images: ['shrimps/black-glx5.png', 'shrimps/black-glx6.png', 'shrimps/black-glx7.png', 'shrimps/black-glx8.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/black-glx5`, `${CLOUDINARY_FOLDER}/shrimps/black-glx6`, `${CLOUDINARY_FOLDER}/shrimps/black-glx7`, `${CLOUDINARY_FOLDER}/shrimps/black-glx8`]
     },
     {
         id: 'tep-red-galaxy-tiger',
@@ -246,7 +247,7 @@ const collectionProducts = [
         tds: '100-160 ppm',
         gh: '3-6 dGH',
         lifespan: '2-2.5',
-        images: ['shrimps/red-glx1.png', 'shrimps/red-glx2.png', 'shrimps/red-glx3.png', 'shrimps/red-glx4.png']
+        images: [`${CLOUDINARY_FOLDER}/shrimps/red-glx1`, `${CLOUDINARY_FOLDER}/shrimps/red-glx2`, `${CLOUDINARY_FOLDER}/shrimps/red-glx3`, `${CLOUDINARY_FOLDER}/shrimps/red-glx4`]
     },
     // Sample plants products (replaced old fish samples)
     {
@@ -260,7 +261,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['plants/mini-taiwan.png', 'plants/mini-taiwan.png', 'plants/mini-taiwan.png', 'plants/mini-taiwan.png']
+        images: [`${CLOUDINARY_FOLDER}/plants/mini-taiwan`, `${CLOUDINARY_FOLDER}/plants/mini-taiwan`, `${CLOUDINARY_FOLDER}/plants/mini-taiwan`, `${CLOUDINARY_FOLDER}/plants/mini-taiwan`]
     },
     {
         id: 'reu-pelia',
@@ -273,7 +274,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: ['plants/pelia.png', 'plants/pelia.png', 'plants/pelia.png', 'plants/pelia.png']
+        images: [`${CLOUDINARY_FOLDER}/plants/pelia`, `${CLOUDINARY_FOLDER}/plants/pelia`, `${CLOUDINARY_FOLDER}/plants/pelia`, `${CLOUDINARY_FOLDER}/plants/pelia`]
     },
     // Sample accessory products
     {
@@ -287,7 +288,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '1-2',
-        images: ['accessories/hbl-803.png', 'accessories/hbl-803.png', 'accessories/hbl-803.png', 'accessories/hbl-803.png']
+        images: [`${CLOUDINARY_FOLDER}/accessories/hbl-803`, `${CLOUDINARY_FOLDER}/accessories/hbl-803`, `${CLOUDINARY_FOLDER}/accessories/hbl-803`, `${CLOUDINARY_FOLDER}/accessories/hbl-803`]
     },
     {
         id: 'den-led-thuy-sinh',
@@ -300,7 +301,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '3-5',
-        images: ['accessories/flat-nano.png', 'accessories/plant2.png', 'accessories/plant3.png', 'accessories/plant4.png']
+        images: [`${CLOUDINARY_FOLDER}/accessories/flat-nano`, `${CLOUDINARY_FOLDER}/accessories/plant2`, `${CLOUDINARY_FOLDER}/accessories/plant3`, `${CLOUDINARY_FOLDER}/accessories/plant4`]
     },
     // New accessory products
     {
@@ -314,7 +315,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '2-3',
-        images: ['accessories/qs200a.png', 'accessories/qs200a.png', 'accessories/qs200a.png', 'accessories/qs200a.png']
+        images: [`${CLOUDINARY_FOLDER}/accessories/qs200a`, `${CLOUDINARY_FOLDER}/accessories/qs200a`, `${CLOUDINARY_FOLDER}/accessories/qs200a`, `${CLOUDINARY_FOLDER}/accessories/qs200a`]
     },
     {
         id: 'den-neo-helios',
@@ -327,7 +328,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '5-7',
-        images: ['accessories/flat-nano.png', 'accessories/flat-nano.png', 'accessories/flat-nano.png', 'accessories/flat-nano.png']
+        images: [`${CLOUDINARY_FOLDER}/accessories/flat-nano`, `${CLOUDINARY_FOLDER}/accessories/flat-nano`, `${CLOUDINARY_FOLDER}/accessories/flat-nano`, `${CLOUDINARY_FOLDER}/accessories/flat-nano`]
     },
     // Plants products
     {
@@ -341,7 +342,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['plants/nanapettie1.png', 'plants/nanapettie2.png', 'plants/nanapettie3.png', 'plants/nanapettie1.png']
+        images: [`${CLOUDINARY_FOLDER}/plants/nanapettie1`, `${CLOUDINARY_FOLDER}/plants/nanapettie2`, `${CLOUDINARY_FOLDER}/plants/nanapettie3`, `${CLOUDINARY_FOLDER}/plants/nanapettie1`]
     },
     {
         id: 'bucephalandra',
@@ -354,7 +355,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: ['plants/bucep.png', 'plants/bucep.png', 'plants/bucep.png', 'plants/bucep.png']
+        images: [`${CLOUDINARY_FOLDER}/plants/bucep`, `${CLOUDINARY_FOLDER}/plants/bucep`, `${CLOUDINARY_FOLDER}/plants/bucep`, `${CLOUDINARY_FOLDER}/plants/bucep`]
     },
     {
         id: 'duong-xi-java',
@@ -367,7 +368,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['plants/java.png', 'plants/java.png', 'plants/java.png', 'plants/java.png']
+        images: [`${CLOUDINARY_FOLDER}/plants/java`, `${CLOUDINARY_FOLDER}/plants/java`, `${CLOUDINARY_FOLDER}/plants/java`, `${CLOUDINARY_FOLDER}/plants/java`]
     },
     {
         id: 'duong-xi-chau-phi',
@@ -380,7 +381,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: ['plants/dxcp.png', 'plants/dxcp.png', 'plants/dxcp.png', 'plants/dxcp.png']
+        images: [`${CLOUDINARY_FOLDER}/plants/dxcp`, `${CLOUDINARY_FOLDER}/plants/dxcp`, `${CLOUDINARY_FOLDER}/plants/dxcp`, `${CLOUDINARY_FOLDER}/plants/dxcp`]
     },
     {
         id: 'duong-xi-la-kim',
@@ -393,6 +394,6 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: ['plants/dxlk.png', 'plants/dxlk.png', 'plants/dxlk.png', 'plants/dxlk.png']
+        images: [`${CLOUDINARY_FOLDER}/plants/dxlk`, `${CLOUDINARY_FOLDER}/plants/dxlk`, `${CLOUDINARY_FOLDER}/plants/dxlk`, `${CLOUDINARY_FOLDER}/plants/dxlk`]
     }
 ];

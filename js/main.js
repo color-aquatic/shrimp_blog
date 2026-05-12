@@ -1,5 +1,4 @@
 // Main JavaScript for Color Aquatic - Optimized and Cleaned Version
-console.log('main.js loaded - Optimized version');
 
 /**
  * Global variables for application state
@@ -21,7 +20,6 @@ function initializeHamburgerMenu() {
     const navOverlay = document.getElementById('nav-overlay');
 
     if (!hamburgerMenu || !navMenu || !navOverlay) {
-        console.error('Hamburger menu elements not found');
         return;
     }
 
@@ -163,7 +161,6 @@ function displayCollectionProducts(page = 1, filter = currentFilter) {
         collectionContainer.appendChild(paginationContainer);
     }
 
-    console.log(`Displayed ${productsToShow.length} products (page ${page}/${totalPages}, filter: ${filter})`);
 }
 
 /**
@@ -270,15 +267,15 @@ function ensureStaticProductImages() {
     const lang = window.currentLanguage || 'vi';
     const productName = getProductByLang(product, 'name', lang);
     const basePath = typeof getBasePath === 'function' ? getBasePath() : '';
-    const mainImg = (product.images && product.images.length) ? product.images[0] : 'placeholder1.png';
+    const mainImg = (product.images && product.images.length) ? product.images[0] : 'placeholder1';
     const thumbnailsHtml = (product.images || []).slice(0, 6).map((img, index) =>
-        `<img src="${basePath}/images/${img}" alt="${productName} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
+        `<img src="${getImageUrl(img, 400)}" alt="${productName} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
     ).join('');
 
     const productImagesHtml = `
         <div class="product-images">
             <div class="main-image">
-                <img id="main-product-image" src="${basePath}/images/${mainImg}" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkhsb2dnYW5nIGltYWdlPC90ZXh0Pjwvc3ZnPg=='" >
+                <img id="main-product-image" src="${getImageUrl(mainImg, 800)}" alt="${productName}" loading="lazy" decoding="async" onerror="this.style.opacity='0.3'">
             </div>
             <div class="thumbnail-images">
                 ${thumbnailsHtml}
@@ -366,10 +363,10 @@ async function loadMarkdownContent(id, lang, type) {
 
             const productName = getProductByLang(product, 'name', lang);
             const basePath = getBasePath();
-            const mainImg = product.images && product.images[0] ? product.images[0] : 'placeholder1.png';
+            const mainImg = product.images && product.images[0] ? product.images[0] : 'placeholder1';
             const thumbnailsHtml = product.images
                 ? product.images.slice(0, 6).map((img, i) =>
-                    `<img src="${basePath}/images/${img}" alt="${productName} ${i + 1}" loading="lazy" decoding="async" class="thumb-img${i === 0 ? ' active' : ''}" onclick="changeMainImage('${basePath}/images/${img}', this)" onerror="this.style.display='none'">`
+                    `<img src="${getImageUrl(img, 400)}" alt="${productName} ${i + 1}" width="400" height="300" loading="lazy" decoding="async" class="thumb-img${i === 0 ? ' active' : ''}" onclick="changeMainImage('${getImageUrl(img, 800)}', this)" onerror="this.style.display='none'">`
                 ).join('')
                 : '';
             articleContent.innerHTML = `
@@ -378,7 +375,7 @@ async function loadMarkdownContent(id, lang, type) {
                 </header>
                 <div class="product-images">
                     <div class="main-image">
-                        <img id="main-product-image" src="${basePath}/images/${mainImg}" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='" >
+                        <img id="main-product-image" src="${getImageUrl(mainImg, 800)}" alt="${productName}" width="800" height="600" loading="lazy" decoding="async" onerror="this.style.opacity='0.3'">
                     </div>
                     <div class="thumbnail-images">
                         ${thumbnailsHtml}
@@ -538,8 +535,6 @@ function setupCollectionInteractions() {
  * Initialize everything when DOM is loaded
  */
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded event fired');
-    console.log('Current script version: Optimized version');
 
     const staticPageType = typeof getCurrentStaticPageType === 'function' ? getCurrentStaticPageType() : '';
 
@@ -548,10 +543,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.currentLanguage = initialLang;
 
     // Initialize all modules
-    console.log('Initializing language...');
     initializeLanguage();
 
-    console.log('Initializing hamburger menu...');
     initializeHamburgerMenu();
 
     // Update page content
@@ -559,18 +552,14 @@ document.addEventListener('DOMContentLoaded', function() {
     updatePageTexts();
 
     if (staticPageType === 'detail') {
-        console.log('Static detail page initialized');
         ensureStaticProductImages();
         return;
     }
 
-    console.log('Initializing navigation...');
     initializeNavigation();
 
-    console.log('Initializing search...');
     initializeSearch();
 
-    console.log('Setting up category filter...');
     setupCategoryFilter();
     setupCollectionInteractions();
 
@@ -580,13 +569,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const productId = urlParams.get('product');
 
     if (postId) {
-        console.log('Loading post:', postId);
         loadPost(postId);
     } else if (productId) {
-        console.log('Loading product:', productId);
         loadProduct(productId);
     } else {
-        console.log('Displaying post list and collection...');
         displayPostList();
         displayCollectionProducts();
     }
@@ -599,8 +585,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize page transitions
     initializePageTransitions();
-
-    console.log('Color Aquatic blog initialized successfully!');
 });
 
 /**
@@ -609,7 +593,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeScrollAnimations() {
     // Check if browser supports Intersection Observer
     if (!('IntersectionObserver' in window)) {
-        console.warn('Intersection Observer not supported, falling back to basic animations');
         return;
     }
 
@@ -819,11 +802,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize bounce effects
     initializeBounceEffects();
-
-    console.log('Enhanced animations initialized!');
 });
 
 window.filterCollection = filterCollection;
 window.changeMainImage = changeMainImage;
-
-console.log('main.js completed loading - all modules integrated');

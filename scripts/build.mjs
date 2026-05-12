@@ -79,11 +79,8 @@ function extractDescriptionFromMarkdown(markdown) {
 function normalizeTemplateAssets(template) {
   return template
     .replace(/href="favicon\.ico"/g, `href="${basePath}/favicon.ico"`)
-    .replace(/href="images\//g, `href="${basePath}/images/`)
     .replace(/href="css\//g, `href="${basePath}/css/`)
-    .replace(/src="js\//g, `src="${basePath}/js/`)
-    .replace(/src="images\//g, `src="${basePath}/images/`)
-    .replace(/srcset="images\//g, `srcset="${basePath}/images/`);
+    .replace(/src="js\//g, `src="${basePath}/js/`);
 }
 
 function injectBasePath(html) {
@@ -427,20 +424,26 @@ async function buildSitemap(pages) {
 }
 
 async function copyStaticDirectories() {
-  const toCopy = ['images'];
+  const toCopy = [];
   for (const dirName of toCopy) {
     await cp(path.join(rootDir, dirName), path.join(distDir, dirName), { recursive: true });
   }
 }
 
 async function buildJsAndCss() {
-  const jsFiles = await glob('js/**/*.js', { cwd: rootDir, nodir: true });
+  // Bundle and minify all JS into a single file
+  const { build } = await import('esbuild');
+  await build({
+    entryPoints: ['js/main.js'],
+    bundle: true,
+    minify: true,
+    target: 'es2018',
+    outfile: path.join(distDir, 'js', 'bundle.js'),
+    format: 'iife',
+  });
+
+  // Minify CSS files individually
   const cssFiles = await glob('css/**/*.css', { cwd: rootDir, nodir: true });
-
-  for (const relPath of jsFiles) {
-    await writeMinifiedJs(path.join(rootDir, relPath), path.join(distDir, relPath));
-  }
-
   for (const relPath of cssFiles) {
     await writeMinifiedCss(path.join(rootDir, relPath), path.join(distDir, relPath));
   }

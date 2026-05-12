@@ -1,5 +1,4 @@
 // Language management for Color Aquatic
-console.log('language.js loaded');
 
 /**
  * Initialize language functionality
@@ -27,7 +26,6 @@ function initializeLanguage() {
  * Toggle between Vietnamese and English
  */
 function toggleLanguage() {
-    console.log('Đang chuyển đổi ngôn ngữ...');
     const currentLang = window.currentLanguage || 'vi';
     const newLang = currentLang === 'vi' ? 'en' : 'vi';
 
@@ -39,7 +37,6 @@ function toggleLanguage() {
  * @param {string} lang - Language code ('vi' or 'en')
  */
 function switchToLanguage(lang) {
-    console.log(`Chuyển đổi sang ngôn ngữ: ${lang}`);
 
     // Update global language
     window.currentLanguage = lang;
@@ -70,18 +67,12 @@ function switchToLanguage(lang) {
     const productId = urlParams.get('product');
 
     if (postId && window.loadPost) {
-        console.log('Reloading post with new language:', lang);
         window.loadPost(postId);
     } else if (productId && window.loadProduct) {
-        console.log('Reloading product with new language:', lang);
         window.loadProduct(productId);
     } else {
         // Re-render list content only if on home page
-        displayPostList();
-        displayCollectionProducts();
     }
-
-    console.log(`Đã chuyển đổi sang ngôn ngữ: ${lang}`);
 }
 
 /**
@@ -265,7 +256,6 @@ function initializeLanguageFromStorage() {
     window.currentLanguage = initialLang;
     updateLanguageSummary();
 
-    console.log(`Language initialized: ${initialLang}`);
     return initialLang;
 }
 

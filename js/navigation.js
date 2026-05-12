@@ -1,5 +1,4 @@
 // Navigation and routing for Color Aquatic
-console.log('navigation.js loaded');
 
 /**
  * Initialize navigation functionality
@@ -182,13 +181,11 @@ function updateActiveNavigation(activeSection) {
  * @param {string} postId - Post ID to load
  */
 function loadPost(postId) {
-    console.log(`Loading post: ${postId}`);
 
     const lang = window.currentLanguage || 'vi';
     const post = posts.find(p => p.id === postId);
 
     if (!post) {
-        console.error('Post not found:', postId);
         showHomePage();
         return;
     }
@@ -227,13 +224,11 @@ function loadPost(postId) {
  * @param {string} productId - Product ID to load
  */
 function loadProduct(productId) {
-    console.log(`Loading product: ${productId}`);
 
     const lang = window.currentLanguage || 'vi';
     const product = collectionProducts.find(p => p.id === productId);
 
     if (!product) {
-        console.error('Product not found:', productId);
         showHomePage();
         return;
     }

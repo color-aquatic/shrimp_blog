@@ -1,5 +1,20 @@
+// ─── Cloudinary Configuration ───────────────────────────────────────────────
+const CLOUDINARY_CLOUD_NAME = 'dgdwyi1wk';
+const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload`;
+
+/**
+ * Build a Cloudinary image URL with automatic format (WebP/AVIF) and quality.
+ * @param {string} publicId - The Cloudinary public ID (e.g. 'shrimp-blog/shrimps/bluedream1')
+ * @param {number} width    - Desired display width in pixels (default 600)
+ * @returns {string} Optimized Cloudinary URL
+ */
+function getImageUrl(publicId, width = 600) {
+    if (!publicId) return '';
+    return `${CLOUDINARY_BASE}/f_auto,q_auto,w_${width}/${publicId}`;
+}
+// ────────────────────────────────────────────────────────────────────────────
+
 // UI Helper Functions for Color Aquatic
-console.log('ui-helpers.js loaded');
 
 /**
  * Get post file path based on language
@@ -178,11 +193,11 @@ function createProductCard(product) {
     card.innerHTML = `
         <div class="product-images">
             <div class="main-image">
-                <img src="${getBasePath()}/images/${product.images && product.images[0] ? product.images[0] : 'placeholder1.png'}" alt="${productName}" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkto4buZbmcg4bupY2gg4bqhaDwvdGV4dD48L3N2Zz4='">
+                <img src="${getImageUrl(product.images && product.images[0] ? product.images[0] : 'placeholder1', 800)}" alt="${productName}" width="800" height="600" loading="lazy" decoding="async" onerror="this.style.opacity='0.3'">
             </div>
             <div class="thumbnail-images">
                 ${product.images.slice(0, 4).map((img, index) =>
-                    `<img src="${getBasePath()}/images/${img}" alt="${productName} ${index + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
+                    `<img src="${getImageUrl(img, 400)}" alt="${productName} ${index + 1}" width="400" height="300" loading="lazy" decoding="async" onerror="this.style.display='none'">`
                 ).join('')}
             </div>
         </div>

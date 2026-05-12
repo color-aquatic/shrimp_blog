@@ -1,5 +1,4 @@
 // Search functionality for Color Aquatic
-console.log('search.js loaded');
 
 // Search variables
 let searchResults = [];
@@ -15,7 +14,6 @@ function initializeSearch() {
     const searchResultsContent = document.getElementById('search-results-content');
 
     if (!searchInput || !searchButton || !clearButton) {
-        console.error('Search elements not found');
         return;
     }
 
