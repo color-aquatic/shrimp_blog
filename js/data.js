@@ -276,33 +276,6 @@ const collectionProducts = [
         lifespan: 'N/A',
         images: [`${CLOUDINARY_FOLDER}/plants/pelia`, `${CLOUDINARY_FOLDER}/plants/pelia`, `${CLOUDINARY_FOLDER}/plants/pelia`, `${CLOUDINARY_FOLDER}/plants/pelia`]
     },
-    // Sample accessory products
-    {
-        id: 'may-loc-nuoc',
-        category: 'accessory',
-        nameVi: 'Máy Lọc Nước Mini',
-        nameEn: 'Mini Water Filter',
-        shortDescriptionVi: 'Máy lọc nước nhỏ gọn phù hợp cho bể nano, duy trì chất lượng nước tốt.',
-        shortDescriptionEn: 'Compact water filter suitable for nano tanks, maintains good water quality.',
-        temperature: 'N/A',
-        tds: 'N/A',
-        gh: 'N/A',
-        lifespan: '1-2',
-        images: [`${CLOUDINARY_FOLDER}/accessories/hbl-803`, `${CLOUDINARY_FOLDER}/accessories/hbl-803`, `${CLOUDINARY_FOLDER}/accessories/hbl-803`, `${CLOUDINARY_FOLDER}/accessories/hbl-803`]
-    },
-    {
-        id: 'den-led-thuy-sinh',
-        category: 'accessory',
-        nameVi: 'Đèn LED Thủy Sinh',
-        nameEn: 'LED Aquarium Light',
-        shortDescriptionVi: 'Đèn LED chuyên dụng cho thủy sinh, hỗ trợ quang hợp và tăng màu sắc.',
-        shortDescriptionEn: 'Specialized LED light for aquariums, supports photosynthesis and enhances colors.',
-        temperature: 'N/A',
-        tds: 'N/A',
-        gh: 'N/A',
-        lifespan: '3-5',
-        images: [`${CLOUDINARY_FOLDER}/accessories/flat-nano`, `${CLOUDINARY_FOLDER}/accessories/plant3`, `${CLOUDINARY_FOLDER}/accessories/plant4`, `${CLOUDINARY_FOLDER}/accessories/plant5`]
-    },
     // New accessory products
     {
         id: 'loc-qs200',
