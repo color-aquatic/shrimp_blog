@@ -480,12 +480,13 @@ async function main() {
   await ensureDir(distDir);
 
   let indexTemplate = await readFile(path.join(rootDir, 'index.html'), 'utf8');
+  const bundleVersion = Date.now().toString(36);
 
   // Replace the dev script block with one production bundle script.
   indexTemplate = indexTemplate.replace(
     /<!-- JavaScript modules[\s\S]*?<script src="js\/main\.js" defer><\/script>/,
     `<!-- Bundled JavaScript -->
-    <script src="${basePath}/js/bundle.js" defer></script>`
+    <script src="${basePath}/js/bundle.js?v=${bundleVersion}" defer></script>`
   );
 
   await Promise.all([buildJsAndCss(), copyStaticDirectories(), copyRootSupportFiles(), copyRequiredImageAssets()]);
