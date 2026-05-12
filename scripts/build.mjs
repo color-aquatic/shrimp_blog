@@ -431,16 +431,27 @@ async function copyStaticDirectories() {
 }
 
 async function buildJsAndCss() {
-  // Bundle and minify all JS into a single file
-  const { build } = await import('esbuild');
-  await build({
-    entryPoints: ['js/main.js'],
-    bundle: true,
+  // Merge scripts in browser load order, then minify into a single bundle.
+  const jsLoadOrder = [
+    'js/translations.js',
+    'js/language.js',
+    'js/ui-helpers.js',
+    'js/navigation.js',
+    'js/search.js',
+    'js/data.js',
+    'js/main.js'
+  ];
+  const mergedJs = (await Promise.all(
+    jsLoadOrder.map(async (relPath) => readFile(path.join(rootDir, relPath), 'utf8'))
+  )).join('\n\n');
+  const jsResult = await transform(mergedJs, {
+    loader: 'js',
     minify: true,
-    target: 'es2018',
-    outfile: path.join(distDir, 'js', 'bundle.js'),
-    format: 'iife',
+    target: 'es2018'
   });
+  const bundlePath = path.join(distDir, 'js', 'bundle.js');
+  await ensureDir(path.dirname(bundlePath));
+  await writeFile(bundlePath, jsResult.code, 'utf8');
 
   // Minify CSS files individually
   const cssFiles = await glob('css/**/*.css', { cwd: rootDir, nodir: true });
