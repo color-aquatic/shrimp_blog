@@ -3,6 +3,11 @@
 
 const translations = {
     vi: {
+        // Hero / Brand
+        hero: {
+            tagline: 'Nuôi tép cảnh · Nghệ thuật thủy sinh'
+        },
+
         // Navigation
         nav: {
             home: 'Trang chủ',
@@ -10,12 +15,6 @@ const translations = {
             posts: 'Bài viết',
             about: 'Giới thiệu',
             consultation: 'Liên hệ'
-        },
-
-        // Hero Section
-        hero: {
-            title: 'Chào mừng đến với Color Aquatic',
-            subtitle: 'Nơi chia sẻ kiến thức và kinh nghiệm về nuôi tép cảnh'
         },
 
         // Collection Section
@@ -96,6 +95,11 @@ const translations = {
     },
 
     en: {
+        // Hero / Brand
+        hero: {
+            tagline: 'Aquarium Shrimp · The Art of Aquascaping'
+        },
+
         // Navigation
         nav: {
             home: 'Home',
@@ -103,12 +107,6 @@ const translations = {
             posts: 'Posts',
             about: 'About',
             consultation: 'Contact Us'
-        },
-
-        // Hero Section
-        hero: {
-            title: 'Welcome to Color Aquatic',
-            subtitle: 'A place to share knowledge and experience about keeping aquarium shrimp'
         },
 
         // Collection Section
