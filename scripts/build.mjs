@@ -94,7 +94,7 @@ function setHeadMetadata(template, { lang, title, description, keywords, canonic
   const safeKeywords = escapeAttr(keywords || '');
 
   let html = template;
-  html = replaceRequired(html, /<html lang="[^"]+">/, `<html lang="${lang}">`, 'html lang');
+  html = replaceRequired(html, /<html lang="[^"]+"([^>]*)>/, `<html lang="${lang}"$1>`, 'html lang');
   html = replaceRequired(html, /<title>[\s\S]*?<\/title>/, `<title>${title}</title>`, 'title');
   html = replaceRequired(html, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${safeDescription}">`, 'meta description');
   html = replaceRequired(html, /<meta name="keywords" content="[^"]*">/, `<meta name="keywords" content="${safeKeywords}">`, 'meta keywords');
@@ -193,7 +193,6 @@ function buildDetailPageFromTemplate(template, { lang, title, description, keywo
   html = setNavigationLinks(html, lang);
   html = setLanguageSwitcher(html, { lang, switchVi, switchEn });
   html = hideSection(html, 'search-section');
-  html = hideSection(html, 'hero');
   html = hideSection(html, 'benefits');
   html = hideSection(html, 'collection');
   html = hideSection(html, 'posts');
