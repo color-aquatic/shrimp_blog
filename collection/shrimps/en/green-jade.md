@@ -16,10 +16,10 @@ Green Jade Shrimp is a popular jade-green Neocaridina line loved for its unique 
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 22-30°C |
-| pH | 6.2-7.8 |
-| TDS | 150-300 ppm |
-| GH | 7-9 dGH |
+| Temperature | 22-27°C |
+| pH | 6-8 |
+| TDS | 150-250 ppm |
+| GH | 6-12 dGH |
 | KH | 2-6 dKH |
 
 ## Biological Features

@@ -16,11 +16,11 @@ Blue Dream shrimp is a well-loved ornamental shrimp variety known for its distin
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 22-26°C |
-| pH | 6.8-7.5 |
+| Temperature |22-27°C |
+| pH | 6-8 |
 | TDS | 150-250 ppm |
 | GH | 6-12 dGH |
-| KH | 3-8 dKH |
+| KH | 2-6 dKH |
 
 ## Biological Characteristics
 

@@ -16,10 +16,10 @@ Tép Vàng Thái là dòng tép cảnh với màu vàng cam rực, rất dễ nh
 
 | Thông số | Giá trị |
 |----------|---------------------|
-| Nhiệt độ | 22-31°C |
-| pH | 6.0-7.8 |
-| TDS | 150-300 ppm |
-| GH | 7-9 dGH |
+| Nhiệt độ |22-27°C |
+| pH | 6-8 |
+| TDS | 150-250 ppm |
+| GH | 6-12 dGH |
 | KH | 2-6 dKH |
 
 ## Đặc điểm sinh học

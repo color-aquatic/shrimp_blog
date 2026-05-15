@@ -16,10 +16,10 @@ Thai Yellow Shrimp is an ornamental line with a vivid yellow-orange color that s
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 22-31°C |
-| pH | 6.0-7.8 |
-| TDS | 150-300 ppm |
-| GH | 7-9 dGH |
+| Temperature |22-27°C |
+| pH | 6-8 |
+| TDS | 150-250 ppm |
+| GH | 6-12 dGH |
 | KH | 2-6 dKH |
 
 ## Biological Features

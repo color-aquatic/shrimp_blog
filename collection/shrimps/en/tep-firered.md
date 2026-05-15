@@ -16,11 +16,11 @@ Fire Red Shrimp is a hugely popular ornamental shrimp known for its deep, solid 
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 18-25°C |
-| pH | 6.0-8.0 |
-| TDS | 150-350 ppm |
-| GH | 3-15 dGH |
-| KH | 1-8 dKH |
+| Temperature |22-27°C |
+| pH | 6-8 |
+| TDS | 150-250 ppm |
+| GH | 6-12 dGH |
+| KH | 2-6 dKH |
 
 ## Biological Features
 

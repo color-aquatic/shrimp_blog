@@ -16,11 +16,11 @@ Tép Fire Red là dòng tép cảnh rất được ưa chuộng với màu đỏ
 
 | Thông số | Giá trị |
 |----------|---------------------|
-| Nhiệt độ | 18-25°C |
-| pH | 6.0-8.0 |
-| TDS | 150-350 ppm |
-| GH | 3-15 dGH |
-| KH | 1-8 dKH |
+| Nhiệt độ |22-27°C |
+| pH | 6-8 |
+| TDS | 150-250 ppm |
+| GH | 6-12 dGH |
+| KH | 2-6 dKH |
 
 ## Đặc điểm sinh học
 
