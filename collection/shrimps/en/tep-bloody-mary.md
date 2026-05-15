@@ -16,11 +16,11 @@ Bloody Mary Shrimp is a striking ornamental shrimp with a deep red body and a ne
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 20-24°C |
-| pH | 6.2-7.2 |
+| Temperature | 22-27°C |
+| pH | 6-8 |
 | TDS | 150-250 ppm |
-| GH | 4-8 dGH |
-| KH | 1-4 dKH |
+| GH | 6-12 dGH |
+| KH | 2-6 dKH |
 
 ## Biological Features
 

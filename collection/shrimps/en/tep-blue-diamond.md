@@ -16,11 +16,11 @@ Blue Diamond Shrimp is an eye-catching Neocaridina variety with a distinctive bl
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 20-26°C |
-| pH | 6.5-7.8 |
-| TDS | 150-300 ppm |
-| GH | 4-8 dGH |
-| KH | 1-5 dKH |
+| Temperature | 22-27°C |
+| pH | 6-8 |
+| TDS | 150-250 ppm |
+| GH | 6-12 dGH |
+| KH | 2-6 dKH |
 
 ## Biological Features
 
