@@ -16,9 +16,9 @@ Orange Eye Red Dragon Shrimp is a premium tiger shrimp line recognized for its b
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 22-26°C |
-| pH | 5.2-6.6 |
-| TDS | 120-180 ppm |
+| Temperature |20-26°C |
+| pH | 5 - 6.5 |
+| TDS | 90-120 ppm |
 | GH | 4-6 dGH |
 | KH | 0-2 dKH |
 

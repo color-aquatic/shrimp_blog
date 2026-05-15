@@ -16,10 +16,10 @@ Red Galaxy Tiger Shrimp combines vibrant red coloration with bold tiger stripes 
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 20-24°C |
-| pH | 5.8-6.8 |
-| TDS | 100-160 ppm |
-| GH | 3-6 dGH |
+| Temperature |20-26°C |
+| pH | 5 - 6.5 |
+| TDS | 90-120 ppm |
+| GH | 4-6 dGH |
 | KH | 0-2 dKH |
 
 ## Biological Features

@@ -16,11 +16,11 @@ Pure Black Line (PBL) Shrimp is a special and relatively rare variety in the shr
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 22-26°C |
-| pH | 5.0-6.5 |
-| TDS | 120-180 ppm |
+| Temperature |20-26°C |
+| pH | 5 - 6.5 |
+| TDS | 90-120 ppm |
 | GH | 4-6 dGH |
-| KH | 1-3 dKH |
+| KH | 0-2 dKH |
 
 ## Biological Features
 

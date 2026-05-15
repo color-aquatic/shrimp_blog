@@ -16,11 +16,11 @@ Tép Pure Black Line (PBL) là dòng tép ong khá hiếm trên thị trường.
 
 | Thông số | Giá trị |
 |----------|---------------------|
-| Nhiệt độ | 22-26°C |
-| pH | 5.0-6.5 |
-| TDS | 120-180 ppm |
+| Nhiệt độ |20-26°C |
+| pH | 5 - 6.5 |
+| TDS | 90-120 ppm |
 | GH | 4-6 dGH |
-| KH | 1-3 dKH |
+| KH | 0-2 dKH |
 
 ## Đặc điểm sinh học
 

@@ -16,11 +16,11 @@ Tép Black Galaxy BOA là một trong những dòng tép lạnh cao cấp nhất
 
 | Thông số | Giá trị yêu cầu |
 |----------|-----------------|
-| Nhiệt độ | 18-22°C |
-| pH | 5.5-6.5 |
-| TDS | 80-120 ppm |
-| GH | 2-5 dGH |
-| KH | 0-1 dKH |
+| Nhiệt độ |20-26°C |
+| pH | 5 - 6.5 |
+| TDS | 90-120 ppm |
+| GH | 4-6 dGH |
+| KH | 0-2 dKH |
 
 ## Đặc điểm sinh học
 

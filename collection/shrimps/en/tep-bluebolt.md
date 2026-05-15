@@ -16,11 +16,11 @@ Bluebolt Shrimp is a popular entry-level bee shrimp with a distinctive blue head
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 22-26°C |
-| pH | 5.0-6.5 |
-| TDS | 120-180 ppm |
+| Temperature |20-26°C |
+| pH | 5 - 6.5 |
+| TDS | 90-120 ppm |
 | GH | 4-6 dGH |
-| KH | 1-3 dKH |
+| KH | 0-2 dKH |
 
 ## Biological Features
 

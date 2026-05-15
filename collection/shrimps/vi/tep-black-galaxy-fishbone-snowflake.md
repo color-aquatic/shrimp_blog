@@ -16,10 +16,10 @@ Tép Black Galaxy Fishbone Snowflake là dòng tép lạnh cao cấp với họa
 
 | Thông số | Giá trị bắt buộc |
 |----------|------------------|
-| Nhiệt độ | 20-24°C |
-| pH | 5.8-6.8 |
-| TDS | 90-150 ppm |
-| GH | 3-6 dGH |
+| Nhiệt độ |20-26°C |
+| pH | 5 - 6.5 |
+| TDS | 90-120 ppm |
+| GH | 4-6 dGH |
 | KH | 0-2 dKH |
 
 ## Đặc điểm sinh học

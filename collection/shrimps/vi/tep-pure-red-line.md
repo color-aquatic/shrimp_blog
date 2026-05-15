@@ -16,11 +16,11 @@ Tép Pure Red Line là dòng tép cảnh có đường màu đỏ thuần chạy
 
 | Thông số | Giá trị |
 |----------|---------------------|
-| Nhiệt độ | 20-28°C |
-| pH | 6.5-7.8 |
-| TDS | 120-200 ppm |
-| GH | 4-10 dGH |
-| KH | 2-6 dKH |
+| Nhiệt độ |20-26°C |
+| pH | 5 - 6.5 |
+| TDS | 90-120 ppm |
+| GH | 4-6 dGH |
+| KH | 0-2 dKH |
 
 ## Đặc điểm sinh học
 

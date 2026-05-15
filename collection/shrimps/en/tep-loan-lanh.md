@@ -16,11 +16,11 @@ Mixed Cold-Water Shrimp, known as "Loạn Lạnh" in Vietnamese, is a combo pack
 
 | Parameter | Recommended Value |
 |-----------|-------------------|
-| Temperature | 20-26°C |
-| pH | 6.0-7.5 |
-| TDS | 150-250 ppm |
-| GH | 4-8 dGH |
-| KH | 2-5 dKH |
+| Temperature |20-26°C |
+| pH | 5 - 6.5 |
+| TDS | 90-120 ppm |
+| GH | 4-6 dGH |
+| KH | 0-2 dKH |
 
 ## Biological Features
 
