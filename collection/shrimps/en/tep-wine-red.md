@@ -1,12 +1,12 @@
-# Wine Red Shrimp
+# Extreme Red / Wine Red Shrimp
 
 ## Introduction
 
-Wine Red Shrimp is a beautiful ornamental variety with a distinctive wine-red and white coloration. This eye-catching look makes Wine Red highly sought after, though the species needs patience and experience to keep well.
+Extreme Red / Wine Red Shrimp is a beautiful ornamental variety with a distinctive wine-red and white coloration. This eye-catching look makes Wine Red highly sought after, though the species needs patience and experience to keep well.
 
 ## Characteristics
 
-- **Scientific name**: Caridina sp. "Wine Red"
+- **Scientific name**: Caridina sp. "Extreme Red / Wine Red"
 - **Size**: 2-2.5 cm when fully grown
 - **Coloration**: Wine red and white pattern resembling red wine
 - **Temperament**: Peaceful, active in groups
@@ -24,7 +24,7 @@ Wine Red Shrimp is a beautiful ornamental variety with a distinctive wine-red an
 
 ## Biological Features
 
-Wine Red belongs to the Taiwan Bee family and needs soft, acidic water to thrive. The wine-red pigmentation develops best under stable conditions with proper nutrition. These shrimp are fairly sensitive to water parameter changes.
+Extreme Red / Wine Red belongs to the Taiwan Bee family and needs soft, acidic water to thrive. The wine-red pigmentation develops best under stable conditions with proper nutrition. These shrimp are fairly sensitive to water parameter changes.
 
 ## Care Instructions
 
@@ -45,7 +45,7 @@ Wine Red belongs to the Taiwan Bee family and needs soft, acidic water to thrive
 
 ## Breeding
 
-Wine Red breeding requires stable water parameters and patience. Females carry eggs for 25-28 days and produce 20-30 shrimplets per batch. Maintaining the wine-red color through generations requires careful breeder selection.
+Extreme Red / Wine Red breeding requires stable water parameters and patience. Females carry eggs for 25-28 days and produce 20-30 shrimplets per batch. Maintaining the wine-red color through generations requires careful breeder selection.
 
 ## Special Notes
 

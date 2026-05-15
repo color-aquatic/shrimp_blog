@@ -200,8 +200,8 @@ const collectionProducts = [
     {
         id: 'tep-wine-red',
         category: 'shrimps',
-        nameVi: 'Tép Wine Red',
-        nameEn: 'Wine Red Shrimp',
+        nameVi: 'Tép Extreme Red / Wine Red',
+        nameEn: 'Extreme Red / Wine Red Shrimp',
         shortDescriptionVi: 'Tép ong cao cấp với họa tiết đỏ rượu vang và trắng, nổi bật và rất được ưa chuộng.',
         shortDescriptionEn: 'A premium bee shrimp with wine-red and white patterning, highly sought after by hobbyists.',
         temperature: '20-26°C',
