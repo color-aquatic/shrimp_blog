@@ -195,7 +195,7 @@ const collectionProducts = [
         tds: '90-120 ppm',
         gh: '4-6 dGH',
         lifespan: '1-2',
-        images: [`${CLOUDINARY_FOLDER}/shrimps/bluebolt1`, `${CLOUDINARY_FOLDER}/shrimps/bluebolt1`, `${CLOUDINARY_FOLDER}/shrimps/bluebolt1`, `${CLOUDINARY_FOLDER}/shrimps/bluebolt1`]
+        images: [`${CLOUDINARY_FOLDER}/shrimps/bluebolt2`, `${CLOUDINARY_FOLDER}/shrimps/bluebolt1`, `${CLOUDINARY_FOLDER}/shrimps/bluebolt1`, `${CLOUDINARY_FOLDER}/shrimps/bluebolt1`]
     },
     {
         id: 'tep-wine-red',
@@ -208,7 +208,7 @@ const collectionProducts = [
         tds: '90-120 ppm',
         gh: '4-6 dGH',
         lifespan: '1-2',
-        images: [`${CLOUDINARY_FOLDER}/shrimps/dark-winered1`, `${CLOUDINARY_FOLDER}/shrimps/red-mosura1`, `${CLOUDINARY_FOLDER}/shrimps/red-mosura1`, `${CLOUDINARY_FOLDER}/shrimps/red-mosura1`]
+        images: [`${CLOUDINARY_FOLDER}/shrimps/dark-winered2`, `${CLOUDINARY_FOLDER}/shrimps/dark-winered1`, `${CLOUDINARY_FOLDER}/shrimps/red-mosura1`, `${CLOUDINARY_FOLDER}/shrimps/red-mosura1`]
     },
     {
         id: 'tep-black-galaxy-fishbone-snowflake',
