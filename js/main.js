@@ -406,7 +406,10 @@ async function loadMarkdownContent(id, lang, type) {
  * @param {HTMLElement} thumbEl - Thumbnail element
  */
 function changeMainImage(src, thumbEl) {
-    const mainImage = document.getElementById('main-product-image');
+    const scopedMainImage = thumbEl
+        ? thumbEl.closest('.product-images')?.querySelector('.main-image img')
+        : null;
+    const mainImage = scopedMainImage || document.getElementById('main-product-image');
     if (mainImage) {
         mainImage.src = src;
     }
@@ -522,6 +525,13 @@ function setupCollectionInteractions() {
     if (!collectionContainer) return;
 
     collectionContainer.addEventListener('click', function(event) {
+        const thumbnail = event.target.closest('.thumbnail-images img');
+        if (thumbnail) {
+            event.preventDefault();
+            changeMainImage(getImageUrlFromThumbnail(thumbnail), thumbnail);
+            return;
+        }
+
         const pageButton = event.target.closest('[data-page]');
         if (pageButton) {
             const page = Number(pageButton.getAttribute('data-page') || '1');
@@ -529,6 +539,16 @@ function setupCollectionInteractions() {
             displayCollectionProducts(page, filter);
         }
     });
+}
+
+/**
+ * Build a larger main image URL from a thumbnail image element.
+ * @param {HTMLImageElement} thumbnail - Thumbnail image element
+ * @returns {string} Main image URL
+ */
+function getImageUrlFromThumbnail(thumbnail) {
+    const currentSrc = thumbnail.getAttribute('src') || thumbnail.src || '';
+    return currentSrc.replace(/\/w_\d+\//, '/w_800/');
 }
 
 /**

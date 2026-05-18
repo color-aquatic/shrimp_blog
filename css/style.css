@@ -1084,6 +1084,10 @@ section h2::after {
     margin-top: 0.5rem;
 }
 
+#collection-list .thumbnail-images {
+    padding-bottom: 2px;
+}
+
 .thumbnail-images img {
     width: 58px;
     height: 58px;
