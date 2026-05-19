@@ -694,26 +694,79 @@ nav .nav-menu .nav-consultation-btn:hover {
 }
 
 .search-container {
-    max-width: 600px;
+    max-width: 480px;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
 }
 
 .search-box {
+    max-width: 480px;
+    margin: 0 auto;
+    height: 46px;
     display: flex;
     align-items: center;
-    gap: 0.35rem;
-    position: relative;
-    background: var(--bg-card);
-    border: 1.5px solid var(--border-card);
+    padding: 5px 5px 5px 18px;
+    border: 1px solid var(--border-card);
     border-radius: 999px;
-    padding: 0.4rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bg-input);
+    gap: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .search-box:focus-within {
     border-color: var(--primary);
-    box-shadow: 0 0 0 4px var(--primary-glow);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    height: auto;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+    align-self: center;
+}
+
+.search-box .search-btn {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border: none;
+    color: var(--text-on-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.search-box .search-btn:hover {
+    background: var(--primary-hover);
+    transform: scale(1.06);
+}
+
+.search-box .clear-btn {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
 }
 
 #search-input {
@@ -721,10 +774,14 @@ nav .nav-menu .nav-consultation-btn:hover {
     min-width: 0;
     border: none;
     outline: none;
-    padding: 0.65rem 1rem;
-    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
     background: transparent;
     color: var(--text-primary);
+    align-self: center;
+    line-height: normal;
+    height: auto;
 }
 
 #search-input::placeholder {
@@ -735,8 +792,8 @@ nav .nav-menu .nav-consultation-btn:hover {
     background: linear-gradient(135deg, #0096c7, #0369a1);
     color: white;
     border: none;
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -836,12 +893,13 @@ nav .nav-menu .nav-consultation-btn:hover {
     }
 
     .search-box {
-        padding: 0.25rem;
+        padding: 4px 4px 4px 16px;
         align-items: center;
     }
 
     #search-input {
-        padding: 0.5rem 0.75rem;
+        padding: 0;
+        margin: 0;
         font-size: 0.9rem;
     }
 
@@ -2008,5 +2066,5 @@ footer p,
    the cascade over component display rules
    ================================================ */
 .is-hidden {
-    display: none;
+    display: none !important;
 }

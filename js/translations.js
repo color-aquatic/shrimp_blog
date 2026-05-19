@@ -14,7 +14,7 @@ const translations = {
             collection: 'Bộ sưu tập',
             posts: 'Bài viết',
             about: 'Giới thiệu',
-            consultation: 'Liên hệ'
+            consultation: 'Hỗ trợ'
         },
 
         // Collection Section
@@ -106,7 +106,7 @@ const translations = {
             collection: 'Collection',
             posts: 'Posts',
             about: 'About',
-            consultation: 'Contact Us'
+            consultation: 'Support'
         },
 
         // Collection Section
