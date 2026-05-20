@@ -46,6 +46,16 @@ const posts = [
         descriptionEn: 'Detailed guide on how to setup an aquarium shrimp tank from A-Z, including equipment selection, water environment setup and important notes.',
         keywordsVi: 'setup bể tép, bể tép cảnh, hướng dẫn nuôi tép',
         keywordsEn: 'shrimp tank setup, aquarium shrimp tank, shrimp keeping guide'
+    },
+    {
+        id: 'xu-ly-doc-to-ho-tep',
+        titleVi: 'Xử Lý Hồ Tép Bị Nhiễm Độc Tố (Thuốc Muỗi, Nước Hoa, Hóa Chất)',
+        titleEn: 'Treating Toxin Contamination in Shrimp Tanks (Insecticide, Perfume, Chemicals)',
+        date: '2024-02-05',
+        descriptionVi: 'Hướng dẫn nhận biết và xử lý khẩn cấp khi hồ tép bị nhiễm độc tố từ thuốc xịt muỗi, nước hoa, hóa chất tẩy rửa. Biện pháp thay nước, sử dụng than hoạt tính, easy-filter và cách phòng ngừa hiệu quả.',
+        descriptionEn: 'Guide to identifying and emergency-treating shrimp tanks contaminated by mosquito spray, perfume, and cleaning chemicals. Water change protocols, activated carbon, sponge filter methods, and effective prevention strategies.',
+        keywordsVi: 'hồ tép nhiễm độc, thuốc xịt muỗi, xử lý hồ tép, than hoạt tính, easy filter, thay nước khẩn cấp, tép chết hàng loạt',
+        keywordsEn: 'shrimp tank toxins, mosquito spray, treating contaminated tank, activated carbon, sponge filter, emergency water change, mass shrimp death'
     }
 ];
 
