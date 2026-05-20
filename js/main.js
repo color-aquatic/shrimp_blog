@@ -605,7 +605,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize page transitions
     initializePageTransitions();
+
+    // Initialize scroll-to-top button
+    initializeScrollToTop();
 });
+
+/**
+ * Initialize scroll-to-top button visibility and click behaviour
+ */
+function initializeScrollToTop() {
+    const btn = document.getElementById('scroll-to-top');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            btn.classList.add('is-visible');
+        } else {
+            btn.classList.remove('is-visible');
+        }
+    }, { passive: true });
+
+    btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
 /**
  * Initialize scroll-triggered animations using Intersection Observer
