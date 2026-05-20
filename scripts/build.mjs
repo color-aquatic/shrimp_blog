@@ -133,7 +133,7 @@ function setNavigationLinks(template, lang) {
   html = replaceRequired(html, /href="#collection" data-translate="nav\.collection"/, `href="${homePath}#collection" data-translate="nav.collection"`, 'collection nav link');
   html = replaceRequired(html, /href="#posts" data-translate="nav\.posts"/, `href="${homePath}#posts" data-translate="nav.posts"`, 'posts nav link');
   html = replaceRequired(html, /href="#about" data-translate="nav\.about"/, `href="${homePath}#about" data-translate="nav.about"`, 'about nav link');
-  html = replaceRequired(html, /href="index\.html" role="button" class="secondary" data-translate="post\.backButton"/, `href="${homePath}" role="button" class="secondary" data-translate="post.backButton"`, 'back button link');
+  html = replaceRequired(html, /href="index\.html" class="back-home-btn"/, `href="${homePath}" class="back-home-btn"`, 'back button link');
   return html;
 }
 
