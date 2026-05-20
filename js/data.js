@@ -127,7 +127,7 @@ const collectionProducts = [
         tds: '150-250 ppm',
         gh: '6-12 dGH',
         lifespan: '1-2',
-        images: [`${CLOUDINARY_FOLDER}/shrimps/yellow1`, `${CLOUDINARY_FOLDER}/shrimps/yellow2`, `${CLOUDINARY_FOLDER}/shrimps/yellow3`, `${CLOUDINARY_FOLDER}/shrimps/yellow3`]
+        images: [`${CLOUDINARY_FOLDER}/shrimps/yellow1`, `${CLOUDINARY_FOLDER}/shrimps/yellow2`, `${CLOUDINARY_FOLDER}/shrimps/yellow3`, `${CLOUDINARY_FOLDER}/shrimps/yellow4`]
     },
     {
         id: 'orange-eye-red-dragon',
@@ -179,7 +179,7 @@ const collectionProducts = [
         tds: '90-120 ppm',
         gh: '4-6 dGH',
         lifespan: '1-2',
-        images: [`${CLOUDINARY_FOLDER}/shrimps/loanlanh1`, `${CLOUDINARY_FOLDER}/shrimps/loanlanh1`, `${CLOUDINARY_FOLDER}/shrimps/loanlanh1`, `${CLOUDINARY_FOLDER}/shrimps/loanlanh1`]
+        images: [`${CLOUDINARY_FOLDER}/shrimps/loanlanh1`, `${CLOUDINARY_FOLDER}/shrimps/loanlanh2`, `${CLOUDINARY_FOLDER}/shrimps/loanlanh3`, `${CLOUDINARY_FOLDER}/shrimps/loanlanh4`]
     },
     {
         id: 'tep-deep-blue',
@@ -192,7 +192,7 @@ const collectionProducts = [
         tds: '90-120 ppm',
         gh: '4-6 dGH',
         lifespan: '1-2',
-        images: [`${CLOUDINARY_FOLDER}/shrimps/deepblue1`, `${CLOUDINARY_FOLDER}/shrimps/deepblue2`, `${CLOUDINARY_FOLDER}/shrimps/deepblue3`, `${CLOUDINARY_FOLDER}/shrimps/deepblue3`]
+        images: [`${CLOUDINARY_FOLDER}/shrimps/deepblue1`, `${CLOUDINARY_FOLDER}/shrimps/deepblue2`, `${CLOUDINARY_FOLDER}/shrimps/deepblue3`, `${CLOUDINARY_FOLDER}/shrimps/deepblue4`]
     },
     {
         id: 'tep-bluebolt',
@@ -298,7 +298,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'N/A',
         lifespan: '2-3',
-        images: [`${CLOUDINARY_FOLDER}/accessories/qs200a`, `${CLOUDINARY_FOLDER}/accessories/qs200a`, `${CLOUDINARY_FOLDER}/accessories/qs200a`, `${CLOUDINARY_FOLDER}/accessories/qs200a`]
+        images: [`${CLOUDINARY_FOLDER}/accessories/qs200a`, `${CLOUDINARY_FOLDER}/accessories/qs200a1`, `${CLOUDINARY_FOLDER}/accessories/qs200a2`, `${CLOUDINARY_FOLDER}/accessories/qs200a3`]
     },
     {
         id: 'den-neo-helios',
@@ -325,7 +325,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to hard',
         lifespan: 'N/A',
-        images: [`${CLOUDINARY_FOLDER}/plants/nanapettie1`, `${CLOUDINARY_FOLDER}/plants/nanapettie2`, `${CLOUDINARY_FOLDER}/plants/nanapettie3`, `${CLOUDINARY_FOLDER}/plants/nanapettie1`]
+        images: [`${CLOUDINARY_FOLDER}/plants/nanapettie1`, `${CLOUDINARY_FOLDER}/plants/nanapettie2`, `${CLOUDINARY_FOLDER}/plants/nanapettie3`, `${CLOUDINARY_FOLDER}/plants/nanapettie4`]
     },
     {
         id: 'bucephalandra',
@@ -338,7 +338,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: [`${CLOUDINARY_FOLDER}/plants/bucep`, `${CLOUDINARY_FOLDER}/plants/bucep`, `${CLOUDINARY_FOLDER}/plants/bucep`, `${CLOUDINARY_FOLDER}/plants/bucep`]
+        images: [`${CLOUDINARY_FOLDER}/plants/bucep`, `${CLOUDINARY_FOLDER}/plants/bucep1`, `${CLOUDINARY_FOLDER}/plants/bucep2`, `${CLOUDINARY_FOLDER}/plants/bucep3`]
     },
     {
         id: 'duong-xi-java',
@@ -364,7 +364,7 @@ const collectionProducts = [
         tds: 'N/A',
         gh: 'Soft to medium',
         lifespan: 'N/A',
-        images: [`${CLOUDINARY_FOLDER}/plants/dxcp`, `${CLOUDINARY_FOLDER}/plants/dxcp`, `${CLOUDINARY_FOLDER}/plants/dxcp`, `${CLOUDINARY_FOLDER}/plants/dxcp`]
+        images: [`${CLOUDINARY_FOLDER}/plants/dxcp`, `${CLOUDINARY_FOLDER}/plants/dxcp1`, `${CLOUDINARY_FOLDER}/plants/dxcp2`, `${CLOUDINARY_FOLDER}/plants/dxcp3`]
     },
     {
         id: 'duong-xi-la-kim',
