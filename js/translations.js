@@ -43,7 +43,7 @@ const translations = {
 
         // Post Content
         post: {
-            backButton: '← Quay lại trang chủ',
+            backButton: 'Quay lại trang chủ',
             loading: 'Đang tải bài viết...',
             error: '❌ Không thể tải bài viết. Vui lòng thử lại sau.',
             publishedOn: 'Ngày đăng:'
@@ -135,7 +135,7 @@ const translations = {
 
         // Post Content
         post: {
-            backButton: '← Back to Home',
+            backButton: 'Back to Home',
             loading: 'Loading post...',
             error: '❌ Unable to load post. Please try again later.',
             publishedOn: 'Published on:'

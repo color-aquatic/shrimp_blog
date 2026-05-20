@@ -203,7 +203,7 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     position: relative;
     z-index: 10;
@@ -725,6 +725,7 @@ nav .nav-menu .nav-consultation-btn:hover {
     font-size: 1rem;
     background: transparent;
     color: var(--text-primary);
+    margin-bottom: 0;
 }
 
 #search-input::placeholder {
@@ -1799,6 +1800,45 @@ footer p,
         padding: 0.58rem 0.88rem;
         font-size: 0.88rem;
     }
+}
+
+/* ================================================
+   BACK HOME BUTTON
+   ================================================ */
+
+.post-back-nav {
+    border-top: 1px solid var(--border-card);
+}
+
+.back-home-btn {
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease, transform 0.18s ease;
+}
+
+.back-home-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.22s ease;
+}
+
+.back-home-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 16px var(--primary-glow-strong);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.back-home-btn:hover i {
+    transform: translateX(-3px);
 }
 
 /* ================================================
